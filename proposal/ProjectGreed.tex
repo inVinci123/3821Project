@@ -1,9 +1,10 @@
 \documentclass{report}
-\usepackage[a4paper,bmargin=1.5in,tmargin=1.5in]{geometry}
+\usepackage[a4paper,bmargin=1.6in,tmargin=1.6in]{geometry}
 \usepackage{tabularx}
 \usepackage{amsmath}
 
-\usepackage{biblatex}
+\usepackage{hyperref}
+\usepackage[sorting=none]{biblatex}
 \addbibresource{sources.bib}
 
 \usepackage[OT1]{fontenc}
@@ -13,8 +14,8 @@
 
 \title{\huge Project Proposal: Evaluating the effectiveness of different trading algorithms}
 \author{
-BL (z5592091), TRJ (z5592097),\\
-KM (z5592102), VP (z5592103), YM (z5624648) 
+Brian Liu (z5592091), Tamiz Rumey Jiffrey (z5592097),\\
+Kirk Murillo (z5592102), Vedang Purohit (z5592103), Yash Mittal (z5624648) 
 }
 \date{}
 
@@ -109,8 +110,7 @@ and can be made portable to load different data sets to thoroughly test the perf
 We can use this to test with volatile and stable assets.
 There are variations and more advanced method ofs backtesting, including generating simulated data sets
 using generative models that are fed historical data to create testing conditions.
-\cite{koshiyama_generative_2019}
-\cite{lezmi_improving_2020}
+\cite{koshiyama_generative_2019, lezmi_improving_2020}
 
 Known drawbacks to backtesting include overfitted algorithms, which are when they are more suited to
 some data sets than others, and unreliable performance during black swan (e.g. COVID-19) events.
@@ -158,8 +158,7 @@ risk, and possibly other factors.
 We will compare the results of the algorithms against each other and the other controls
 using performance metrics, as well as the realistic benchmarks from the same time period, 
 such as market indexes.
-\cite{adesina_algorithmic_2024}
-\cite{treleaven_algorithmic_2013}
+\cite{treleaven_algorithmic_2013, adesina_algorithmic_2024}
 
 \subsection*{Project Timeline}
 
