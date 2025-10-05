@@ -3,7 +3,7 @@
 \usepackage{tabularx}
 \usepackage{amsmath}
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[sorting=none]{biblatex}
 \addbibresource{sources.bib}
 
@@ -24,13 +24,12 @@ Kirk Murillo (z5592102), Vedang Purohit (z5592103), Yash Mittal (z5624648)
 
 \section*{Executive summary}
 
-Algorithms are used extensively in the stock market in order to optimise trade timings,
-decision, and portfoios to maximise profit and reduce risk.
-These algorithms rely on large amounts of historical market data to identify patterns and finely tune parameters 
-in order to generate and execute decisions, removing the reliance on human intuition and tranforming
-the problem into an optimisation and single-processing one.
-Furthermore, algorithmic trading allows trades to be executed at much higher speed than possible for humans,
-and also allows for objective testing of performance, bringing more avenues for improvement.
+Our project investigates the performance of different trading algorithms under different market conditions,
+using simulated and historic data.
+We aim to compare simple strategies such as random and greedy algorithm based strategies against
+approaches like trend-following and mean-reversion.
+In this project, we seek to identify patterns and common properties that explain why certain strategies
+are profitable or unprofitable in different types of markets.
 
 \subsection*{Context and Background Information}
 
@@ -42,15 +41,17 @@ Despite this evolution, there is still a lot of value to be had in empirically a
 due to their transparency and interpretability, as they can highlight the need for complexity in real-world algorithms.
 
 Algorithmic trading systems primarily aim to maximise profit, but also manage risk and minimise transaction costs
-of various financial securities, including stocks, bonds, options, and more.
+of various financial securities, including stocks, bonds, options, and others.
 A large part of the effort in algorithmic trading comes from finding and parsing quality data,
 which is important to test and run many algorithms.
 In a full algorithmic trading system, models for calculating and taking into account transaction costs
-and the specifics of trade execution need to be implemented as well. \cite{treleaven_algorithmic_2013}
+and the specifics of trade execution need to be implemented as well.
+\cite{treleaven_algorithmic_2013}
 
 \section*{Survey of existing trading algorithms}
 
-In his research paper, Hägg (2023) identifies different types of trading algorithms. \cite{hagg_study_2023}
+In his research paper, Hägg (2023) identifies a few types of trading algorithms:
+\cite{hagg_study_2023}
 
 \subsection*{Systematic}
 
@@ -76,7 +77,7 @@ For our project, we will be testing different Systematic Algorithms as they requ
 \begin{itemize}
   \item \textbf{Trend Followers}:
     A class of algorithms that perform statistical analysis on the trend to predict the next movement,
-    and make trade decisions based on this data
+    and make trade decisions based on this data.
 
   \item \textbf{Pair Trading}:
     Tracking two correlated assets (for example, Coke and Pepsi).
@@ -88,13 +89,13 @@ For our project, we will be testing different Systematic Algorithms as they requ
     This compares short-term and long-term moving average (MA) signals.
     Some variants of these are exponential MAs, triple crossover, and weighted MAs.
 
-  \item \textbf{Reinforcement Learning (Deep Q / Policy Gradient)}
-    Instead of tabular Q-learning, this uses a small neural network to approximate Q-values or policies.
-    stuff
+  \item \textbf{Reinforcement Learning (Deep Q / Policy Gradient)}:
+    This uses neural networks and simulations to optimise and tune model parameters.
+    It uses own profit/loss ratio in simulation as its reward mechanism.
 
   \item \textbf{Kelly Criterion Position Sizing}:
     Not a signal strategy, but a risk management overlay.
-    This dynamically sizes trades based on experience return or variance.
+    This dynamically sizes trades based on expected return or variance.
     It can be applied on top of other strategies.
 
 \end{itemize}
@@ -108,7 +109,7 @@ An event driven backtesting system (one where the algorithm runs in a loop and e
 when certain events occur) can help create a realistic simulation that avoids anticipation bias,
 and can be made portable to load different data sets to thoroughly test the performance of each algorithm.
 We can use this to test with volatile and stable assets.
-There are variations and more advanced method ofs backtesting, including generating simulated data sets
+There are variations and more advanced method of backtesting, including generating simulated data sets
 using generative models that are fed historical data to create testing conditions.
 \cite{koshiyama_generative_2019, lezmi_improving_2020}
 
