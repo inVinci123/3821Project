@@ -1,5 +1,5 @@
 \documentclass{report}
-\usepackage[a4paper]{geometry}
+\usepackage[a4paper,bmargin=1.5in,tmargin=1.5in]{geometry}
 \usepackage{tabularx}
 \usepackage{amsmath}
 
@@ -70,7 +70,7 @@ to take advantage of mispricings while minimising overall risk.
 Innovative tools from science and economics are frequently used in statistical arbitrage, including time series,
 data mining, artificial intelligence, agent-based models, and fractals.
 Finding opportunities to take advantage of market inefficiencies while managing risk is the aim of statistical arbitrage.
-
+\clearpage
 For our project, we will be testing different Systematic Algorithms as they require the creation of algorithms/strategies that maximises our portfolio, some algorithms we found are popularly used in the industry today include:
 \begin{itemize}
   \item \textbf{Trend Followers}:
@@ -125,7 +125,6 @@ The benefits of this method include validating algorithmic execution in real tim
 trust in the algorithm, and being able to factor in latency.
 But this only tests an algorithm on its performance in a specific market, which can fluctuate.
 So it must be tested in various conditions.
-
 \\\ \\
 Once algorithms have been tested, they must be evaluated via metrics and benchmarks.
 These metrics have to measure the important outcomes of the algorithm, such as profit and risk,
@@ -135,6 +134,33 @@ Metrics like the Sharpe Ratio combine the outcomes, measuring risk-adjusted retu
 
 \section*{Research plan}
 
+\subsection*{Aim}
+Our main objective with this project is to find or create and algorithm that maximises our portfolio and is profitable.
+We aim to complete at least 2 control/backtesting algorithms like some random algorithm. \cite{smith_random_2025}
+
+We also want to find about 5 popular algorithms currently used by the industry to test if they are the best algorithms.
+We will try to create on of our own, using parts of other algorithsm and test this to come with a final conclusion.
+
+\subsection*{Methodology}
+
+Our experimental analysis will revolve around algorithms that generate optimal trading decisions
+and portfolios, rather than processing data and analysing transactional costs.
+
+As for the financial security in question, we will mainly be focusing on stocks.
+This will be taken over longer perioes of time (multiple years), rather than over a few days
+as might be seen in high-frequency trading.
+
+For testing the algorithms, we plan to build our own simple backtesting framwork using Python,
+and use historical data over multiple years from many large companies.
+We will use different time periods to emulate various (volatile and stable) market conditions.
+The success of the algorithms will be measured by their profitability, consistency,
+risk, and possibly other factors.
+We will compare the results of the algorithms against each other and the other controls
+using performance metrics, as well as the realistic benchmarks from the same time period, 
+such as market indexes.
+\cite{adesina_algorithmic_2024}
+\cite{treleaven_algorithmic_2013}
+
 \subsection*{Project Timeline}
 
 \renewcommand{\arraystretch}{1.7}
@@ -142,24 +168,22 @@ Metrics like the Sharpe Ratio combine the outcomes, measuring risk-adjusted retu
 \begin{tabular}{m{0.2\textwidth}m{0.35\textwidth}m{0.3\textwidth}}
   \hline
   \textbf{Date} & \textbf{Aim} & \textbf{Notes}\\ \hline\hline
-  Sunday, 5 Oct & Finish project proposal & \\
-  Tuesday, 7 Oct & Create function to test algorithms & Coded in a real language (likely Python) \\
+  Sunday, 5 Oct & \textbf{Finish project proposal} & \\
+  Tuesday, 7 Oct & Create function/framework to test algorithms & Coded in a real language (likely Python) \\
   Friday, 10 Oct & Find data for experiments & \\
   Sunday, 12 Oct & First algorithm & \\
   Sunday, 19 Oct & Second/Third algorithms & Split into two teams, each working on one algorithm \\
   \textit{Flex week} & Fourth algorithm & \\
-  Tuesday, 28 Oct & Fifth algorithm & Based on previous algorithms and research \\
-  Sunday, 2 Nov & Progression check writeup & \\
+  Tuesday, 28 Oct & Fifth algorithm and start writeup of progression check & Based on previous algorithms and research \\
+  Sunday, 2 Nov & \textbf{Progression check} & \\
   Monday, 3 Nov & Start working on report and poster & If time permits, we may start work on a $6^{\textsf{th}}$ algorithm \\
-  Sunday, 9 Nov & Soft deadline for poster and report & \\
-  Wed/Fri, Week 10 & Poster showcase & \\
+  Sunday, 9 Nov & \underline{Soft deadline for poster and report} & \\
+  Wed/Fri, Week 10 & \textbf{Poster showcase} & \\
   \hline
 \end{tabular}
 \end{center}
 
-When planning algorithms, we will write them in plain English as well as implementing them in
-a language to document and test them.
-
+\nocite{*}
 \printbibliography
 
 \end{document}
