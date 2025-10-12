@@ -28,11 +28,29 @@ def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool
 # rand = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, starting_balance=100, starting_shares=100)
 # backtest(rand, data)
 
+# Standardising testing
+data = parse_csv("nabax.csv")
 
-data_dow = parse_csv("dowjonesmonthly100Y.csv")
-greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, 100, 100)
-random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, 100, 100)
+start_balance = 100
+start_shares = 50
+start_value = round(start_balance + start_shares * data[0], 3)
 
-backtest(greedy_long, data_dow)
-# backtest(random_long, data_dow)
+print("GREEDY")
+
+greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares)
+random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares)
+
+backtest(greedy_long, data, False)
+print(         
+    f"Balance: {start_balance} -> {greedy_long.get_current_balance():.03f}\n"
+        f"Shares:  {start_balance} -> {greedy_long.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
+    f"TWorth:  {start_value} -> {greedy_long.get_current_worth(data[-1]):.03f}")
+
+print("\nRANDOM")
+
+backtest(random_long, data, False)
+print(         
+    f"Balance: {start_balance} -> {random_long.get_current_balance():.03f}\n"
+        f"Shares:  {start_balance} -> {random_long.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
+    f"TWorth:  {start_value} -> {random_long.get_current_worth(data[-1]):.03f}")
 

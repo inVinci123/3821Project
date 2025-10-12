@@ -4,6 +4,7 @@
 # stdout: csv
 #
 # Note: Table needs to be copied via a human through inspect element
+# DEPRECATED by yahoo.py
 
 # Extract `tr` HTML entries
 sed -E 's:</([^>]*)>:<\1>\n:g' | sed -E 's:^.*">([^<]*)<.*$:\1:g' |
