@@ -4,8 +4,9 @@ from algorithm_class import TradingAlgorithm
 
 
 class MaximallyGreedyAlgorithm(TradingAlgorithm):
-    def __init__(self, starting_balance: float, starting_shares: float):
+    def __init__(self, starting_balance: float, starting_shares: float, trading_proportion: float = 0.5):
         super().__init__(starting_balance, starting_shares)
+        self.trading_proportion = trading_proportion
 
     @override
     def give_data_point(self, stock_price: float):
@@ -18,14 +19,16 @@ class MaximallyGreedyAlgorithm(TradingAlgorithm):
         super().give_data_point(stock_price)
 
         if last_data_point < stock_price:
-            # Stock rise: Sell half of current shares
-            current_shares *= 0.5
-            current_balance += current_shares * stock_price
+            # Stock rise: Sell w of current shares
+            selling_amount = current_shares * self.trading_proportion
+            current_shares -= selling_amount
+            current_balance += selling_amount * stock_price
             
         elif last_data_point > stock_price:
-            # Stock fall: Buy shares worth half of current balance
-            current_balance *= 0.5
-            current_shares += current_balance / stock_price
+            # Stock fall: Buy shares worth w of current balance
+            buying_amount = current_balance * self.trading_proportion
+            current_balance -= buying_amount
+            current_shares += buying_amount / stock_price
 
         self.balance_history.append(current_balance)
         self.shares_history.append(current_shares)

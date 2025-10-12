@@ -2,6 +2,7 @@ from enum import Enum
 
 from algorithm_class import TradingAlgorithm
 from algorithms.greedy import MaximallyGreedyAlgorithm
+from algorithms.random_choice import RandomChoiceAlgorithm
 
 
 class AlgorithmTypes(Enum):
@@ -14,6 +15,8 @@ def algorithm_create(choice: AlgorithmTypes, starting_balance: float = 0, starti
     match choice:
         case AlgorithmTypes.MAXIMALLY_GREEDY:
             return MaximallyGreedyAlgorithm(starting_balance, starting_shares)
+        case AlgorithmTypes.RANDOM_CHOICE:
+            return RandomChoiceAlgorithm(starting_balance, starting_shares)
         case _:
             raise KeyError("Not yet implemented")
 
