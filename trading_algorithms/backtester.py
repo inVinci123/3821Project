@@ -42,7 +42,7 @@ for stock in testing_stocks:
     plt.title(stock)
     plt.xlabel("Days since start")
     ax1.set_ylabel("Stock Value")
-    ax1.plot(data, 'k')
+    ax1.plot(data, 'k-+')
     ax1.legend("Stock Value")
     ax1.set_xlim(0, len(data) - 1)
 
@@ -53,8 +53,10 @@ for stock in testing_stocks:
 
     greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares)
     random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares)
+    best_after_long = algorithm_create(AlgorithmTypes.BEST_AFTER_N, start_balance, start_shares)
 
     backtest(greedy_long, data, False)
+    greedy_final = greedy_long.get_current_worth(data[-1])
     print(         
         f"Balance: {start_balance} -> {greedy_long.get_current_balance():.03f}\n"
         f"Shares:  {start_balance} -> {greedy_long.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
@@ -63,19 +65,29 @@ for stock in testing_stocks:
     print("\nRANDOM")
 
     backtest(random_long, data, False)
+    random_final = random_long.get_current_worth(data[-1])
     print(         
         f"Balance: {start_balance} -> {random_long.get_current_balance():.03f}\n"
         f"Shares:  {start_balance} -> {random_long.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
         f"TWorth:  {start_value} ({data[0]:.03f}) -> {random_long.get_current_worth(data[-1]):.03f}")
 
+    print("\nBEST AFTER N")
+    backtest(best_after_long, data, False)
+    best_after_final = best_after_long.get_current_worth(data[-1])
+    print(         
+        f"Balance: {start_balance} -> {best_after_long.get_current_balance():.03f}\n"
+        f"Shares:  {start_balance} -> {best_after_long.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
+        f"TWorth:  {start_value} ({data[0]:.03f}) -> {best_after_long.get_current_worth(data[-1]):.03f}")
+
     ax2 = ax1.twinx()
     ax2.set_ylabel("Worth history")
-    ax2.plot(greedy_long.get_worth_history(), 'r')
-    ax2.plot(random_long.get_worth_history(), 'b')
-    ax2.legend(["Greedy", "Random"])
+    ax2.plot(greedy_long.get_worth_history() + [greedy_final], 'r--')
+    ax2.plot(random_long.get_worth_history() + [random_final], 'b--')
+    ax2.plot(best_after_long.get_worth_history() + [best_after_final], 'g--')
+    ax2.legend(["Greedy", "Random", "Best after n"])
     plt.tight_layout()
     plt.show()
-    if greedy_long.get_current_worth(data[-1]) >= random_long.get_current_worth(data[-1]):
+    if greedy_final >= random_final and greedy_final > best_after_final:
         greedy_wins += 1
 
 print("Greedy won", greedy_wins, "out of", len(testing_stocks))

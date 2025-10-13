@@ -1,22 +1,27 @@
 from enum import Enum
+from typing import Iterable
 
 from algorithm_class import TradingAlgorithm
 from algorithms.greedy import MaximallyGreedyAlgorithm
 from algorithms.random_choice import RandomChoiceAlgorithm
+from algorithms.bestaftern import BestAfterNAlgorithm
 
 
 class AlgorithmTypes(Enum):
     MAXIMALLY_GREEDY = 0
     RANDOM_CHOICE = 1
-    OTHER = 2
+    BEST_AFTER_N = 2
+    OTHER = 99
 
 
-def algorithm_create(choice: AlgorithmTypes, starting_balance: float = 0, starting_shares: float = 0) -> TradingAlgorithm:
+def algorithm_create(choice: AlgorithmTypes, starting_balance: float = 0, starting_shares: float = 0, meta_arguments: Iterable = []) -> TradingAlgorithm:
     match choice:
         case AlgorithmTypes.MAXIMALLY_GREEDY:
             return MaximallyGreedyAlgorithm(starting_balance, starting_shares)
         case AlgorithmTypes.RANDOM_CHOICE:
             return RandomChoiceAlgorithm(starting_balance, starting_shares)
+        case AlgorithmTypes.BEST_AFTER_N:
+            return BestAfterNAlgorithm(starting_balance, starting_shares, *meta_arguments)
         case _:
             raise KeyError("Not yet implemented")
 

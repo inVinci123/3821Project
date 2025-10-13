@@ -12,8 +12,11 @@ class TradingAlgorithm(ABC):
     def give_data_point(self, stock_price: float):
         # Override this in subclasses
         # Call super first
+        if len(self.seen_data_points) > 0:
+            previous_stock_price = self.seen_data_points[-1]
+            previous_worth = self.get_current_worth(previous_stock_price)
+            self.worth_history.append(previous_worth)
         self.seen_data_points.append(stock_price)
-        self.worth_history.append(self.get_current_worth(stock_price))
         self.current_index += 1
 
 
