@@ -19,15 +19,16 @@ class BestAfterNAlgorithm(TradingAlgorithm):
         actionable = self.current_index - self.considering_from > self.searching_number
         if actionable:
             # Will only consider doing an action after n prices have been considered
+            search_latest = self.considering_from + self.searching_number
             if self.selling:
-                if stock_price >= max(self.seen_data_points[self.considering_from:]):
+                if stock_price >= max(self.seen_data_points[self.considering_from:search_latest]):
                     # Highest stock price after the first n prices considered
                     current_balance += current_shares * stock_price
                     current_shares = 0
                     self.considering_from = self.current_index
                     self.selling = False
             else:
-                if stock_price <= min(self.seen_data_points[self.considering_from:]):
+                if stock_price <= min(self.seen_data_points[self.considering_from:search_latest]):
                     # Lowest stock price after the first n prices considered
                     current_shares += current_balance / stock_price
                     current_balance = 0
