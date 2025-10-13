@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 from algorithm_class import TradingAlgorithm
 from algorithm_factory import algorithm_create, AlgorithmTypes
 from data_parser import parse_csv
@@ -29,28 +30,53 @@ def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool
 # backtest(rand, data)
 
 # Standardising testing
-data = parse_csv("nabax.csv")
+testing_stocks = ["MSFT", "AAPL", "NVDA", "NAB.AX", "BTC-USD", "CBA.AX", "ANZ.AX"]
+greedy_wins = 0
+for stock in testing_stocks:
+    data = parse_csv(stock.lower() + ".csv")
+    start_balance = 100
+    start_shares = 50
+    start_value = round(start_balance + start_shares * data[0], 3)
 
-start_balance = 100
-start_shares = 50
-start_value = round(start_balance + start_shares * data[0], 3)
+    fig, ax1 = plt.subplots()
+    plt.title(stock)
+    plt.xlabel("Days since start")
+    ax1.set_ylabel("Stock Value")
+    ax1.plot(data, 'k')
+    ax1.legend("Stock Value")
+    ax1.set_xlim(0, len(data) - 1)
 
-print("GREEDY")
+    print(f"\n=== {stock} ===")
 
-greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares)
-random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares)
 
-backtest(greedy_long, data, False)
-print(         
-    f"Balance: {start_balance} -> {greedy_long.get_current_balance():.03f}\n"
+    print("GREEDY")
+
+    greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares)
+    random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares)
+
+    backtest(greedy_long, data, False)
+    print(         
+        f"Balance: {start_balance} -> {greedy_long.get_current_balance():.03f}\n"
         f"Shares:  {start_balance} -> {greedy_long.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
-    f"TWorth:  {start_value} -> {greedy_long.get_current_worth(data[-1]):.03f}")
+        f"TWorth:  {start_value} ({data[0]:.03f}) -> {greedy_long.get_current_worth(data[-1]):.03f}")
 
-print("\nRANDOM")
+    print("\nRANDOM")
 
-backtest(random_long, data, False)
-print(         
-    f"Balance: {start_balance} -> {random_long.get_current_balance():.03f}\n"
+    backtest(random_long, data, False)
+    print(         
+        f"Balance: {start_balance} -> {random_long.get_current_balance():.03f}\n"
         f"Shares:  {start_balance} -> {random_long.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
-    f"TWorth:  {start_value} -> {random_long.get_current_worth(data[-1]):.03f}")
+        f"TWorth:  {start_value} ({data[0]:.03f}) -> {random_long.get_current_worth(data[-1]):.03f}")
+
+    ax2 = ax1.twinx()
+    ax2.set_ylabel("Worth history")
+    ax2.plot(greedy_long.get_worth_history(), 'r')
+    ax2.plot(random_long.get_worth_history(), 'b')
+    ax2.legend(["Greedy", "Random"])
+    plt.tight_layout()
+    plt.show()
+    if greedy_long.get_current_worth(data[-1]) >= random_long.get_current_worth(data[-1]):
+        greedy_wins += 1
+
+print("Greedy won", greedy_wins, "out of", len(testing_stocks))
 

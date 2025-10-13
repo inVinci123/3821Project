@@ -6,11 +6,14 @@ class TradingAlgorithm(ABC):
         self.seen_data_points: list[float] = []
         self.balance_history: list[float] = [starting_balance]
         self.shares_history: list[float] = [starting_shares]
+        self.worth_history: list[float] = []
 
     @abstractmethod
     def give_data_point(self, stock_price: float):
         # Override this in subclasses
+        # Call super first
         self.seen_data_points.append(stock_price)
+        self.worth_history.append(self.get_current_worth(stock_price))
         self.current_index += 1
 
 
@@ -32,4 +35,7 @@ class TradingAlgorithm(ABC):
 
     def get_shares_history(self) -> list[float]:
         return self.shares_history
+
+    def get_worth_history(self) -> list[float]:
+        return self.worth_history
 

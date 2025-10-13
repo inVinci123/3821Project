@@ -1,7 +1,7 @@
 import yfinance
 
 stuffs = [
-    "AAPL", "MSFT", "AMZN", "NVDA", 
+    "AAPL", "MSFT", "AMZN", "NVDA", "BTC-USD",
     "CBA.AX", "BHP.AX", "NEM.AX", "NAB.AX", "WBC.AX", "ANZ.AX", "CSL.AX",
     "WES.AX", "MQG.AX", "XYZ.AX", "GMG.AX", "RMD.AX", "FMG.AX", "TLS.AX",
     "RIO.AX", "TCL.AX", "WDS.AX", "ALL.AX", "NST.AX", "SIG.AX", "BXB.AX",
@@ -13,7 +13,7 @@ stuffs = [
 for stock in stuffs:
     ticker = yfinance.Ticker(stock)
     historical_data = ticker.history(period="1y")
-    data = historical_data.to_csv(date_format="%D")
+    data = historical_data.to_csv(date_format="%d/%m/%Y")
 
     # imagine having the data in DataFrame form, then just doing
     # text processing on its CSV output.
@@ -27,7 +27,7 @@ for stock in stuffs:
         key_points = (float(x) for x in components[1:5])
         output.append(components[0] + ',' + str(sum(key_points) / 4))
 
-    fileout = stock.lower().replace('.', "") + ".csv"
+    fileout = stock.lower() + ".csv"
     with open(fileout, "w") as OUTPUT:
         OUTPUT.write('\n'.join(output))
 
