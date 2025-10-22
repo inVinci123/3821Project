@@ -18,9 +18,17 @@ class SimpleMAAlgorithm(TradingAlgorithm):
         super().give_data_point(stock_price)
         for length, history in self.ma_histories.items():
             # Calculate new moving average
-            considered_history = self.seen_data_points[-length:]
-            considered_length = len(considered_history)
-            history.append(sum(considered_history) / considered_length)
+            if len(history) <= length:
+                considered_history = self.seen_data_points[-length:]
+                considered_length = len(considered_history)
+                history.append(sum(considered_history) / considered_length)
+            else:
+                # new_sma = (x2 + ... + xn+1) / n
+                # = (x2 + ... + xn + xn+1 + (x1 - x1)) / n
+                # = (x1 + ... + xn) / n + (xn+1 - x1) / n
+                # = prev_sma + (new - first_considered) / n
+                new_sma = history[-1] + (stock_price - self.seen_data_points[-1 - length]) / length
+                history.append(new_sma)
 
         current_balance = self.get_current_balance()
         current_shares = self.get_current_shares()
