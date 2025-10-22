@@ -3,13 +3,12 @@ from typing import override
 from algorithm_class import TradingAlgorithm
 
 
-class ExponentialMAAlgorithm(TradingAlgorithm):
+class SimpleMAAlgorithm(TradingAlgorithm):
     def __init__(self, starting_balance: float, starting_shares: float, trading_proportion: float = 1.0,
-                 ma_lengths: list[int] = [8, 13, 21], smoothing_factor: float = 2):
+                 ma_lengths: list[int] = [8, 13, 21]):
         super().__init__(starting_balance, starting_shares)
         self.trading_proportion = trading_proportion
         self.ma_lengths = ma_lengths
-        self.smoothing_factor = smoothing_factor
         self.ma_histories: dict[int, list[float]] = {l: [] for l in ma_lengths}
         self.selling: bool = starting_shares > 0
     
@@ -18,19 +17,17 @@ class ExponentialMAAlgorithm(TradingAlgorithm):
     def give_data_point(self, stock_price: float):
         super().give_data_point(stock_price)
         for length, history in self.ma_histories.items():
-            if len(history) == 0:
-                history.append(stock_price)
-                continue
-            # Calculate new exponential smoothing value
-            a = self.smoothing_factor / (1 + length)
-            history.append(stock_price * a + history[-1] * (1 - a))
+            # Calculate new moving average
+            considered_history = self.seen_data_points[-length:]
+            considered_length = len(considered_history)
+            history.append(sum(considered_history) / considered_length)
 
         current_balance = self.get_current_balance()
         current_shares = self.get_current_shares()
 
         if self.selling:
             # Looking to sell in a falling trend
-            # Looking for low-EMA < ... < high-EMA
+            # Looking for low-SMA < ... < high-SMA
             will_sell = True
             for i in range(len(self.ma_histories.keys()) - 1):
                 lower_length = list(self.ma_histories.keys())[i]
@@ -45,7 +42,7 @@ class ExponentialMAAlgorithm(TradingAlgorithm):
                 self.selling = False
         else:
             # Looking to buy in a growing trend
-            # Looking for low-EMA > ... > high-EMA
+            # Looking for low-SMA > ... > high-SMA
             will_buy = True
             for i in range(len(self.ma_histories.keys()) - 1):
                 lower_length = list(self.ma_histories.keys())[i]
