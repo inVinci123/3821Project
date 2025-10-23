@@ -7,12 +7,12 @@ stuffs = [
     "RIO.AX", "TCL.AX", "WDS.AX", "ALL.AX", "NST.AX", "SIG.AX", "BXB.AX",
     "QBE.AX", "WOW.AX", "PME.AX", "COL.AX", "REA.AX", "WTC.AX", "AMC.AX",
     "NWS.AX", "XRO.AX", "ENV.AX", "VAS.AX", "SUN.AX", "STO.AX", "SCG.AX",
-    "COH.AX", "QAN.AX"
+    "COH.AX", "QAN.AX", "ASX.AX"
 ]
 
 for stock in stuffs:
     ticker = yfinance.Ticker(stock)
-    historical_data = ticker.history(period="1y")
+    historical_data = ticker.history(period="10y")
     data = historical_data.to_csv(date_format="%d/%m/%Y")
 
     # imagine having the data in DataFrame form, then just doing

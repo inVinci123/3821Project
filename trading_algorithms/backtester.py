@@ -47,7 +47,6 @@ for stock in testing_stocks:
     plt.xlabel("Days since start")
     ax1.set_ylabel("Stock Value")
     ax1.plot(data, 'k-+')
-    print(data, type(data))
     ax1.set_xlim(0, len(data) - 1)
 
     print(f"\n=== {stock} ===")
@@ -67,7 +66,7 @@ for stock in testing_stocks:
         print(name)
 
         backtest(algorithm, data, False)
-        print(         
+        print(
             f"Balance: {start_balance} -> {algorithm.get_current_balance():.03f}\n"
             f"Shares:  {start_balance} -> {algorithm.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
             f"TWorth:  {start_value} ({data[0]:.03f}) -> {algorithm.get_current_worth(data[-1]):.03f}\n")
