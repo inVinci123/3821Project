@@ -4,6 +4,9 @@ from algorithm_class import TradingAlgorithm
 from algorithm_factory import algorithm_create, AlgorithmTypes
 from data_parser import parse_csv
 from algorithms.true_optimal import get_optimal_worth_history
+from typing import cast
+from algorithms.simple_moving_average import SimpleMAAlgorithm
+from algorithms.expo_moving_average import ExponentialMAAlgorithm
 
 
 def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool = True):
@@ -54,9 +57,9 @@ for stock in testing_stocks:
     greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares)
     random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares, [0.3, (0.4, 0.4)])
     best_after_long = algorithm_create(AlgorithmTypes.BEST_AFTER_N, start_balance, start_shares)
-    expo_ma_long = algorithm_create(AlgorithmTypes.EXPONENTIAL_MA, start_balance, start_shares, [1.0, (5, 21)])
+    expo_ma_long = cast(ExponentialMAAlgorithm, algorithm_create(AlgorithmTypes.EXPONENTIAL_MA, start_balance, start_shares, [1.0, (5, 21)]))
     expo_ma_long2 = algorithm_create(AlgorithmTypes.EXPONENTIAL_MA, start_balance, start_shares)
-    simple_ma_long = algorithm_create(AlgorithmTypes.SIMPLE_MA, start_balance, start_shares, [1.0, (5, 21)])
+    simple_ma_long = cast(SimpleMAAlgorithm, algorithm_create(AlgorithmTypes.SIMPLE_MA, start_balance, start_shares, [1.0, (5, 21)]))
     simple_ma_long2 = algorithm_create(AlgorithmTypes.SIMPLE_MA, start_balance, start_shares)
 
     ax2 = ax1.twinx()
