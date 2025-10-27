@@ -4,6 +4,7 @@ from algorithm_class import TradingAlgorithm
 from algorithm_factory import algorithm_create, AlgorithmTypes
 from data_parser import parse_csv
 from algorithms.true_optimal import get_optimal_worth_history
+from ml_grab import ppo_ml_algorithm
 
 
 def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool = True):
@@ -32,8 +33,8 @@ def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool
 # backtest(rand, data)
 
 # Standardising testing
-# testing_stocks = ["MSFT", "AAPL", "NVDA", "NAB.AX", "BTC-USD", "CBA.AX", "ANZ.AX"]
-testing_stocks = ["dowjonesmonthly100y", "ASX.AX"]
+testing_stocks = ["MSFT", "AAPL", "NVDA", "NAB.AX", "BTC-USD", "CBA.AX", "ANZ.AX"]
+# testing_stocks = ["dowjonesmonthly100y", "ASX.AX"]
 for stock in testing_stocks:
     data = parse_csv(stock.lower() + ".csv")
     # data = data * 10
@@ -51,9 +52,7 @@ for stock in testing_stocks:
 
     print(f"\n=== {stock} ===")
 
-    greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares)
     random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares, [0.3, (0.4, 0.4)])
-    best_after_long = algorithm_create(AlgorithmTypes.BEST_AFTER_N, start_balance, start_shares)
     expo_ma_long = algorithm_create(AlgorithmTypes.EXPONENTIAL_MA, start_balance, start_shares, [1.0, (5, 21)])
     expo_ma_long2 = algorithm_create(AlgorithmTypes.EXPONENTIAL_MA, start_balance, start_shares)
     simple_ma_long = algorithm_create(AlgorithmTypes.SIMPLE_MA, start_balance, start_shares, [1.0, (5, 21)])
@@ -71,6 +70,7 @@ for stock in testing_stocks:
             f"Shares:  {start_balance} -> {algorithm.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
             f"TWorth:  {start_value} ({data[0]:.03f}) -> {algorithm.get_current_worth(data[-1]):.03f}\n")
 
+
     algs = [
         (random_long, "RANDOM", "r--"),
         (expo_ma_long, "EXPO MA (5, 21)", "b--"),
@@ -84,6 +84,11 @@ for stock in testing_stocks:
         final_point = alg[0].get_current_worth(data[-1])
         final_data = alg[0].get_worth_history() + [final_point]
         ax2.plot(final_data, alg[2], label=alg[1])
+
+    # PPO ML Attempt
+    ppo_long = ppo_ml_algorithm(stock.upper(), start_balance, time_period="10y", interval="1d", model="final_model", plot_graphs=False)
+    ax2.plot(final_data, "g--", label="PPO ML")
+
 
     ax1_legend = ["Stock Value"]
     for length, history in simple_ma_long.ma_histories.items():
