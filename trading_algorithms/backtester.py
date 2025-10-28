@@ -8,6 +8,11 @@ from typing import cast
 from algorithms.simple_moving_average import SimpleMAAlgorithm
 from algorithms.expo_moving_average import ExponentialMAAlgorithm
 from algorithms.bollinger import BollingerBandsAlgorithm
+from algorithms.indicators import (
+    SimpleMovingAverageIndicator,
+    ExponentialMovingAverageIndicator,
+    BollingerBandsIndicator,
+)
 
 
 def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool = True):
@@ -98,16 +103,33 @@ for stock in testing_stocks:
     stockAxes_legend = ["Stock Value"]
 
     # ---------------------- PLOTTING INDICATORS ----------------------
-    
-    # for length, history in simple_ma_long.ma_histories.items():
-    #     stockAxes.plot(history, label=f"SMA ({length})")
-    # for length, history in expo_ma_long.ma_histories.items():
-    #     stockAxes.plot(history, label=f"EMA ({length})")
-    history: list[float] = simple_ma_long.ma_histories.get(21) # type: ignore
+
+    # Compute indicator histories directly from the raw data instead of
+    # relying on algorithm instances. This makes the plotted indicators
+    # independent and reproducible from the source data.
+    sma_indicator = SimpleMovingAverageIndicator(21)
+    # create Bollinger indicators that match the algorithms created above
+    bb1_indicator = BollingerBandsIndicator(window_size=20, num_std_dev=1.0)
+    bb2_indicator = BollingerBandsIndicator(window_size=20, num_std_dev=2.0)
+
+    indicators = [
+        sma_indicator,
+        bb1_indicator,
+        bb2_indicator
+    ]
+
+    seen_so_far: list[float] = []
+    for p in data:
+        seen_so_far.append(p)
+        sma_indicator.update(seen_so_far)
+        bb1_indicator.update(seen_so_far)
+        bb2_indicator.update(seen_so_far)
+
+    history: list[float] = sma_indicator.history
     stockAxes.plot(history, label=f"SMA ({21})")
 
-    stockAxes.plot(bb_1std.upper_band_history, label="Bollinger Upper (1 STD)")
-    stockAxes.plot(bb_1std.lower_band_history, label="Bollinger Lower (1 STD)")
+    stockAxes.plot(bb1_indicator.upper_band_history, label="Bollinger Upper (1 STD)")
+    stockAxes.plot(bb1_indicator.lower_band_history, label="Bollinger Lower (1 STD)")
 
     stockAxes.legend(loc="best")
     algoAxes.legend(loc="lower left")

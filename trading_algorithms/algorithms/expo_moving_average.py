@@ -11,16 +11,20 @@ class ExponentialMAAlgorithm(TradingAlgorithm):
         self.trading_proportion = trading_proportion
         self.ma_lengths = ma_lengths
         self.smoothing_factor = smoothing_factor
-        # use indicator for EMA computation
-        self.indicator = ExponentialMovingAverageIndicator(ma_lengths, smoothing_factor)
-        self.ma_histories: dict[int, list[float]] = self.indicator.ma_histories
+        # create one EMA indicator instance per moving-average length
+        self.indicators: dict[int, ExponentialMovingAverageIndicator] = {
+            l: ExponentialMovingAverageIndicator(l, smoothing_factor) for l in ma_lengths
+        }
+        # keep attribute name for external compatibility
+        self.ma_histories: dict[int, list[float]] = {l: self.indicators[l].history for l in ma_lengths}
         self.selling: bool = starting_shares > 0
 
     @override
     def give_data_point(self, stock_price: float):
         super().give_data_point(stock_price)
-        # delegate EMA updates to the indicator
-        self.indicator.update(self.seen_data_points)
+        # delegate EMA updates to each indicator instance
+        for ind in self.indicators.values():
+            ind.update(self.seen_data_points)
 
         current_balance = self.get_current_balance()
         current_shares = self.get_current_shares()

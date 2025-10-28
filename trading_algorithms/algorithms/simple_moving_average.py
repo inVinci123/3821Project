@@ -10,17 +10,20 @@ class SimpleMAAlgorithm(TradingAlgorithm):
         super().__init__(starting_balance, starting_shares)
         self.trading_proportion = trading_proportion
         self.ma_lengths = ma_lengths
-        # Use an indicator instance to compute and store SMA histories
-        self.indicator = SimpleMovingAverageIndicator(ma_lengths)
-        # keep attribute name for external compatibility
-        self.ma_histories: dict[int, list[float]] = self.indicator.ma_histories
+        # Create one indicator instance per moving-average length
+        self.indicators: dict[int, SimpleMovingAverageIndicator] = {
+            l: SimpleMovingAverageIndicator(l) for l in ma_lengths
+        }
+        # keep attribute name for external compatibility (maps length -> history list)
+        self.ma_histories: dict[int, list[float]] = {l: self.indicators[l].history for l in ma_lengths}
         self.selling: bool = starting_shares > 0
 
     @override
     def give_data_point(self, stock_price: float):
         super().give_data_point(stock_price)
-        # delegate SMA calculation to the indicator
-        self.indicator.update(self.seen_data_points)
+        # delegate SMA calculation to each indicator instance
+        for ind in self.indicators.values():
+            ind.update(self.seen_data_points)
 
         current_balance = self.get_current_balance()
         current_shares = self.get_current_shares()
