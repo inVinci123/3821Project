@@ -62,11 +62,10 @@ class BollingerBandsIndicator(Indicator):
         self.lower_band_history: List[float] = []
 
     def update(self, seen_data_points: List[float]) -> Optional[Tuple[float, float]]:
-        if len(seen_data_points) < self.window_size:
-            return None
-        window = seen_data_points[-self.window_size:]
-        mean = sum(window) / self.window_size
-        variance = sum((p - mean) ** 2 for p in window) / self.window_size
+        size_used = min(len(seen_data_points), self.window_size)
+        window = seen_data_points[-size_used:]
+        mean = sum(window) / size_used
+        variance = sum((p - mean) ** 2 for p in window) / size_used
         std_dev = variance ** 0.5
 
         upper_band = mean + self.num_std_dev * std_dev
