@@ -1,6 +1,7 @@
 from typing import override
 
 from algorithm_class import TradingAlgorithm
+from algorithms.indicators import ExponentialMovingAverageIndicator
 
 
 class ExponentialMAAlgorithm(TradingAlgorithm):
@@ -10,20 +11,16 @@ class ExponentialMAAlgorithm(TradingAlgorithm):
         self.trading_proportion = trading_proportion
         self.ma_lengths = ma_lengths
         self.smoothing_factor = smoothing_factor
-        self.ma_histories: dict[int, list[float]] = {l: [] for l in ma_lengths}
+        # use indicator for EMA computation
+        self.indicator = ExponentialMovingAverageIndicator(ma_lengths, smoothing_factor)
+        self.ma_histories: dict[int, list[float]] = self.indicator.ma_histories
         self.selling: bool = starting_shares > 0
-    
 
     @override
     def give_data_point(self, stock_price: float):
         super().give_data_point(stock_price)
-        for length, history in self.ma_histories.items():
-            if len(history) == 0:
-                history.append(stock_price)
-                continue
-            # Calculate new exponential smoothing value
-            a = self.smoothing_factor / (1 + length)
-            history.append(stock_price * a + history[-1] * (1 - a))
+        # delegate EMA updates to the indicator
+        self.indicator.update(self.seen_data_points)
 
         current_balance = self.get_current_balance()
         current_shares = self.get_current_shares()

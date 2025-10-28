@@ -40,7 +40,7 @@ def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool
 # testing_stocks = ["dowjonesmonthly100y", "ASX.AX"]
 
 # stocks to run data on
-testing_stocks = ["BTC-USD"]
+testing_stocks = ["ANZ.AX"]
 for stock in testing_stocks:
     data = parse_csv(stock.lower() + ".csv")
     # data = data * 10
@@ -101,8 +101,10 @@ for stock in testing_stocks:
     
     # for length, history in simple_ma_long.ma_histories.items():
     #     stockAxes.plot(history, label=f"SMA ({length})")
-    for length, history in expo_ma_long.ma_histories.items():
-        stockAxes.plot(history, label=f"EMA ({length})")
+    # for length, history in expo_ma_long.ma_histories.items():
+    #     stockAxes.plot(history, label=f"EMA ({length})")
+    history: list[float] = simple_ma_long.ma_histories.get(21) # type: ignore
+    stockAxes.plot(history, label=f"SMA ({21})")
 
     stockAxes.plot(bb_1std.upper_band_history, label="Bollinger Upper (1 STD)")
     stockAxes.plot(bb_1std.lower_band_history, label="Bollinger Lower (1 STD)")

@@ -1,5 +1,7 @@
 from algorithm_class import TradingAlgorithm
 from typing import override
+from algorithms.indicators import BollingerBandsIndicator
+
 
 class BollingerBandsAlgorithm(TradingAlgorithm):
     def __init__(self, starting_balance: float, starting_shares: float, window_size: int = 20, num_std_dev: float = 2.0, trading_proportion: float = 0.5):
@@ -7,28 +9,24 @@ class BollingerBandsAlgorithm(TradingAlgorithm):
         self.window_size = window_size
         self.num_std_dev = num_std_dev
         self.trading_proportion = trading_proportion
-        self.upper_band_history: list[float] = []
-        self.lower_band_history: list[float] = []
+        # use indicator for band calculations
+        self.indicator = BollingerBandsIndicator(window_size, num_std_dev)
+        # expose same attributes as before for external code
+        self.upper_band_history: list[float] = self.indicator.upper_band_history
+        self.lower_band_history: list[float] = self.indicator.lower_band_history
 
     @override
     def give_data_point(self, stock_price: float):
         super().give_data_point(stock_price)
 
-        if len(self.seen_data_points) < self.window_size:
+        bands = self.indicator.update(self.seen_data_points)
+        if bands is None:
             # Not enough data to calculate Bollinger Bands
             self.balance_history.append(self.get_current_balance())
             self.shares_history.append(self.get_current_shares())
             return
 
-        window = self.seen_data_points[-self.window_size:]
-        mean = sum(window) / self.window_size
-        variance = sum((p - mean) ** 2 for p in window) / self.window_size
-        std_dev = variance ** 0.5
-
-        upper_band = mean + self.num_std_dev * std_dev
-        lower_band = mean - self.num_std_dev * std_dev
-        self.upper_band_history.append(upper_band)
-        self.lower_band_history.append(lower_band)
+        upper_band, lower_band = bands
 
         current_balance = self.get_current_balance()
         current_shares = self.get_current_shares()
