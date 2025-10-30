@@ -4,6 +4,7 @@ from algorithm_class import TradingAlgorithm
 from algorithm_factory import algorithm_create, AlgorithmTypes
 from data_parser import parse_csv
 from algorithms.true_optimal import get_optimal_worth_history
+from metrics import sharpe
 
 
 def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool = True):
@@ -69,7 +70,11 @@ for stock in testing_stocks:
         print(
             f"Balance: {start_balance} -> {algorithm.get_current_balance():.03f}\n"
             f"Shares:  {start_balance} -> {algorithm.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
-            f"TWorth:  {start_value} ({data[0]:.03f}) -> {algorithm.get_current_worth(data[-1]):.03f}\n")
+            f"TWorth:  {start_value} ({data[0]:.03f}) -> {algorithm.get_current_worth(data[-1]):.03f}\n"
+            f"Daily Sharpe Ratio: {sharpe(algorithm.worth_history)}\n")
+
+            # for length, history in simple_ma_long.ma_histories.items():
+        # print(algorithm.worth_history)
 
     algs = [
         (random_long, "RANDOM", "r--"),
