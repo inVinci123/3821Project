@@ -1,5 +1,4 @@
 def sharpe(history, risk_free_rate=0, yearly=True):
-    print("length of history =", len(history))
     # sharpe ratio = (portfolio_return - risk_free_return)/std_dev
     
     # get returns

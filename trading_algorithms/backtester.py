@@ -72,12 +72,10 @@ for stock in testing_stocks:
             f"Shares:  {start_balance} -> {algorithm.get_current_shares():.03f}   (at {data[-1]:.03f} each)\n"
             f"TWorth:  {start_value} ({data[0]:.03f}) -> {algorithm.get_current_worth(data[-1]):.03f}\n"
             f"Yearly Sharpe Ratio: {sharpe(algorithm.worth_history)}\n"
-            # f"CAGR: {cagr(algorithm.worth_history)}\n"
-            # f"Max Drawdown: {max_drawdown(algorithm.worth_history)}\n"
+            f"CAGR: {cagr(algorithm.worth_history)}\n"
+            f"Max Drawdown: {max_drawdown(algorithm.worth_history)}\n"
             f"Calmar Ratio: {calmar(algorithm.worth_history)}\n")
 
-            # for length, history in simple_ma_long.ma_histories.items():
-        # print(algorithm.worth_history)
 
     algs = [
         (random_long, "RANDOM", "r--"),
