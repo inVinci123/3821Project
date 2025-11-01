@@ -14,21 +14,21 @@ class BollingerBandsAlgorithm(TradingAlgorithm):
     def give_data_point(self, stock_price: float):
         super().give_data_point(stock_price)
 
-        if len(self.seen_data_points) < self.window_size:
-            # Not enough data to calculate Bollinger Bands
-            self.balance_history.append(self.get_current_balance())
-            self.shares_history.append(self.get_current_shares())
-            return
-
         window = self.seen_data_points[-self.window_size:]
-        mean = sum(window) / self.window_size
-        variance = sum((p - mean) ** 2 for p in window) / self.window_size
+        mean = sum(window) / len(window)
+        variance = sum((p - mean) ** 2 for p in window) / len(window)
         std_dev = variance ** 0.5
 
         upper_band = mean + self.num_std_dev * std_dev
         lower_band = mean - self.num_std_dev * std_dev
         self.upper_band_history.append(upper_band)
         self.lower_band_history.append(lower_band)
+
+        if len(self.seen_data_points) < self.window_size:
+            # Not enough data to make informed actioms with Bollinger bands
+            self.balance_history.append(self.get_current_balance())
+            self.shares_history.append(self.get_current_shares())
+            return
 
         current_balance = self.get_current_balance()
         current_shares = self.get_current_shares()
