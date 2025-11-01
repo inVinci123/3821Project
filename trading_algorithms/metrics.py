@@ -1,4 +1,5 @@
-def sharpe(history, risk_free_rate=0):
+def sharpe(history, risk_free_rate=0, yearly=True):
+    print("length of history =", len(history))
     # sharpe ratio = (portfolio_return - risk_free_return)/std_dev
     
     # get returns
@@ -18,6 +19,11 @@ def sharpe(history, risk_free_rate=0):
     
     std_dev = (squared_sum_difference / len(returns))**0.5
 
-    # return daily sharpe ratio
-    return (mean - risk_free_rate) / std_dev
+    if yearly:
+        # return daily sharpe ratio * sqrt(252) -> this annualises the sharpe_ratio
+        return ((mean - risk_free_rate) / std_dev) * 252**0.5
+    else:
+        # return daily sharpe ratio
+        return ((mean - risk_free_rate) / std_dev)
+
 
