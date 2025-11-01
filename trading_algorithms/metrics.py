@@ -20,10 +20,30 @@ def sharpe(history, risk_free_rate=0, yearly=True):
     std_dev = (squared_sum_difference / len(returns))**0.5
 
     if yearly:
-        # return daily sharpe ratio * sqrt(252) -> this annualises the sharpe_ratio
+        # return daily sharpe ratio * sqrt(252) -> this annualises the sharpe_ratio (assuming 252 trading days a year)
         return ((mean - risk_free_rate) / std_dev) * 252**0.5
     else:
         # return daily sharpe ratio
         return ((mean - risk_free_rate) / std_dev)
 
 
+def max_drawdown(history):
+    # highest loss between any two points
+    running_max = 0
+
+    maximum_drawdown = 0
+
+    for h in history:
+        running_max = max(h, running_max)
+        drawdown = abs((h - running_max) / running_max)
+        maximum_drawdown = max(maximum_drawdown, drawdown)
+    
+    return maximum_drawdown
+
+
+def cagr(history):
+    # returns framed as compound interest rate
+    return (history[-1]/history[0])**(252/len(history)) - 1
+
+def calmar(history):
+    return cagr(history) / abs(max_drawdown(history))
