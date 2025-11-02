@@ -17,6 +17,8 @@ def sharpe(history, risk_free_rate=0, yearly=True):
         squared_sum_difference += (r - mean)**2
     
     std_dev = (squared_sum_difference / len(returns))**0.5
+    if std_dev == 0:
+        return 0
 
     if yearly:
         # return daily sharpe ratio * sqrt(252) -> this annualises the sharpe_ratio (assuming 252 trading days a year)
