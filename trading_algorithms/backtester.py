@@ -4,7 +4,7 @@ from algorithm_class import TradingAlgorithm
 from algorithm_factory import algorithm_create, AlgorithmTypes
 from data_parser import parse_csv
 from algorithms.true_optimal import get_optimal_worth_history
-from metrics import sharpe, max_drawdown, calmar, cagr
+from metrics import sharpe, max_drawdown, calmar, cagr, average_trade
 from typing import cast
 from algorithms.simple_moving_average import SimpleMAAlgorithm
 from algorithms.expo_moving_average import ExponentialMAAlgorithm
@@ -83,7 +83,8 @@ for stock in testing_stocks:
             f"Yearly Sharpe Ratio: {sharpe(algorithm.worth_history)}\n"
             f"CAGR: {cagr(algorithm.worth_history)}\n"
             f"Max Drawdown: {max_drawdown(algorithm.worth_history)}\n"
-            f"Calmar Ratio: {calmar(algorithm.worth_history)}\n")
+            f"Calmar Ratio: {calmar(algorithm.worth_history)}\n"
+            f"Average Trade: {average_trade(algorithm.worth_history, algorithm.balance_history)}\n")
 
 
     algs = [
