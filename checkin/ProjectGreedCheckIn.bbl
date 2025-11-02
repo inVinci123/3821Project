@@ -1,0 +1,175 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{investosma}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Learn how to calculate a Simple Moving Average ({SMA}), its significance in stock analysis, and compare it with Exponential Moving Averages ({EMA}) for better trading insights.}
+      \field{langid}{english}
+      \field{shorttitle}{Simple Moving Average ({SMA}) Explained}
+      \field{title}{Simple Moving Average ({SMA}) Explained: Definition and Calculation Formula}
+      \field{titleaddon}{Investopedia}
+      \field{urlday}{20}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/anonymous_user/Zotero/storage/VTF76ET3/sma.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.investopedia.com/terms/s/sma.asp
+      \endverb
+      \verb{url}
+      \verb https://www.investopedia.com/terms/s/sma.asp
+      \endverb
+    \endentry
+    \entry{wikisma}{inreference}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In statistics, a moving average (rolling average or running average or moving mean or rolling mean) is a calculation to analyze data points by creating a series of averages of different selections of the full data set. Variations include: simple, cumulative, or weighted forms. Mathematically, a moving average is a type of convolution. Thus in signal processing it is viewed as a low-pass finite impulse response filter. Because the boxcar function outlines its filter coefficients, it is called a boxcar filter. It is sometimes followed by downsampling. Given a series of numbers and a fixed subset size, the first element of the moving average is obtained by taking the average of the initial fixed subset of the number series. Then the subset is modified by "shifting forward"; that is, excluding the first number of the series and including the next value in the series. A moving average is commonly used with time series data to smooth out short-term fluctuations and highlight longer-term trends or cycles - in this case the calculation is sometimes called a time average. The threshold between short-term and long-term depends on the application, and the parameters of the moving average will be set accordingly. It is also used in economics to examine gross domestic product, employment or other macroeconomic time series. When used with non-time series data, a moving average filters higher frequency components without any specific connection to time, although typically some kind of ordering is implied. Viewed simplistically it can be regarded as smoothing the data.}
+      \field{booktitle}{Wikipedia}
+      \field{day}{1}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{note}{Page Version {ID}: 1314422585}
+      \field{title}{Moving average}
+      \field{urlday}{20}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/anonymous_user/Zotero/storage/7BWDEGN5/index.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Moving_average&oldid=1314422585#Simple_moving_average
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Moving_average&oldid=1314422585#Simple_moving_average
+      \endverb
+    \endentry
+    \entry{investoema}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Discover how to calculate and apply the Exponential Moving Average ({EMA}) to enhance trading strategies with updated insights and formula explanations.}
+      \field{langid}{english}
+      \field{shorttitle}{Exponential Moving Average ({EMA})}
+      \field{title}{Exponential Moving Average ({EMA}): Definition, Formula, and Usage}
+      \field{titleaddon}{Investopedia}
+      \field{urlday}{21}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/anonymous_user/Zotero/storage/7TXD855U/ema.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.investopedia.com/terms/e/ema.asp
+      \endverb
+      \verb{url}
+      \verb https://www.investopedia.com/terms/e/ema.asp
+      \endverb
+    \endentry
+    \entry{investoboll}{online}{}{}
+      \name{author}{4}{}{%
+        {{hash=d34f80cf7b44dec810a4f2b9cf7956b4}{%
+           family={marketer},
+           familyi={m\bibinitperiod},
+           given={Suzanne\bibnamedelimb Kvilhaug\bibnamedelimb Full\bibnamedelimb Bio\bibnamedelimb Suzanne\bibnamedelimb is\bibnamedelimb a\bibnamedelima content},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim a\bibinitperiod\bibinitdelim c\bibinitperiod}}}%
+        {{hash=a82feee3cc1af8bcabda979e8775ef0f}{%
+           family={{writer}},
+           familyi={w\bibinitperiod}}}%
+        {{hash=6672b053ce2e70d1fdb2027e8e0ae1b1}{%
+           family={University},
+           familyi={U\bibinitperiod},
+           given={fact-checker\bibnamedelimb She\bibnamedelimb holds\bibnamedelimb a\bibnamedelimb Bachelor\bibnamedelimb of\bibnamedelimb Science\bibnamedelimb in\bibnamedelimb Finance\bibnamedelimb degree\bibnamedelimb from\bibnamedelimb Bridgewater\bibnamedelima State},
+           giveni={f\bibinithyphendelim c\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim h\bibinitperiod\bibinitdelim a\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=321da5fbf1d2c1e246fb7b3e762455f7}{%
+           given={helps\bibnamedelimb develop\bibnamedelimb content\bibnamedelimb strategies\bibnamedelimb Learn\bibnamedelimb about\bibnamedelimb our\bibnamedelima editorial},
+           giveni={h\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim c\bibinitperiod\bibinitdelim s\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim a\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim e\bibinitperiod},
+           prefix={policies\bibnamedelimb helps\bibnamedelimb develop\bibnamedelimb content\bibnamedelima strategies},
+           prefixi={p\bibinitperiod\bibinitdelim h\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim c\bibinitperiod\bibinitdelim s\bibinitperiod}}}%
+      }
+      \strng{namehash}{18739b2738ff2c69cb90d4ab012464e0}
+      \strng{fullhash}{49576185d84da5c54ec3a008d6d8cfaf}
+      \strng{fullhashraw}{49576185d84da5c54ec3a008d6d8cfaf}
+      \strng{bibnamehash}{18739b2738ff2c69cb90d4ab012464e0}
+      \strng{authorbibnamehash}{18739b2738ff2c69cb90d4ab012464e0}
+      \strng{authornamehash}{18739b2738ff2c69cb90d4ab012464e0}
+      \strng{authorfullhash}{49576185d84da5c54ec3a008d6d8cfaf}
+      \strng{authorfullhashraw}{49576185d84da5c54ec3a008d6d8cfaf}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Bollinger Bands aid investors by indicating market volatility using standard deviations around a 20-day moving average, helping identify overbought and oversold signals.}
+      \field{langid}{english}
+      \field{shorttitle}{Understanding Bollinger Bands}
+      \field{title}{Understanding Bollinger Bands: A Key Technical Analysis Tool for Investors}
+      \field{titleaddon}{Investopedia}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.investopedia.com/terms/b/bollingerbands.asp
+      \endverb
+      \verb{url}
+      \verb https://www.investopedia.com/terms/b/bollingerbands.asp
+      \endverb
+    \endentry
+    \entry{ppohf}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=500806bdd4e47f0aa0a87ac15a8b866c}{%
+           family={{Adilbai}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \strng{fullhash}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \strng{fullhashraw}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \strng{bibnamehash}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \strng{authorbibnamehash}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \strng{authornamehash}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \strng{authorfullhash}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \strng{authorfullhashraw}{500806bdd4e47f0aa0a87ac15a8b866c}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Stock Trading {RL} Agent using {PPO}}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://huggingface.co/Adilbai/stock-trading-rl-20250704-171446
+      \endverb
+      \verb{url}
+      \verb https://huggingface.co/Adilbai/stock-trading-rl-20250704-171446
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
