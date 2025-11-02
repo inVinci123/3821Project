@@ -45,7 +45,8 @@ def cagr(history):
     return (history[-1]/history[0])**(252/len(history)) - 1
 
 def calmar(history):
-    return cagr(history) / abs(max_drawdown(history))
+    maximum_drawdown = max(1, abs(max_drawdown(history)))
+    return cagr(history) / maximum_drawdown
 
 def average_trade(worth_history, balance_history):
     prev = balance_history[0]
