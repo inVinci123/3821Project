@@ -107,10 +107,10 @@ for stock in testing_stocks:
     # Compute indicator histories directly from the raw data instead of
     # relying on algorithm instances. This makes the plotted indicators
     # independent and reproducible from the source data.
-    sma_indicator = SimpleMovingAverageIndicator(21)
+    sma_indicator = SimpleMovingAverageIndicator(20)
     # create Bollinger indicators that match the algorithms created above
-    bb1_indicator = BollingerBandsIndicator(window_size=20, num_std_dev=1.0)
-    bb2_indicator = BollingerBandsIndicator(window_size=20, num_std_dev=2.0)
+    bb1_indicator = BollingerBandsIndicator(window_size=10, num_std_dev=1.0)
+    bb2_indicator = BollingerBandsIndicator(window_size=10, num_std_dev=2.0)
 
     indicators = [
         sma_indicator,
@@ -126,7 +126,7 @@ for stock in testing_stocks:
         bb2_indicator.update(seen_so_far)
 
     history: list[float] = sma_indicator.history
-    stockAxes.plot(history, label=f"SMA ({21})")
+    stockAxes.plot(history, label=f"SMA ({sma_indicator.length})")
 
     stockAxes.plot(bb1_indicator.upper_band_history, label="Bollinger Upper (1 STD)")
     stockAxes.plot(bb1_indicator.lower_band_history, label="Bollinger Lower (1 STD)")

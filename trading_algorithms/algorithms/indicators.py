@@ -23,17 +23,11 @@ class SimpleMovingAverageIndicator(Indicator):
     def update(self, seen_data_points: List[float]):
         if not seen_data_points:
             return
-        latest = seen_data_points[-1]
-        length = self.length
-        history = self.history
-        if len(history) <= length:
-            considered_history = seen_data_points[-length:]
-            considered_length = len(considered_history)
-            history.append(sum(considered_history) / considered_length)
-        else:
-            # incremental update formula
-            new_sma = history[-1] + (latest - seen_data_points[-1 - length]) / length
-            history.append(new_sma)
+        
+        used_length = min(len(seen_data_points), self.length)
+        window = seen_data_points[-used_length:]
+        sma = sum(window) / len(window)
+        self.history.append(sma)
 
 
 class ExponentialMovingAverageIndicator(Indicator):
