@@ -36,5 +36,6 @@ plt.grid(True)
 
 import matplot2tikz
 print(matplot2tikz.get_tikz_code())
-plt.show()
+# plt.show()
+plt.savefig("images/" + stockname + ".png")
 
