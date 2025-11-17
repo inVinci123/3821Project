@@ -9,7 +9,8 @@ from algorithms.true_optimal import get_optimal_worth_history
 from algorithms.simple_moving_average import SimpleMAAlgorithm
 from algorithms.expo_moving_average import ExponentialMAAlgorithm
 from algorithms.bollinger import BollingerBandsAlgorithm
-from ml_grab import ppo_ml_algorithm
+from algorithms.rsi import RSIAlgorithm
+# from ml_grab import ppo_ml_algorithm
 
 
 def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool = True):
@@ -49,13 +50,25 @@ for stock in testing_stocks:
     true_optimal = get_optimal_worth_history(data, start_balance, start_shares)
     start_value = round(start_balance + start_shares * data[0], 3)
 
-    fig, stockAxes = plt.subplots()
-    plt.title(stock)
-    plt.xlabel("Days since start")
+    # Create a 2-row subplot: stock/worth on top, RSI below (shared x-axis)
+    fig, (stockAxes, rsiAxes) = plt.subplots(
+        2,
+        1,
+        sharex=True,
+        gridspec_kw={"height_ratios": [3, 1]},
+        figsize=(10, 6),
+    )
+    plt.suptitle(stock)
+    # Top plot: stock price
     stockAxes.set_ylabel("Stock Value")
     stockAxes.plot(data, 'k-+')
     stockAxes.set_xlim(0, len(data) - 1)
-
+    # Bottom plot: RSI (0-100)
+    rsiAxes.set_xlabel("Days since start")
+    rsiAxes.set_ylabel("RSI")
+    rsiAxes.set_ylim(0, 100)
+    rsiAxes.set_xlim(0, len(data) - 1)
+    
     print(f"\n=== {stock} ===")
 
     random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares, [0.3, (0.4, 0.4)])
@@ -64,10 +77,10 @@ for stock in testing_stocks:
     expo_ma_long2 = algorithm_create(AlgorithmTypes.EXPONENTIAL_MA, start_balance, start_shares, [1.0, (10, 20, 50)])
     bb_1std = BollingerBandsAlgorithm(start_balance, start_shares, num_std_dev=1.0)
     bb_2std = BollingerBandsAlgorithm(start_balance, start_shares, num_std_dev=2.0)
+    rsi_default = RSIAlgorithm(start_balance, start_shares)
 
     algoAxes = stockAxes.twinx()
     algoAxes.set_ylabel("Worth history")
-
 
     def run_backtest(algorithm, name):
         print(name)
@@ -86,11 +99,12 @@ for stock in testing_stocks:
 
     algs = [
         (random_long, "RANDOM", "r"),
-        (simple_ma_long, "SIMPLE MA (5, 21)", "y"),
-        (expo_ma_long, "EXPO MA (5, 21)", "b"),
-        (expo_ma_long2, "EXPO MA (10, 20, 50)", "m"),
-        (bb_1std, "BOLLINGER 1STD", "g"),
-        (bb_2std, "BOLLINGER 2STD", "c"),
+        # (simple_ma_long, "SIMPLE MA (5, 21)", "y"),
+        # (expo_ma_long, "EXPO MA (5, 21)", "b"),
+        # (expo_ma_long2, "EXPO MA (10, 20, 50)", "m"),
+        # (bb_1std, "BOLLINGER 1STD", "g"),
+        # (bb_2std, "BOLLINGER 2STD", "c"),
+        (rsi_default, "RSI", "purple")
     ]
 
     for alg in algs:
@@ -99,37 +113,55 @@ for stock in testing_stocks:
         final_data = alg[0].get_worth_history() + [final_point]
         algoAxes.plot(final_data, color=alg[2], linestyle="--", label=alg[1])
 
+    # Plot RSI history if the RSI algorithm was created and has history
+    try:
+        if rsi_default and hasattr(rsi_default, "rsi_history") and len(rsi_default.rsi_history) > 0:
+            # rsi_history should have one entry per data point (or approximate). Plot it on the lower axes.
+            rsi_line = rsi_default.rsi_history
+            # If lengths differ, matplotlib will plot up to the length of the shorter sequence.
+            rsiAxes.plot(rsi_line, color="purple", label="RSI")
+            # Draw common RSI threshold lines
+            rsiAxes.axhline(rsi_default.overbought, color="red", linestyle="--", linewidth=0.7, label="Overbought (70)")
+            rsiAxes.axhline(rsi_default.oversold, color="green", linestyle="--", linewidth=0.7, label="Oversold (30)")
+            rsiAxes.legend(loc="best")
+    except NameError:
+        # rsi_default not present; skip plotting RSI
+        pass
+
     # PPO ML Attempt
-    ppo_data, ppo_long = ppo_ml_algorithm(stock.upper(), start_balance, time_period="10y", interval="1d", model="final_model", plot_graphs=False)
+    # ppo_data, ppo_long = ppo_ml_algorithm(stock.upper(), start_balance, time_period="10y", interval="1d", model="final_model", plot_graphs=False)
 
-    data_len_discrepancy = len(data) - len(ppo_data)
-    ppo_plot_data = [start_balance] * data_len_discrepancy + ppo_data
+    # data_len_discrepancy = len(data) - len(ppo_data)
+    # ppo_plot_data = [start_balance] * data_len_discrepancy + ppo_data
 
-    algoAxes.plot(ppo_plot_data, color="orange", linestyle="--", label="PPO ML")
-    print(
-        f"PPO-ML\n"
-        f"Balance: {ppo_long.initial_balance} -> {ppo_long.balance:.03f}\n"
-        f"Shares:  0 -> {ppo_long.shares_held:.03f}   (at {data[-1]:.03f} each)\n"
-        f"TWorth:  {ppo_long.initial_balance} ({data[0]:.03f}) -> {ppo_long.net_worth:.03f}\n"
-        f"Yearly Sharpe Ratio: {sharpe(ppo_data)}\n"
-        f"CAGR: {cagr(ppo_data)}\n"
-        f"Max Drawdown: {max_drawdown(ppo_data)}\n"
-        f"Calmar Ratio: {calmar(ppo_data)}\n")
+    # algoAxes.plot(ppo_plot_data, color="orange", linestyle="--", label="PPO ML")
+    # print(
+    #     f"PPO-ML\n"
+    #     f"Balance: {ppo_long.initial_balance} -> {ppo_long.balance:.03f}\n"
+    #     f"Shares:  0 -> {ppo_long.shares_held:.03f}   (at {data[-1]:.03f} each)\n"
+    #     f"TWorth:  {ppo_long.initial_balance} ({data[0]:.03f}) -> {ppo_long.net_worth:.03f}\n"
+    #     f"Yearly Sharpe Ratio: {sharpe(ppo_data)}\n"
+    #     f"CAGR: {cagr(ppo_data)}\n"
+    #     f"Max Drawdown: {max_drawdown(ppo_data)}\n"
+    #     f"Calmar Ratio: {calmar(ppo_data)}\n")
 
 
     # ---------------------- PLOTTING INDICATORS ----------------------
 
     stockAxes_legend = ["Stock Value"]
-    for length, history in cast(SimpleMAAlgorithm, simple_ma_long).ma_histories.items():
-        stockAxes.plot(history, label=f"SMA ({length})")
-    for length, history in cast(ExponentialMAAlgorithm, expo_ma_long).ma_histories.items():
-        stockAxes.plot(history, label=f"EMA ({length})")
-    for length, history in cast(ExponentialMAAlgorithm, expo_ma_long2).ma_histories.items():
-        stockAxes.plot(history, label=f"EMA ({length})")
+    # for length, history in cast(SimpleMAAlgorithm, simple_ma_long).ma_histories.items():
+    #     stockAxes.plot(history, label=f"SMA ({length})")
+    # for length, history in cast(ExponentialMAAlgorithm, expo_ma_long).ma_histories.items():
+    #     stockAxes.plot(history, label=f"EMA ({length})")
+    # for length, history in cast(ExponentialMAAlgorithm, expo_ma_long2).ma_histories.items():
+    #     stockAxes.plot(history, label=f"EMA ({length})")
     
-    stockAxes.plot(bb_1std.upper_band_history, label="Bollinger Upper (1 STD)")
-    stockAxes.plot(bb_1std.lower_band_history, label="Bollinger Lower (1 STD)")
+    # stockAxes.plot(bb_1std.upper_band_history, label="Bollinger Upper (1 STD)")
+    # stockAxes.plot(bb_1std.lower_band_history, label="Bollinger Lower (1 STD)")
+    # stockAxes.plot(rsi_default.rsi_history, label="RSI history")
 
+    # rsiAxes.plot(rsi_default.rsi_history, label = "RSI")
+    
 
     algoAxes.legend(loc="lower left")
     stockAxes.legend(loc="best")
