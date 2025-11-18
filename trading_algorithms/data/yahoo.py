@@ -6,13 +6,13 @@ stuffs = [
     "WES.AX", "MQG.AX", "XYZ.AX", "GMG.AX", "RMD.AX", "FMG.AX", "TLS.AX",
     "RIO.AX", "TCL.AX", "WDS.AX", "ALL.AX", "NST.AX", "SIG.AX", "BXB.AX",
     "QBE.AX", "WOW.AX", "PME.AX", "COL.AX", "REA.AX", "WTC.AX", "AMC.AX",
-    "NWS.AX", "XRO.AX", "ENV.AX", "VAS.AX", "SUN.AX", "STO.AX", "SCG.AX",
-    "COH.AX", "QAN.AX", "ASX.AX"
+    "NWS.AX", "XRO.AX", "VAS.AX", "SUN.AX", "STO.AX", "SCG.AX", "COH.AX",
+    "QAN.AX", "ASX.AX"
 ]
 
 for stock in stuffs:
     ticker = yfinance.Ticker(stock)
-    historical_data = ticker.history(period="10y")
+    historical_data = ticker.history(period="5y")
     data = historical_data.to_csv(date_format="%d/%m/%Y")
 
     # imagine having the data in DataFrame form, then just doing
