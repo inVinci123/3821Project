@@ -77,7 +77,7 @@ for stock in testing_stocks:
     expo_ma_long2 = algorithm_create(AlgorithmTypes.EXPONENTIAL_MA, start_balance, start_shares, [1.0, (10, 20, 50)])
     bb_1std = BollingerBandsAlgorithm(start_balance, start_shares, num_std_dev=1.0)
     bb_2std = BollingerBandsAlgorithm(start_balance, start_shares, num_std_dev=2.0)
-    rsi_default = RSIAlgorithm(start_balance, start_shares)
+    rsiAlgo = RSIAlgorithm(start_balance, start_shares, window_size=50)
 
     algoAxes = stockAxes.twinx()
     algoAxes.set_ylabel("Worth history")
@@ -97,14 +97,14 @@ for stock in testing_stocks:
             f"Average Trade: {average_trade(algorithm.worth_history, algorithm.balance_history)}\n")
 
 
-    algs = [
+    algs: list[tuple[TradingAlgorithm, str, str]] = [
         (random_long, "RANDOM", "r"),
         # (simple_ma_long, "SIMPLE MA (5, 21)", "y"),
         # (expo_ma_long, "EXPO MA (5, 21)", "b"),
         # (expo_ma_long2, "EXPO MA (10, 20, 50)", "m"),
         # (bb_1std, "BOLLINGER 1STD", "g"),
         # (bb_2std, "BOLLINGER 2STD", "c"),
-        (rsi_default, "RSI", "purple")
+        (rsiAlgo, "RSI", "purple")
     ]
 
     for alg in algs:
@@ -112,21 +112,6 @@ for stock in testing_stocks:
         final_point = alg[0].get_current_worth(data[-1])
         final_data = alg[0].get_worth_history() + [final_point]
         algoAxes.plot(final_data, color=alg[2], linestyle="--", label=alg[1])
-
-    # Plot RSI history if the RSI algorithm was created and has history
-    try:
-        if rsi_default and hasattr(rsi_default, "rsi_history") and len(rsi_default.rsi_history) > 0:
-            # rsi_history should have one entry per data point (or approximate). Plot it on the lower axes.
-            rsi_line = rsi_default.rsi_history
-            # If lengths differ, matplotlib will plot up to the length of the shorter sequence.
-            rsiAxes.plot(rsi_line, color="purple", label="RSI")
-            # Draw common RSI threshold lines
-            rsiAxes.axhline(rsi_default.overbought, color="red", linestyle="--", linewidth=0.7, label="Overbought (70)")
-            rsiAxes.axhline(rsi_default.oversold, color="green", linestyle="--", linewidth=0.7, label="Oversold (30)")
-            rsiAxes.legend(loc="best")
-    except NameError:
-        # rsi_default not present; skip plotting RSI
-        pass
 
     # PPO ML Attempt
     # ppo_data, ppo_long = ppo_ml_algorithm(stock.upper(), start_balance, time_period="10y", interval="1d", model="final_model", plot_graphs=False)
@@ -158,9 +143,22 @@ for stock in testing_stocks:
     
     # stockAxes.plot(bb_1std.upper_band_history, label="Bollinger Upper (1 STD)")
     # stockAxes.plot(bb_1std.lower_band_history, label="Bollinger Lower (1 STD)")
-    # stockAxes.plot(rsi_default.rsi_history, label="RSI history")
 
-    # rsiAxes.plot(rsi_default.rsi_history, label = "RSI")
+    # Plot RSI history if the RSI algorithm was created and has history
+    try:
+        if rsiAlgo and hasattr(rsiAlgo, "rsi_history") and len(rsiAlgo.rsi_history) > 0:
+            # rsi_history should have one entry per data point (or approximate). Plot it on the lower axes.
+            rsi_line = rsiAlgo.rsi_history
+            # If lengths differ, matplotlib will plot up to the length of the shorter sequence.
+            rsiAxes.plot(rsi_line, color="purple", label="RSI")
+            # Draw common RSI threshold lines
+            rsiAxes.axhline(rsiAlgo.overbought, color="red", linestyle="--", linewidth=0.7, label="Overbought")
+            rsiAxes.axhline(rsiAlgo.oversold, color="green", linestyle="--", linewidth=0.7, label="Oversold")
+            rsiAxes.legend(loc="lower right")
+    except NameError:
+        # rsiAlgo not present; skip plotting RSI
+        pass
+
     
 
     algoAxes.legend(loc="lower left")
