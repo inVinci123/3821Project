@@ -8,6 +8,7 @@ from algorithms.best_after_n import BestAfterNAlgorithm
 from algorithms.expo_moving_average import ExponentialMAAlgorithm
 from algorithms.simple_moving_average import SimpleMAAlgorithm
 from algorithms.bollinger import BollingerBandsAlgorithm
+from algorithms.rsi import RSIAlgorithm
 
 
 class AlgorithmTypes(Enum):
@@ -17,6 +18,7 @@ class AlgorithmTypes(Enum):
     EXPONENTIAL_MA = 3
     SIMPLE_MA = 4
     BBANDS = 5
+    RSI = 6
     OTHER = 99
 
 
@@ -34,6 +36,8 @@ def algorithm_create(choice: AlgorithmTypes, starting_balance: float = 0, starti
             return SimpleMAAlgorithm(starting_balance, starting_shares, *meta_arguments)
         case AlgorithmTypes.BBANDS:
             return BollingerBandsAlgorithm(starting_balance, starting_shares, *meta_arguments)
+        case AlgorithmTypes.RSI:
+            return RSIAlgorithm(starting_balance, starting_shares, *meta_arguments)
         case _:
             raise KeyError("Not yet implemented")
 
