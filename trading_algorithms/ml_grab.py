@@ -4,7 +4,7 @@ from dataprocessor import StockDataProcessor
 
 
 def ppo_ml_algorithm(ticker: str, starting_balance: float,
-                     time_period: str = "1y", interval: str = "1d", model: str = "final_model", plot_graphs: bool = False):
+                     time_period: str = "5y", interval: str = "1d", model: str = "final_model", plot_graphs: bool = False):
     # Load local model
     # print("Loading model")
     model = PPO.load("models/" + model + ".zip")
