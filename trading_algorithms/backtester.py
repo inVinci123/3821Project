@@ -10,7 +10,7 @@ from algorithms.simple_moving_average import SimpleMAAlgorithm
 from algorithms.expo_moving_average import ExponentialMAAlgorithm
 from algorithms.bollinger import BollingerBandsAlgorithm
 from algorithms.rsi import RSIAlgorithm
-from ml_grab import ppo_ml_algorithm
+from ppo_ml_files.ml_grab import ppo_ml_algorithm
 
 
 def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool = True):
@@ -27,18 +27,19 @@ def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool
                 f"Total worth: {algorithm.get_current_worth(datum):.03f}")
 
 
-test_ml = True
-plot_out = False
+test_ml = False
+plot_out = True
 
 
 bullish_stocks = ["AAPL","ALL.AX","AMZN","ANZ.AX","BTC-USD","BXB.AX","CBA.AX","COH.AX","COL.AX","FMG.AX","GMG.AX","GOOGL","MQG.AX","MSFT","NAB.AX","NEM.AX","NST.AX","NVDA","NWS.AX","PME.AX","QAN.AX","QBE.AX","REA.AX","RIO.AX","RMD.AX","SCG.AX","SIG.AX","STO.AX","SUN.AX","TCL.AX","TLS.AX","VAS.AX","WBC.AX","WES.AX","WTC.AX","XRO.AX","XYZ.AX"]
 
 sideways_stocks = ["AMC.AX", "ASX.AX", "BHP.AX", "CSL.AX", "WDS.AX", "WOW.AX"]
 
-testing_stocks = bullish_stocks
+testing_stocks = sideways_stocks
 
 for stock in testing_stocks:
     data = parse_csv(stock.lower() + ".csv")
+    # data = data[::-1]  # Haha bearish go brrr
     # data = data * 10
     start_balance = 1000
     start_shares = 0
@@ -129,23 +130,23 @@ for stock in testing_stocks:
 
     if test_ml:
         # PPO ML Attempt
-        ppo_data, ppo_long = ppo_ml_algorithm(stock.upper(), start_balance, time_period="10y", interval="1d", model="final_model", plot_graphs=False)
+        ppo_data, ppo_long = ppo_ml_algorithm(stock.upper(), start_balance, time_period="5y", interval="1d", model="final_model", plot_graphs=False)
 
         data_len_discrepancy = len(data) - len(ppo_data)
         ppo_plot_data = [start_balance] * data_len_discrepancy + ppo_data
         algo_axes.plot(ppo_plot_data, color="cyan", linestyle="--", label="PPO ML")
 
-        ppo_bal_history = [p['balance'] for p in ppo_long.portfolio_history]
+        # algo_axes.plot(ppo_data)
         print(
             f"# PPO-ML\n"
             f"Balance: {ppo_long.initial_balance} -> {ppo_long.balance:.03f}\n"
             f"Shares:  0 -> {ppo_long.shares_held:.03f}   (at {data[-1]:.03f} each)\n"
-            f"TWorth:  {ppo_long.initial_balance} ({data[0]:.03f}) -> {ppo_long.net_worth:.03f}\n"
+            f"TWorth:  {ppo_long.initial_balance} ({data[0]:.03f}) -> {ppo_data[-1]:.03f}\n"
             f"Yearly Sharpe Ratio: {sharpe(ppo_data)}\n"
             f"CAGR: {cagr(ppo_data)}\n"
             f"Max Drawdown: {max_drawdown(ppo_data)}\n"
-            f"Calmar Ratio: {calmar(ppo_data)}\n"
-            f"Average Trade: {average_trade(ppo_data, ppo_bal_history)}\n")
+            f"Calmar Ratio: {calmar(ppo_data)}\n")
+            # f"Average Trade: {average_trade(ppo_data, ppo_bal_history)}\n")
 
 
     # Finishing plotting
@@ -155,6 +156,6 @@ for stock in testing_stocks:
     if plot_out:
         plt.tight_layout()
         first_worth = start_balance + data[0] * start_shares
-        mpl.align.yaxes(stock_axes, data[0], algo_axes, first_worth, 0.3)
+        mpl.align.yaxes(stock_axes, data[0], algo_axes, first_worth, 0.5)
         plt.show()
 

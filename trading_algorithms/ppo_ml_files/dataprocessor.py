@@ -369,6 +369,8 @@ class StockDataProcessor:
         # Download data
         # logger.info(f"Downloading data for {len(tickers)} tickers...")
         raw_data = self.download_multiple_stocks(tickers, period, interval)
+
+        raw_data['Date'] = raw_data['Date'].values[::-1]
         
         if raw_data.empty:
             # logger.error("No data downloaded. Exiting.")
