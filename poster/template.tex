@@ -1,0 +1,167 @@
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+\usepackage{tangocolors}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\mode<presentation>
+{
+  % \usetheme{Berlin}
+  \usetheme{Algo}
+}
+\usepackage{amsmath, amsthm, amssymb, latexsym}
+\boldmath
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[orientation=portrait,size=a1,scale=1.4]{beamerposter}
+\geometry{lmargin=0.5cm,rmargin=0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\graphicspath{{assets/}}
+
+% Empirically assessing the performance of algorithmic trading strategies
+\title{Evaluating Algorithmic Trading strategies}
+\author{Brian Liu (z5592091) \and Tamiz Rumey Jiffrey (z5592097) \\
+        Kirk Murillo (z5592102) \and Vedang Purohit (z5592103)}
+\institute{Mentor: Deniz Dilsiz\\Group: 10}
+% \date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}{}
+  \vfill
+    
+  \begin{multicols}{2}
+  \begin{mybox}{Introduction and Context}
+    % Project context, literature review
+    % \textit{MARKING RUBRIC FOR SUMMARY: Clear summary reflecting the content of the project. It is put in context with own contributions clearly identified. Clear communication of importance and motivation for the project.}
+        
+    The stock market is one of the most complex systems studied in the modern world.
+    Now more than ever, \textbf{algorithms} control the major movements of the stock market, from ultra high-frequency trading strategies to determining the best long term positions to hold over months or years.
+
+    \vspace{1ex}
+    In this experimental project, we wanted to take a look for ourselves at how some basic trading algorithms that use different heuristics perform on real-world historical data.
+
+    % - we tested 8 algorithms: 3 control, 4 research based, 1 based on a ML model.
+    % - we used various financial (risk adjusted and absolute) metrics and running time estimations to measure and compare the performance of these algorithms.
+    \end{mybox}
+
+
+
+    \begin{mygreenbox}{Summary of our contributions}
+    We built a \textbf{backtesting framework} in Python to test our trading algorithms on historical data. We used the \texttt{yfinance} Python API to gather interday data over 5 years.
+
+    We then conducted research and concretely implemented the actual trading algorithms (see pink section for more detail).
+
+    \vspace{-1ex}
+    \begin{figure}[tbh]
+      \begin{minipage}{0.7\textwidth}
+         Our code repository can be found here:
+      \end{minipage}
+      \begin{minipage}[t]{0.2\textwidth}
+        \includegraphics[width=3cm,valign=c]{assets/qrgithubhelpme.png}
+      \end{minipage}\hfill
+    \end{figure}
+
+    Our backtesting script runs the algorithms on \textbf{38 selected stocks}, recording their final net worth and various metric performances, as well as showing the net value over each data point.
+
+    % \url{https://github.com/inVinci123/3821Project/tree/main/trading_algorithms/algorithms}
+
+    % \begin{itemize}
+    %   \item we took data over 10 years to \textbf{backtest} our algorithms on 38 stocks of varying types.
+    %   \item we tested 8 algorithms: 3 control, 4 research based, 1 based on a ML model.
+
+    %   \item we used various financial (risk adjusted and absolute) metrics and running time estimations   to measure and compare the performance of these algorithms.
+    %     \end{itemize}
+    \end{mygreenbox}
+    
+    \columnbreak
+
+    \begin{myorangebox}{Literature Review}
+        A recent paper by Treleavan, Galas and Lachland, ``Algorithmic Trading Review''\footnotemark[1] provided us with concise AT research, clearly defining key concepts such as execution algorithms, market microstructure and latency. Building on this, we explored specific trading strategies and referenced Investopedia and other reputable online resources. 
+    \end{myorangebox}
+
+    \begin{mypinkbox}{Algorithms Tested}
+      Our research led us to three different strategies that are used in the real world\footnotemark[2]:
+      \begin{itemize}
+        \item Mean Reversion, using Bollinger bands.
+        \item Trend following, using exponential and simple moving averages.
+        \item Momentum following, using RSI (Relative Strength Index).
+      \end{itemize}
+      % Control algorithms: briefly mention
+
+      To compare against these algorithms, we built a handful of very basic ``control'' algorithms.
+      This includes an algorithm that randomly decides to buy or sell at every step, and a greedy algorithm that only looked at the last price movement.
+
+      We also looked into a pre-trained \textbf{machine-learning} model using Proximal Policy Optimisation (PPO)\footnotemark[3], but unfortunately we had a few last-minute roadblocks getting this to work.
+    \end{mypinkbox}
+
+    
+
+
+    % \begin{mybox}{Literature review}
+    %   Briefly discuss our background and literature review.
+    % \end{mybox}
+
+
+    
+
+  \end{multicols}
+
+  \begin{mytealbox}{Graphs \& Results}
+    % Oh boy. Figures, figures, figures.
+    \begin{center}
+    \begin{tabular}{c  c  c}
+    \normal \textbf{Bullish} & \textbf{Sideways} & \textbf{Bearish}\\
+    % \begin{center}
+      \begin{minipage}[t]{0.29\textwidth}
+        \includegraphics[width=16cm]{assets/amzn.png}
+        Sample performances of all algorithms on a bullish market (AMZN)
+      \end{minipage}
+    % \end{center}
+    &
+    % \begin{center}
+    \begin{minipage}[t]{0.29\textwidth}
+      \includegraphics[width=16cm]{assets/csl.png}
+        Sample performances of all algorithms on a sideways market (CSL.AX)
+    \end{minipage}
+    % \end{center}
+    &
+    % \begin{center}
+    \begin{minipage}[t]{0.29\textwidth}
+      \includegraphics[width=16cm]{assets/bxbr.png}
+      Sample performances of all algorithms on a bearish market (BXB.AX reversed)
+    \end{minipage}
+    \vspace{1ex}
+    % \end{center}
+    \\
+    \begin{minipage}[t]{0.3\textwidth}
+      \includegraphics[width=16cm]{assets/bullishperfsnoavg.png}
+      Moving average algorithms effective
+    \end{minipage}
+    &
+    \begin{minipage}[t]{0.3\textwidth}
+      \includegraphics[width=16cm]{assets/sidewaysperfsnoavg.png}
+      Mean reversal algorithms effective
+    \end{minipage}
+    &
+    \begin{minipage}[t]{0.29\textwidth}
+      \includegraphics[width=16cm]{assets/bearishnoavg.png}
+      All algorithms struggle in falling markets
+    \end{minipage}
+    \vspace{1ex}
+    \end{tabular}
+    \end{center}
+  \end{mytealbox}
+
+  \begin{myredbox}{Discussion \& Analysis}
+  As can be seen from the results, the performance of the tested algorithms are heavily based on the type of stock being tested against.
+  Furthermore, they fail to significantly outdo the control algorithms, indicating that increases are due to a increase in market value in general, and not due to intelligent decisions on the algorithm's part.
+  A notable exception are the mean reversion based algorithms, which seem to hold their own even in sideways markets.
+  This could be related to these algorithms' time complexity of $O(m)$ for window size $m$, whereas the other algorithms tested were constant time, suggesting a time vs quality trade-off. 
+  % [X] when they do well, the market as a whole is going up
+  % - Bollinger (mean reversion) does noticeably better in sideways markets
+  % - PPO blew this out of the park, perhaps mention that you're trading time for quality
+  % - somehow tie in time complexity
+  \end{myredbox}
+
+\end{frame}
+\end{document}

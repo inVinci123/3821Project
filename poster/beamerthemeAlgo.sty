@@ -1,0 +1,187 @@
+\ProvidesPackage{beamerthemeAlgo}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[no-math]{fontspec}
+%\setmainfont[Mapping=tex-text-ms]{fonts/Clancy/Clancy-Regular.otf}
+\providefontfamily\clancyfont{Clancy}[
+  Extension = .otf ,
+  Path = ./fonts/Clancy/ ,
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  ItalicFont = *-Light
+]
+\providefontfamily\robotofont{Roboto}[
+  Extension = .ttf ,
+  Path = ./fonts/Roboto/ ,
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  ItalicFont = *-Italic
+]
+\providefontfamily\robotomonofont{RobotoMono}[
+  Extension = .ttf ,
+  Path = ./fonts/Roboto_Mono/ ,
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  ItalicFont = *-Italic
+]
+\setmainfont{Roboto}[
+  Extension = .ttf ,
+  Path = ./fonts/Roboto/ ,
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  ItalicFont = *-Italic
+]
+\setsansfont{Roboto}[
+  Extension = .ttf ,
+  Path = ./fonts/Roboto/ ,
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  ItalicFont = *-Italic
+]
+\setmonofont{RobotoMono}[
+  Extension = .ttf ,
+  Path = ./fonts/Roboto_Mono/ ,
+  UprightFont = *-Regular ,
+  BoldFont = *-Bold ,
+  ItalicFont = *-Italic
+]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{unsw@yellow}{RGB}{255, 220, 0}  % #ffe600
+\definecolor{unsw@black}{RGB}{0, 0, 0}       % #000000ff
+\definecolor{unsw@white}{RGB}{255, 255, 255} % #ffffffff
+\definecolor{unsw@indigo}{RGB}{63, 97, 196}  % #3f61c4ff
+\definecolor{unsw@red}{RGB}{255, 99, 93}     % #ff635dff
+\definecolor{unsw@green}{RGB}{26, 201, 135}  % #1ac987ff
+\definecolor{unsw@pink}{RGB}{250, 145, 182}  % #fa91b6ff
+\definecolor{unsw@blue}{RGB}{45, 170, 226}   % #2daae2ff
+%\definecolor{unsw@darkblue}{RGB}{25, 150, 206}
+\definecolor{unsw@teal}{RGB}{0, 120, 130}    % #007882ff
+\definecolor{unsw@purple}{RGB}{138, 104, 200}% #8a68c8ff
+\definecolor{unsw@orange}{RGB}{255, 130, 0}  % #ff8200ff
+
+\setbeamercolor{headline}{fg=unsw@black, bg=unsw@yellow}
+\setbeamercolor{title in headline}{fg=unsw@black}
+\setbeamercolor{author in headline}{fg=unsw@black}
+\setbeamercolor{institute in headline}{fg=unsw@black}
+
+\setbeamercolor*{normal text}{fg=unsw@black, bg=unsw@white}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamercolor{item}{fg=unsw@black}
+\setbeamerfont{alerted text}{family=\robotomonofont}
+\setbeamercolor{alerted text}{fg=unsw@black}
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[most]{tcolorbox}
+\tcbset{
+  colback=unsw@yellow!20,
+  colframe=unsw@yellow,
+  fonttitle=\bfseries,
+  coltitle=unsw@white,
+  boxrule=1pt,
+  arc=6pt,
+  auto outer arc,
+  boxsep=1ex,
+  left=10pt,
+  right=10pt,
+  top=10pt,
+  bottom=10pt,
+  beforeafter skip=1ex
+}
+
+% primary color box
+\newtcolorbox{mybox}[1]{title=#1,coltitle=unsw@black}
+% secondary accent box
+\newtcolorbox{myindigobox}[1]{title=#1,colback=unsw@indigo!20,colframe=unsw@indigo}
+\newtcolorbox{myredbox}[1]{title=#1,colback=unsw@red!20,colframe=unsw@red,coltitle=unsw@black}
+\newtcolorbox{mygreenbox}[1]{title=#1,colback=unsw@green!20,colframe=unsw@green,coltitle=unsw@black}
+\newtcolorbox{mypinkbox}[1]{title=#1,colback=unsw@pink!20,colframe=unsw@pink,coltitle=unsw@black}
+% tertiary accent box
+\newtcolorbox{mytealbox}[1]{title=#1,colback=unsw@teal!20,colframe=unsw@teal}
+\newtcolorbox{mybluebox}[1]{title=#1,colback=unsw@blue!20,colframe=unsw@blue,coltitle=unsw@black}
+\newtcolorbox{mypurplebox}[1]{title=#1,colback=unsw@purple!20,colframe=unsw@purple}
+\newtcolorbox{myorangebox}[1]{title=#1,colback=unsw@orange!20,colframe=unsw@orange,coltitle=unsw@black}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.2\paperwidth}
+        \vspace{10ex}
+        \begin{center}
+          \includegraphics[width=.6\linewidth]{unsw_logo}
+        \end{center}
+        \vspace{6ex}
+      \end{column}
+      \begin{column}{.76\paperwidth}
+        \vspace{6ex}
+        %\raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\clancyfont \inserttitle}}\\[4ex]}
+        \usebeamercolor{author in headline}{\color{fg}\large{\robotomonofont \insertauthor}\\[2ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\robotomonofont \insertinstitute}\\[1ex]}
+      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+}
+
+
+\setbeamertemplate{footline}{
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth,sep=0.7cm,dp=0cm]{headline}
+    \begin{multicols}{2}
+      % \vfill
+      
+      \usebeamercolor{unsw@black}{\color{fg}
+        \vspace{-2ex}
+        \textbf{\Large{\clancyfont Conclusions}}\\
+
+        \vspace{2ex}
+        \normalsize{
+          The algorithms we researched were able to beat the controls in specific markets.
+          However, they were unable to well outperform \emph{random} trading every time,
+          nor could they prevent significant loss in bearish markets.
+          
+          \vspace{1ex}
+          We found that objective trading algorithms need more elusive techniques such as
+          machine learning to function well.
+          Otherwise, external knowledge such as market conditions and multi-stock analysis
+          are necessary to make informed decisions on trading.
+        }
+      }
+
+      % \vfill
+      \columnbreak
+      % \vfill
+
+      \vspace{-2ex}
+      \usebeamercolor{unsw@black}{\color{fg}
+        \textbf{\Large{\clancyfont References}}\\
+
+        \vspace{2ex}
+        \small{
+          \begin{enumerate}
+            \item Treleaven, P., Galas, M., \& Lalchand, V. (2013). Algorithmic Trading Review. Communications of the ACM, 56, 76–85. \url{https://doi.org/10.1145/2500117}
+
+            \item Seth, S. (2025, August). Basics of Algorithmic Trading: Concepts and examples. Investopedia. \url{https://www.investopedia.com/articles/active-trading/101014/basics-algorithmic-trading-concepts-and-examples.asp}
+
+            \item Adilbai. (2025). Stock Trading RL Agent using PPO. \url{https://huggingface.co/Adilbai/stock-trading-rl-20250704-171446}
+
+          \end{enumerate}
+        }
+      }
+      
+      % \vfill
+    \end{multicols}
+  \end{beamercolorbox}
+}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
