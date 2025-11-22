@@ -1,5 +1,7 @@
-from algorithm_class import TradingAlgorithm
 from typing import override
+
+from algorithms.algorithm_class import TradingAlgorithm
+
 
 class BollingerBandsAlgorithm(TradingAlgorithm):
     def __init__(self, starting_balance: float, starting_shares: float, window_size: int = 20, num_std_dev: float = 2.0, trading_proportion: float = 0.5):

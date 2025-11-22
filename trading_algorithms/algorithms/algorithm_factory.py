@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Iterable
 
-from algorithm_class import TradingAlgorithm
+from algorithms.algorithm_class import TradingAlgorithm
 from algorithms.greedy import MaximallyGreedyAlgorithm
 from algorithms.random_choice import RandomChoiceAlgorithm
 from algorithms.best_after_n import BestAfterNAlgorithm

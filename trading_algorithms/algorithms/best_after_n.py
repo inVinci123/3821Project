@@ -1,6 +1,6 @@
 from typing import override
 
-from algorithm_class import TradingAlgorithm
+from algorithms.algorithm_class import TradingAlgorithm
 
 
 class BestAfterNAlgorithm(TradingAlgorithm):

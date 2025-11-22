@@ -1,5 +1,7 @@
-from algorithm_class import TradingAlgorithm
 from typing import override
+
+from algorithms.algorithm_class import TradingAlgorithm
+
 
 class RSIAlgorithm(TradingAlgorithm):
     def __init__(

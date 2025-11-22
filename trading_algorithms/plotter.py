@@ -1,5 +1,10 @@
+# Plots a stock from csv in data/
+# python3 plotter.py <STOCK>
+# e.g. python3 plotter.py googl
+
 import matplotlib.pyplot as plt
 from matplotlib.dates import DateFormatter, DayLocator, WeekdayLocator
+import matplot2tikz
 from sys import argv
 from data_parser import get_stock_data
 
@@ -11,6 +16,8 @@ stockname = argv[1].strip()
 stock = get_stock_data(stockname)
 dates = [p[0] for p in stock]
 values = [p[1] for p in stock]
+
+# Attempt to put x labels on the same day every month
 date_ticks = []
 for date in dates:
     month_days = (d.day for d in dates if (d.month, d.year) == (date.month, date.year) and d.day >= dates[-1].day)
@@ -34,7 +41,6 @@ plt.ylabel("Value")
 plt.title("Stock")
 plt.grid(True)
 
-import matplot2tikz
 print(matplot2tikz.get_tikz_code())
 plt.show()
 # plt.savefig("images/" + stockname + ".png")

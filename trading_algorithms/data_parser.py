@@ -1,3 +1,5 @@
+# Reads csv stock data and turns it into sequence of floats
+
 from os.path import join
 from datetime import date, datetime
 

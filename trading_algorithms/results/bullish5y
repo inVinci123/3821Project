@@ -1,0 +1,3367 @@
+
+=== AAPL ===
+# GREEDY
+Balance: 1000 -> 76.300
+Shares:  0 -> 2.161   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 655.688
+Yearly Sharpe Ratio: -0.5526358018508963
+CAGR: -0.07908837008158287
+Max Drawdown: 0.4388273716264459
+Calmar Ratio: -0.07908837008158287
+Average Trade: -0.2683914733249176
+
+# RANDOM
+Balance: 1000 -> 312.962
+Shares:  0 -> 3.765   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 1322.441
+Yearly Sharpe Ratio: 0.5451644506775509
+CAGR: 0.059928926033274266
+Max Drawdown: 0.1972539190021663
+Calmar Ratio: 0.059928926033274266
+Average Trade: 0.34524608391768735
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 6.263   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 1679.212
+Yearly Sharpe Ratio: 0.7598221590329238
+CAGR: 0.11319331805554689
+Max Drawdown: 0.2756008270586155
+Calmar Ratio: 0.11319331805554689
+Average Trade: 10.523545183608654
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 5.533   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 1483.497
+Yearly Sharpe Ratio: 0.5941200726882455
+CAGR: 0.0858137332909148
+Max Drawdown: 0.24550829850969175
+Calmar Ratio: 0.0858137332909148
+Average Trade: 20.25392261291511
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1316.952
+Shares:  0 -> 0.000   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 1316.974
+Yearly Sharpe Ratio: 0.4223235028327707
+CAGR: 0.05689019684831176
+Max Drawdown: 0.24185873892036522
+Calmar Ratio: 0.05689019684831176
+Average Trade: 0.4547690418676851
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1450.837
+Shares:  0 -> 0.001   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 1451.028
+Yearly Sharpe Ratio: 0.5530783766154028
+CAGR: 0.07768053837088407
+Max Drawdown: 0.2622424653722744
+Calmar Ratio: 0.07768053837088407
+Average Trade: 2.98695887514279
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 268.125 each)
+TWorth:  1000.0 (115.466) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 0.018
+Shares:  0 -> 3796.000   (at 268.125 each)
+TWorth:  1000 (115.466) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== ALL.AX ===
+# GREEDY
+Balance: 1000 -> 22.725
+Shares:  0 -> 14.086   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 814.928
+Yearly Sharpe Ratio: -0.24596470661898012
+CAGR: -0.03821388427408756
+Max Drawdown: 0.2684522783412865
+Calmar Ratio: -0.03821388427408756
+Average Trade: -0.1408801397061838
+
+# RANDOM
+Balance: 1000 -> 1171.917
+Shares:  0 -> 4.305   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 1414.047
+Yearly Sharpe Ratio: 0.6176854736041728
+CAGR: 0.07201682027537504
+Max Drawdown: 0.2034470652738212
+Calmar Ratio: 0.07201682027537504
+Average Trade: 0.41366060622407674
+
+# BEST AFTER 10
+Balance: 1000 -> 1029.261
+Shares:  0 -> 0.000   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 1029.261
+Yearly Sharpe Ratio: 0.13080530228755918
+CAGR: 0.00576659675280311
+Max Drawdown: 0.09482639366132312
+Calmar Ratio: 0.00576659675280311
+Average Trade: 4.876896678035185
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1568.486
+Shares:  0 -> 0.000   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 1568.486
+Yearly Sharpe Ratio: 0.6661064252105569
+CAGR: 0.09388683892004868
+Max Drawdown: 0.2805506546348299
+Calmar Ratio: 0.09388683892004868
+Average Trade: 8.613421432215036
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1628.256
+Shares:  0 -> 0.000   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 1628.256
+Yearly Sharpe Ratio: 0.7231344043190477
+CAGR: 0.10207339679313798
+Max Drawdown: 0.20789017151632538
+Calmar Ratio: 0.10207339679313798
+Average Trade: 31.412784244349485
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 23.606   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 1327.629
+Yearly Sharpe Ratio: 0.44630601998955677
+CAGR: 0.060153242906561655
+Max Drawdown: 0.2703310992202864
+Calmar Ratio: 0.060153242906561655
+Average Trade: 0.4856425940594666
+
+# BOLLINGER 2STD
+Balance: 1000 -> 6.145
+Shares:  0 -> 23.993   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 1355.522
+Yearly Sharpe Ratio: 0.485332640484488
+CAGR: 0.06453859343144508
+Max Drawdown: 0.31545383981462827
+Calmar Ratio: 0.06453859343144508
+Average Trade: 2.2606083347208346
+
+# RSI
+Balance: 1000 -> 500.000
+Shares:  0 -> 8.890   (at 56.240 each)
+TWorth:  1000.0 (30.726) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0.0
+
+# PPO-ML
+Balance: 1000 -> 0.005
+Shares:  0 -> 12051.000   (at 56.240 each)
+TWorth:  1000 (30.726) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== AMZN ===
+# GREEDY
+Balance: 1000 -> 26.829
+Shares:  0 -> 2.193   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 536.730
+Yearly Sharpe Ratio: -0.6202331948626443
+CAGR: -0.11550016829244047
+Max Drawdown: 0.6130647091177783
+Calmar Ratio: -0.11550016829244047
+Average Trade: -0.36497751386839467
+
+# RANDOM
+Balance: 1000 -> 151.050
+Shares:  0 -> 4.321   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 1155.505
+Yearly Sharpe Ratio: 0.267768577761563
+CAGR: 0.03167861025787677
+Max Drawdown: 0.3867106708247311
+Calmar Ratio: 0.03167861025787677
+Average Trade: 0.16771611487776997
+
+# BEST AFTER 10
+Balance: 1000 -> 1249.243
+Shares:  0 -> 0.000   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 1249.243
+Yearly Sharpe Ratio: 0.30920242079270815
+CAGR: 0.04573549383799258
+Max Drawdown: 0.47716695852555746
+Calmar Ratio: 0.04573549383799258
+Average Trade: 17.803049817540504
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 5.817   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 1352.386
+Yearly Sharpe Ratio: 0.40580872354170006
+CAGR: 0.06515934246597554
+Max Drawdown: 0.3878851409761574
+Calmar Ratio: 0.06515934246597554
+Average Trade: 5.8579798800021585
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 4.793   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 1114.335
+Yearly Sharpe Ratio: 0.22261690821249497
+CAGR: 0.024512117243331355
+Max Drawdown: 0.4116265320543305
+Calmar Ratio: 0.024512117243331355
+Average Trade: 5.122700228243211
+
+# BOLLINGER 1STD
+Balance: 1000 -> 947.872
+Shares:  0 -> 0.002   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 948.346
+Yearly Sharpe Ratio: 0.05620229154357735
+CAGR: -0.010600037470861468
+Max Drawdown: 0.42291131599593873
+Calmar Ratio: -0.010600037470861468
+Average Trade: -0.07572996009028068
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1060.808
+Shares:  0 -> 0.071   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 1077.282
+Yearly Sharpe Ratio: 0.17437761680496405
+CAGR: 0.015110426481943495
+Max Drawdown: 0.4154444524212769
+Calmar Ratio: 0.015110426481943495
+Average Trade: 0.4531305637768258
+
+# RSI
+Balance: 1000 -> 276.496
+Shares:  0 -> 5.101   (at 232.478 each)
+TWorth:  1000.0 (156.057) -> 1462.465
+Yearly Sharpe Ratio: 0.7338691405375003
+CAGR: 0.0815409578585633
+Max Drawdown: 0.2490840629842787
+Calmar Ratio: 0.0815409578585633
+Average Trade: 68.15442624765433
+
+# PPO-ML
+Balance: 1000 -> 0.058
+Shares:  0 -> 2238.000   (at 232.478 each)
+TWorth:  1000 (156.057) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== ANZ.AX ===
+# GREEDY
+Balance: 1000 -> 49.504
+Shares:  0 -> 22.604   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 862.010
+Yearly Sharpe Ratio: -0.26410676535550776
+CAGR: -0.028392194827488004
+Max Drawdown: 0.30921130805738456
+Calmar Ratio: -0.028392194827488004
+Average Trade: -0.10684138641915898
+
+# RANDOM
+Balance: 1000 -> 1358.396
+Shares:  0 -> 8.203   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 1653.265
+Yearly Sharpe Ratio: 1.1778145449906074
+CAGR: 0.1056755072540474
+Max Drawdown: 0.15925681247634943
+Calmar Ratio: 0.1056755072540474
+Average Trade: 0.6492820364625348
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 35.740   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 1284.681
+Yearly Sharpe Ratio: 0.4883567505948571
+CAGR: 0.05213574896917805
+Max Drawdown: 0.24530635510580628
+Calmar Ratio: 0.05213574896917805
+Average Trade: 4.089507970474322
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 38.585   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 1386.947
+Yearly Sharpe Ratio: 0.5818811579709299
+CAGR: 0.06832551446981694
+Max Drawdown: 0.3332971717425716
+Calmar Ratio: 0.06832551446981694
+Average Trade: 13.554212718916359
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1602.021
+Shares:  0 -> 0.000   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 1602.021
+Yearly Sharpe Ratio: 1.0156791215664036
+CAGR: 0.0985101939541353
+Max Drawdown: 0.2060045507148204
+Calmar Ratio: 0.0985101939541353
+Average Trade: 0.8408111252920468
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1637.994
+Shares:  0 -> 0.000   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 1637.995
+Yearly Sharpe Ratio: 0.9903485366824589
+CAGR: 0.1033845287994839
+Max Drawdown: 0.2262999516152205
+Calmar Ratio: 0.1033845287994839
+Average Trade: 3.9140816914266034
+
+# RSI
+Balance: 1000 -> 1393.875
+Shares:  0 -> 0.745   (at 35.945 each)
+TWorth:  1000.0 (16.344) -> 1420.657
+Yearly Sharpe Ratio: 0.898456585770372
+CAGR: 0.07252772858801437
+Max Drawdown: 0.11407408265458703
+Calmar Ratio: 0.07252772858801437
+Average Trade: 46.752782713007164
+
+# PPO-ML
+Balance: 1000 -> 0.003
+Shares:  0 -> 28381.000   (at 35.945 each)
+TWorth:  1000 (16.344) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== BTC-USD ===
+# GREEDY
+Balance: 1000 -> 0.257
+Shares:  0 -> 0.001   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 63.964
+Yearly Sharpe Ratio: -1.6571372333323435
+CAGR: -0.3129862522401604
+Max Drawdown: 0.950128933227616
+Calmar Ratio: -0.3129862522401604
+Average Trade: -0.511628868836518
+
+# RANDOM
+Balance: 1000 -> 855.442
+Shares:  0 -> 0.011   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 1858.819
+Yearly Sharpe Ratio: 0.5507755159940645
+CAGR: 0.09161167383733426
+Max Drawdown: 0.6076853624971579
+Calmar Ratio: 0.09161167383733426
+Average Trade: 0.607330409918735
+
+# BEST AFTER 10
+Balance: 1000 -> 1077.566
+Shares:  0 -> 0.000   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 1077.566
+Yearly Sharpe Ratio: 0.381253054201936
+CAGR: 0.010363095679954304
+Max Drawdown: 0.07164808743845641
+Calmar Ratio: 0.010363095679954304
+Average Trade: 19.391528121054648
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 3557.006
+Shares:  0 -> 0.000   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 3557.006
+Yearly Sharpe Ratio: 0.8166644877303388
+CAGR: 0.19138819837325372
+Max Drawdown: 0.6126225271239548
+Calmar Ratio: 0.19138819837325372
+Average Trade: 25.068684926493017
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 6659.067
+Shares:  0 -> 0.000   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 6659.067
+Yearly Sharpe Ratio: 1.1108851006503775
+CAGR: 0.29908167637909644
+Max Drawdown: 0.46218380097615835
+Calmar Ratio: 0.29908167637909644
+Average Trade: 188.63556199303994
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.002
+Shares:  0 -> 0.012   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 1083.470
+Yearly Sharpe Ratio: 0.18174782371225348
+CAGR: 0.015039835819934178
+Max Drawdown: 0.6130966164376676
+Calmar Ratio: 0.015039835819934178
+Average Trade: 0.11936742983323624
+
+# BOLLINGER 2STD
+Balance: 1000 -> 53.228
+Shares:  0 -> 0.008   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 786.867
+Yearly Sharpe Ratio: -0.03220896633828533
+CAGR: -0.029294348724917207
+Max Drawdown: 0.5856561913500926
+Calmar Ratio: -0.029294348724917207
+Average Trade: -0.8247342371187313
+
+# RSI
+Balance: 1000 -> 1909.241
+Shares:  0 -> 0.001   (at 90776.873 each)
+TWorth:  1000.0 (17799.013) -> 2007.453
+Yearly Sharpe Ratio: 0.6909707315563264
+CAGR: 0.10115956636566725
+Max Drawdown: 0.5238289086546333
+Calmar Ratio: 0.10115956636566725
+Average Trade: 53.17061739248585
+
+# PPO-ML
+Balance: 1000 -> 0.015
+Shares:  0 -> 2500.000   (at 90776.873 each)
+TWorth:  1000 (17799.013) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== BXB.AX ===
+# GREEDY
+Balance: 1000 -> 54.595
+Shares:  0 -> 42.596   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 1052.675
+Yearly Sharpe Ratio: 0.16461078593058548
+CAGR: 0.010730697220311614
+Max Drawdown: 0.17648292462345933
+Calmar Ratio: 0.010730697220311614
+Average Trade: 0.043579411280967914
+
+# RANDOM
+Balance: 1000 -> 1179.561
+Shares:  0 -> 11.032   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 1438.052
+Yearly Sharpe Ratio: 0.7325163939455365
+CAGR: 0.07525326471904026
+Max Drawdown: 0.1418666227589211
+Calmar Ratio: 0.07525326471904026
+Average Trade: 0.4350619979133668
+
+# BEST AFTER 10
+Balance: 1000 -> 1090.439
+Shares:  0 -> 0.000   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 1090.439
+Yearly Sharpe Ratio: 0.42441623279891655
+CAGR: 0.017411139391784403
+Max Drawdown: 0.048309145583634465
+Calmar Ratio: 0.017411139391784403
+Average Trade: 11.304893075629764
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1766.390
+Shares:  0 -> 0.000   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 1766.390
+Yearly Sharpe Ratio: 0.8176908442806862
+CAGR: 0.12011071989563038
+Max Drawdown: 0.1635492068167124
+Calmar Ratio: 0.12011071989563038
+Average Trade: 10.644310673258047
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 2325.297
+Shares:  0 -> 0.000   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 2325.297
+Yearly Sharpe Ratio: 1.0951403338821764
+CAGR: 0.1832152344724478
+Max Drawdown: 0.13850588554714832
+Calmar Ratio: 0.1832152344724478
+Average Trade: 82.83108749610037
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.616
+Shares:  0 -> 60.463   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 1417.340
+Yearly Sharpe Ratio: 0.7903001319065257
+CAGR: 0.07254507523070886
+Max Drawdown: 0.1441858991995206
+Calmar Ratio: 0.07254507523070886
+Average Trade: 0.6144384061284313
+
+# BOLLINGER 2STD
+Balance: 1000 -> 171.449
+Shares:  0 -> 62.789   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 1642.668
+Yearly Sharpe Ratio: 1.1673987952969342
+CAGR: 0.10450516639854968
+Max Drawdown: 0.11684226499714445
+Calmar Ratio: 0.10450516639854968
+Average Trade: 4.427101341101948
+
+# RSI
+Balance: 1000 -> 1381.520
+Shares:  0 -> 0.104   (at 23.431 each)
+TWorth:  1000.0 (9.477) -> 1383.956
+Yearly Sharpe Ratio: 0.7029223722628818
+CAGR: 0.06692904753219975
+Max Drawdown: 0.13870203539740542
+Calmar Ratio: 0.06692904753219975
+Average Trade: 25.597493381587523
+
+# PPO-ML
+Balance: 1000 -> 1.348
+Shares:  0 -> 4084.000   (at 23.431 each)
+TWorth:  1000 (9.477) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== CBA.AX ===
+# GREEDY
+Balance: 1000 -> 3.918
+Shares:  0 -> 5.921   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 911.848
+Yearly Sharpe Ratio: -0.11332289134784132
+CAGR: -0.014357808981087294
+Max Drawdown: 0.23666045034221328
+Calmar Ratio: -0.014357808981087294
+Average Trade: -0.0556186274424091
+
+# RANDOM
+Balance: 1000 -> 1320.158
+Shares:  0 -> 1.805   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 1596.894
+Yearly Sharpe Ratio: 1.0533652432861258
+CAGR: 0.09889281153909502
+Max Drawdown: 0.14077775132583056
+Calmar Ratio: 0.09889281153909502
+Average Trade: 0.5994267069452027
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1403.310
+Shares:  0 -> 0.000   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 1403.310
+Yearly Sharpe Ratio: 0.5746980770262201
+CAGR: 0.06988619166526466
+Max Drawdown: 0.1783690437210174
+Calmar Ratio: 0.06988619166526466
+Average Trade: 5.7615699458228065
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1518.238
+Shares:  0 -> 0.000   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 1518.238
+Yearly Sharpe Ratio: 0.6818817313080117
+CAGR: 0.08680898840287776
+Max Drawdown: 0.26857455323706503
+Calmar Ratio: 0.08680898840287776
+Average Trade: 23.556290418925766
+
+# BOLLINGER 1STD
+Balance: 1000 -> 23.571
+Shares:  0 -> 9.043   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 1410.243
+Yearly Sharpe Ratio: 0.794052767935853
+CAGR: 0.07504447412105164
+Max Drawdown: 0.10418152200088565
+Calmar Ratio: 0.07504447412105164
+Average Trade: 0.592119861501275
+
+# BOLLINGER 2STD
+Balance: 1000 -> 52.348
+Shares:  0 -> 11.363   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 1794.880
+Yearly Sharpe Ratio: 1.2094383495568115
+CAGR: 0.1278880926268875
+Max Drawdown: 0.12931375178690388
+Calmar Ratio: 0.1278880926268875
+Average Trade: 6.0939153009200595
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 153.345 each)
+TWorth:  1000.0 (63.511) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 16.103
+Shares:  0 -> 28621.000   (at 153.345 each)
+TWorth:  1000 (63.511) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== COH.AX ===
+# GREEDY
+Balance: 1000 -> 38.599
+Shares:  0 -> 2.593   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 743.239
+Yearly Sharpe Ratio: -0.41066636735284856
+CAGR: -0.05593844883780219
+Max Drawdown: 0.2543902455636371
+Calmar Ratio: -0.05593844883780219
+Average Trade: -0.1985435992421011
+
+# RANDOM
+Balance: 1000 -> 966.984
+Shares:  0 -> 0.763   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 1174.416
+Yearly Sharpe Ratio: 0.33075663629316226
+CAGR: 0.03302385968860988
+Max Drawdown: 0.18622516564230152
+Calmar Ratio: 0.03302385968860988
+Average Trade: 0.1754192578921558
+
+# BEST AFTER 10
+Balance: 1000 -> 0.000
+Shares:  0 -> 7.046   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 1914.941
+Yearly Sharpe Ratio: 0.994650473166757
+CAGR: 0.14025903865727618
+Max Drawdown: 0.20445870464613508
+Calmar Ratio: 0.14025903865727618
+Average Trade: 30.052364516451455
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1518.281
+Shares:  0 -> 0.000   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 1518.281
+Yearly Sharpe Ratio: 0.6254856018850743
+CAGR: 0.086815107277878
+Max Drawdown: 0.2356543944653926
+Calmar Ratio: 0.086815107277878
+Average Trade: 7.404018068185347
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 940.803
+Shares:  0 -> 0.000   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 940.803
+Yearly Sharpe Ratio: -0.006121290036200162
+CAGR: -0.012091906953234477
+Max Drawdown: 0.32115088619039056
+Calmar Ratio: -0.012091906953234477
+Average Trade: -2.114166334274606
+
+# BOLLINGER 1STD
+Balance: 1000 -> 38.657
+Shares:  0 -> 4.305   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 1208.572
+Yearly Sharpe Ratio: 0.3640723703685424
+CAGR: 0.0401730969608054
+Max Drawdown: 0.16613194649932567
+Calmar Ratio: 0.0401730969608054
+Average Trade: 0.2992154082508537
+
+# BOLLINGER 2STD
+Balance: 1000 -> 0.183
+Shares:  0 -> 4.983   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 1354.261
+Yearly Sharpe Ratio: 0.5126072035575504
+CAGR: 0.06416244196207654
+Max Drawdown: 0.1823668873556747
+Calmar Ratio: 0.06416244196207654
+Average Trade: 2.4567480785282436
+
+# RSI
+Balance: 1000 -> 783.679
+Shares:  0 -> 0.898   (at 271.763 each)
+TWorth:  1000.0 (220.880) -> 1027.831
+Yearly Sharpe Ratio: 0.15528449052733323
+CAGR: 0.005902177586933677
+Max Drawdown: 0.11095171028850397
+Calmar Ratio: 0.005902177586933677
+Average Trade: 14.978755440837062
+
+# PPO-ML
+Balance: 1000 -> -234.873
+Shares:  0 -> 811.000   (at 271.763 each)
+TWorth:  1000 (220.880) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== COL.AX ===
+# GREEDY
+Balance: 1000 -> 802.140
+Shares:  0 -> 2.768   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 864.129
+Yearly Sharpe Ratio: -0.3354559463841465
+CAGR: -0.028817861767351127
+Max Drawdown: 0.2183689961186011
+Calmar Ratio: -0.028817861767351127
+Average Trade: -0.10817879040588871
+
+# RANDOM
+Balance: 1000 -> 1022.219
+Shares:  0 -> 10.230   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 1251.340
+Yearly Sharpe Ratio: 0.5870184982149724
+CAGR: 0.045428963964291746
+Max Drawdown: 0.14883927592232216
+Calmar Ratio: 0.045428963964291746
+Average Trade: 0.24739612794495552
+
+# BEST AFTER 10
+Balance: 1000 -> 1159.510
+Shares:  0 -> 0.000   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 1159.510
+Yearly Sharpe Ratio: 0.4904818045026431
+CAGR: 0.02994535909296059
+Max Drawdown: 0.14978183508002602
+Calmar Ratio: 0.02994535909296059
+Average Trade: 13.292461371653417
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1224.113
+Shares:  0 -> 0.000   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 1224.113
+Yearly Sharpe Ratio: 0.4439049420082946
+CAGR: 0.0411389418089767
+Max Drawdown: 0.2297562897341254
+Calmar Ratio: 0.0411389418089767
+Average Trade: 2.873238503960503
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1296.556
+Shares:  0 -> 0.000   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 1296.556
+Yearly Sharpe Ratio: 0.5150798952653569
+CAGR: 0.053141907907130026
+Max Drawdown: 0.21089158035956732
+Calmar Ratio: 0.053141907907130026
+Average Trade: 12.35651629609788
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.034
+Shares:  0 -> 47.350   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 1060.562
+Yearly Sharpe Ratio: 0.16497325756796283
+CAGR: 0.010731177254235558
+Max Drawdown: 0.1606887068630623
+Calmar Ratio: 0.010731177254235558
+Average Trade: 0.07845738100169687
+
+# BOLLINGER 2STD
+Balance: 1000 -> 4.551
+Shares:  0 -> 50.195   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 1128.783
+Yearly Sharpe Ratio: 0.3140451702273599
+CAGR: 0.023375949521950323
+Max Drawdown: 0.1503964195337437
+Calmar Ratio: 0.023375949521950323
+Average Trade: 0.7022005964391467
+
+# RSI
+Balance: 1000 -> 1313.699
+Shares:  0 -> 0.031   (at 22.397 each)
+TWorth:  1000.0 (14.897) -> 1314.400
+Yearly Sharpe Ratio: 0.818205243388816
+CAGR: 0.05601511287407002
+Max Drawdown: 0.13214231895959966
+Calmar Ratio: 0.05601511287407002
+Average Trade: 15.719823498016273
+
+# PPO-ML
+Balance: 1000 -> -248.445
+Shares:  0 -> 0.000   (at 22.397 each)
+TWorth:  1000 (14.897) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== FMG.AX ===
+# GREEDY
+Balance: 1000 -> 154.892
+Shares:  0 -> 15.532   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 468.716
+Yearly Sharpe Ratio: -0.7294902216289146
+CAGR: -0.1397814074702053
+Max Drawdown: 0.6326640354173171
+Calmar Ratio: -0.1397814074702053
+Average Trade: -0.4222769865024001
+
+# RANDOM
+Balance: 1000 -> 985.385
+Shares:  0 -> 10.932   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 1206.265
+Yearly Sharpe Ratio: 0.30682875399288695
+CAGR: 0.03840265653025687
+Max Drawdown: 0.3561472270563785
+Calmar Ratio: 0.03840265653025687
+Average Trade: 0.20620477543900495
+
+# BEST AFTER 10
+Balance: 1000 -> 1110.448
+Shares:  0 -> 0.000   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 1110.448
+Yearly Sharpe Ratio: 0.4495944120443062
+CAGR: 0.021105991201035845
+Max Drawdown: 0.06933331181158695
+Calmar Ratio: 0.021105991201035845
+Average Trade: 55.223842643199646
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 2344.606
+Shares:  0 -> 0.000   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 2344.606
+Yearly Sharpe Ratio: 0.8883126457928419
+CAGR: 0.18516757851747023
+Max Drawdown: 0.25140803579990056
+Calmar Ratio: 0.18516757851747023
+Average Trade: 20.37282204949946
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 49.088   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 991.830
+Yearly Sharpe Ratio: 0.10983851915831074
+CAGR: -0.0005039597165331644
+Max Drawdown: 0.5166048232548724
+Calmar Ratio: -0.0005039597165331644
+Average Trade: -0.08707728661295278
+
+# BOLLINGER 1STD
+Balance: 1000 -> 528.780
+Shares:  0 -> 26.472   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 1063.649
+Yearly Sharpe Ratio: 0.1696203443128741
+CAGR: 0.012955013448099129
+Max Drawdown: 0.3519108844951876
+Calmar Ratio: 0.012955013448099129
+Average Trade: 0.09707888433023129
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1082.006
+Shares:  0 -> 0.030   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 1082.621
+Yearly Sharpe Ratio: 0.18080530522787722
+CAGR: 0.015953360103523995
+Max Drawdown: 0.3269295971645486
+Calmar Ratio: 0.015953360103523995
+Average Trade: 0.6075351331539878
+
+# RSI
+Balance: 1000 -> 664.887
+Shares:  0 -> 37.077   (at 20.205 each)
+TWorth:  1000.0 (9.983) -> 1414.032
+Yearly Sharpe Ratio: 0.7318712553565976
+CAGR: 0.07215441766900055
+Max Drawdown: 0.16559363282899014
+Calmar Ratio: 0.07215441766900055
+Average Trade: 38.02693701641376
+
+# PPO-ML
+Balance: 1000 -> 0.013
+Shares:  0 -> 3217.000   (at 20.205 each)
+TWorth:  1000 (9.983) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== GMG.AX ===
+# GREEDY
+Balance: 1000 -> 254.345
+Shares:  0 -> 23.656   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 952.385
+Yearly Sharpe Ratio: 0.0064359911515970755
+CAGR: -0.00904946219685221
+Max Drawdown: 0.3365336967420011
+Calmar Ratio: -0.00904946219685221
+Average Trade: -0.03529121872023481
+
+# RANDOM
+Balance: 1000 -> 1000.074
+Shares:  0 -> 7.344   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 1216.774
+Yearly Sharpe Ratio: 0.3451065311943203
+CAGR: 0.04024882014599385
+Max Drawdown: 0.2742041220729992
+Calmar Ratio: 0.04024882014599385
+Average Trade: 0.2169199407528721
+
+# BEST AFTER 10
+Balance: 1000 -> 1321.699
+Shares:  0 -> 0.000   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 1321.699
+Yearly Sharpe Ratio: 0.5765752621888739
+CAGR: 0.05718216036854984
+Max Drawdown: 0.1936393454622822
+Calmar Ratio: 0.05718216036854984
+Average Trade: 22.9784780060374
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1719.677
+Shares:  0 -> 0.000   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 1719.677
+Yearly Sharpe Ratio: 0.7407752893651128
+CAGR: 0.11414153721144404
+Max Drawdown: 0.2699833442698636
+Calmar Ratio: 0.11414153721144404
+Average Trade: 9.9955156193055
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1384.362
+Shares:  0 -> 0.000   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 1384.362
+Yearly Sharpe Ratio: 0.47354827655985504
+CAGR: 0.06699039705431264
+Max Drawdown: 0.3194150047316193
+Calmar Ratio: 0.06699039705431264
+Average Trade: 14.783138704326111
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.073
+Shares:  0 -> 36.770   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 1085.069
+Yearly Sharpe Ratio: 0.1881840469985891
+CAGR: 0.0177797408440743
+Max Drawdown: 0.28887141864995064
+Calmar Ratio: 0.0177797408440743
+Average Trade: 0.12455815706992336
+
+# BOLLINGER 2STD
+Balance: 1000 -> 5.594
+Shares:  0 -> 42.734   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 1266.555
+Yearly Sharpe Ratio: 0.3778958847967147
+CAGR: 0.04964425156885688
+Max Drawdown: 0.2658493786302048
+Calmar Ratio: 0.04964425156885688
+Average Trade: 1.7522370554125963
+
+# RSI
+Balance: 1000 -> 1084.498
+Shares:  0 -> 2.419   (at 29.508 each)
+TWorth:  1000.0 (17.529) -> 1155.878
+Yearly Sharpe Ratio: 0.7511979571956989
+CAGR: 0.029387304655337676
+Max Drawdown: 0.03896103806946122
+Calmar Ratio: 0.029387304655337676
+Average Trade: 39.09042756646221
+
+# PPO-ML
+Balance: 1000 -> 713.304
+Shares:  0 -> 171.000   (at 29.508 each)
+TWorth:  1000 (17.529) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== GOOGL ===
+# GREEDY
+Balance: 1000 -> 44.547
+Shares:  0 -> 3.990   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 997.834
+Yearly Sharpe Ratio: 0.14738475878548726
+CAGR: 0.010851435129914488
+Max Drawdown: 0.17364584315609213
+Calmar Ratio: 0.010851435129914488
+Average Trade: 0.04340713088762372
+
+# RANDOM
+Balance: 1000 -> 656.810
+Shares:  0 -> 3.289   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 1442.464
+Yearly Sharpe Ratio: 2.965629388600219
+CAGR: 0.45832112305190575
+Max Drawdown: 0.12527142372094568
+Calmar Ratio: 0.45832112305190575
+Average Trade: 2.282303684243533
+
+# BEST AFTER 10
+Balance: 1000 -> 1157.707
+Shares:  0 -> 0.000   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 1157.707
+Yearly Sharpe Ratio: 1.0984762787948648
+CAGR: 0.16044489690400554
+Max Drawdown: 0.14206600761173105
+Calmar Ratio: 0.16044489690400554
+Average Trade: 39.426801802553314
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1367.782
+Shares:  0 -> 0.000   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 1367.782
+Yearly Sharpe Ratio: 1.5304743950594004
+CAGR: 0.37470921329316553
+Max Drawdown: 0.14258803351384663
+Calmar Ratio: 0.37470921329316553
+Average Trade: 30.648535768251367
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 6.139   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 1466.646
+Yearly Sharpe Ratio: 1.9626257889788117
+CAGR: 0.4970023986966008
+Max Drawdown: 0.1540997230985442
+Calmar Ratio: 0.4970023986966008
+Average Trade: 97.48918536460079
+
+# BOLLINGER 1STD
+Balance: 1000 -> 257.191
+Shares:  0 -> 3.200   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 1021.573
+Yearly Sharpe Ratio: 0.26967015804816413
+CAGR: 0.029236593056688243
+Max Drawdown: 0.2320973111112914
+Calmar Ratio: 0.029236593056688243
+Average Trade: 0.19436425011526132
+
+# BOLLINGER 2STD
+Balance: 1000 -> 550.755
+Shares:  0 -> 2.307   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 1101.877
+Yearly Sharpe Ratio: 1.055949276940408
+CAGR: 0.10360789679619553
+Max Drawdown: 0.0707208408808062
+Calmar Ratio: 0.10360789679619553
+Average Trade: 5.6601267247087
+
+# RSI
+Balance: 1000 -> 777.541
+Shares:  0 -> 2.515   (at 238.900 each)
+TWorth:  1000.0 (164.494) -> 1378.352
+Yearly Sharpe Ratio: 2.799379103345163
+CAGR: 0.394207488857065
+Max Drawdown: 0.057537690080539564
+Calmar Ratio: 0.394207488857065
+Average Trade: 128.95746080731837
+
+# PPO-ML
+Balance: 1000 -> 0.024
+Shares:  0 -> 9950.000   (at 238.900 each)
+TWorth:  1000 (164.494) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== MQG.AX ===
+# GREEDY
+Balance: 1000 -> 9.610
+Shares:  0 -> 4.761   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 929.259
+Yearly Sharpe Ratio: -0.027686921631268173
+CAGR: -0.011300403091831335
+Max Drawdown: 0.2906487893595414
+Calmar Ratio: -0.011300403091831335
+Average Trade: -0.04387055724827883
+
+# RANDOM
+Balance: 1000 -> 1116.991
+Shares:  0 -> 1.232   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 1354.972
+Yearly Sharpe Ratio: 0.5788063425636386
+CAGR: 0.06332683086956359
+Max Drawdown: 0.20556407287459078
+Calmar Ratio: 0.06332683086956359
+Average Trade: 0.35746638517350837
+
+# BEST AFTER 10
+Balance: 1000 -> 1114.317
+Shares:  0 -> 0.000   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 1114.317
+Yearly Sharpe Ratio: 0.5404938550707895
+CAGR: 0.021814392786038805
+Max Drawdown: 0.06501668900029851
+Calmar Ratio: 0.021814392786038805
+Average Trade: 28.579304047449398
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1129.786
+Shares:  0 -> 0.000   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 1129.786
+Yearly Sharpe Ratio: 0.24526460411554826
+CAGR: 0.024626761474527692
+Max Drawdown: 0.24396597203254347
+Calmar Ratio: 0.024626761474527692
+Average Trade: 1.622324811450838
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1120.646
+Shares:  0 -> 0.000   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 1120.646
+Yearly Sharpe Ratio: 0.22722379503124135
+CAGR: 0.02296874344091715
+Max Drawdown: 0.37176031946170374
+Calmar Ratio: 0.02296874344091715
+Average Trade: 4.021526531466687
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.710
+Shares:  0 -> 6.913   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 1336.047
+Yearly Sharpe Ratio: 0.4898298980484694
+CAGR: 0.06298168854521013
+Max Drawdown: 0.2839089033069162
+Calmar Ratio: 0.06298168854521013
+Average Trade: 0.5099142430343143
+
+# BOLLINGER 2STD
+Balance: 1000 -> 111.920
+Shares:  0 -> 7.021   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 1468.043
+Yearly Sharpe Ratio: 0.6206675036108382
+CAGR: 0.08286838441235167
+Max Drawdown: 0.2477389646872669
+Calmar Ratio: 0.08286838441235167
+Average Trade: 2.9390826304881768
+
+# RSI
+Balance: 1000 -> 716.498
+Shares:  0 -> 2.186   (at 193.150 each)
+TWorth:  1000.0 (116.476) -> 1138.668
+Yearly Sharpe Ratio: 0.509993691661143
+CAGR: 0.02749886179501071
+Max Drawdown: 0.05298142208869909
+Calmar Ratio: 0.02749886179501071
+Average Trade: 48.58675150491164
+
+# PPO-ML
+Balance: 1000 -> 0.058
+Shares:  0 -> 4814.000   (at 193.150 each)
+TWorth:  1000 (116.476) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== MSFT ===
+# GREEDY
+Balance: 1000 -> 583.233
+Shares:  0 -> 0.737   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 957.611
+Yearly Sharpe Ratio: -0.022681816163145876
+CAGR: -0.009850584554506825
+Max Drawdown: 0.3034664318913855
+Calmar Ratio: -0.009850584554506825
+Average Trade: -0.03836135882344948
+
+# RANDOM
+Balance: 1000 -> 168.224
+Shares:  0 -> 2.304   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 1339.208
+Yearly Sharpe Ratio: 0.5505469840261702
+CAGR: 0.059025639636294036
+Max Drawdown: 0.2545209302518338
+Calmar Ratio: 0.059025639636294036
+Average Trade: 0.32993873017283326
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1532.172
+Shares:  0 -> 0.000   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 1532.172
+Yearly Sharpe Ratio: 0.6351836790340123
+CAGR: 0.08952911111104012
+Max Drawdown: 0.27814229113255473
+Calmar Ratio: 0.08952911111104012
+Average Trade: 6.489903847532948
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1654.014
+Shares:  0 -> 0.000   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 1654.014
+Yearly Sharpe Ratio: 0.7437676334114441
+CAGR: 0.10641224083646517
+Max Drawdown: 0.2783151575665725
+Calmar Ratio: 0.10641224083646517
+Average Trade: 25.154389948745486
+
+# BOLLINGER 1STD
+Balance: 1000 -> 91.336
+Shares:  0 -> 2.710   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 1468.669
+Yearly Sharpe Ratio: 0.6195828833181314
+CAGR: 0.0787416312324325
+Max Drawdown: 0.2174560835910868
+Calmar Ratio: 0.0787416312324325
+Average Trade: 0.6276084745256926
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1574.572
+Shares:  0 -> 0.000   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 1574.795
+Yearly Sharpe Ratio: 0.7049171353436539
+CAGR: 0.09555307365795684
+Max Drawdown: 0.25511527656690836
+Calmar Ratio: 0.09555307365795684
+Average Trade: 4.13520090749275
+
+# RSI
+Balance: 1000 -> 831.905
+Shares:  0 -> 0.704   (at 508.243 each)
+TWorth:  1000.0 (204.483) -> 1189.927
+Yearly Sharpe Ratio: 1.064951085791127
+CAGR: 0.03508407007626779
+Max Drawdown: 0.03947163523178459
+Calmar Ratio: 0.03508407007626779
+Average Trade: 93.59682057230748
+
+# PPO-ML
+Balance: 1000 -> 7.921
+Shares:  0 -> 1755.000   (at 508.243 each)
+TWorth:  1000 (204.483) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== NAB.AX ===
+# GREEDY
+Balance: 1000 -> 47.242
+Shares:  0 -> 22.018   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 948.296
+Yearly Sharpe Ratio: -0.028200673878476495
+CAGR: -0.007969131813421626
+Max Drawdown: 0.26147833725401576
+Calmar Ratio: -0.007969131813421626
+Average Trade: -0.03126937469313554
+
+# RANDOM
+Balance: 1000 -> 1345.444
+Shares:  0 -> 7.096   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 1635.834
+Yearly Sharpe Ratio: 1.090857199833146
+CAGR: 0.1038986583159287
+Max Drawdown: 0.15449292526032427
+Calmar Ratio: 0.1038986583159287
+Average Trade: 0.636102268817112
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1380.739
+Shares:  0 -> 0.000   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 1380.739
+Yearly Sharpe Ratio: 0.56160154938833
+CAGR: 0.06643312568477677
+Max Drawdown: 0.19702902372721928
+Calmar Ratio: 0.06643312568477677
+Average Trade: 5.439125507586287
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 38.727   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 1584.862
+Yearly Sharpe Ratio: 0.7554691860665546
+CAGR: 0.09929352738151387
+Max Drawdown: 0.23755138174724175
+Calmar Ratio: 0.09929352738151387
+Average Trade: 35.7505300367647
+
+# BOLLINGER 1STD
+Balance: 1000 -> 83.181
+Shares:  0 -> 38.386   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 1654.073
+Yearly Sharpe Ratio: 1.0756454400942916
+CAGR: 0.10838456519073225
+Max Drawdown: 0.1340033261370848
+Calmar Ratio: 0.10838456519073225
+Average Trade: 0.9343937694812962
+
+# BOLLINGER 2STD
+Balance: 1000 -> 115.905
+Shares:  0 -> 42.999   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 1875.603
+Yearly Sharpe Ratio: 1.3183440594001836
+CAGR: 0.13643539025369478
+Max Drawdown: 0.15930817240370196
+Calmar Ratio: 0.13643539025369478
+Average Trade: 6.159943809705924
+
+# RSI
+Balance: 1000 -> 1160.386
+Shares:  0 -> 0.724   (at 40.924 each)
+TWorth:  1000.0 (17.366) -> 1190.022
+Yearly Sharpe Ratio: 0.7226435966839665
+CAGR: 0.035366972984813394
+Max Drawdown: 0.10554047133041317
+Calmar Ratio: 0.035366972984813394
+Average Trade: 31.741652818833927
+
+# PPO-ML
+Balance: 1000 -> 0.041
+Shares:  0 -> 2372.000   (at 40.924 each)
+TWorth:  1000 (17.366) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== NEM.AX ===
+# GREEDY
+Balance: 1000 -> 157.508
+Shares:  0 -> 8.214   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 1241.188
+Yearly Sharpe Ratio: 0.767044959904637
+CAGR: 0.11804896362753414
+Max Drawdown: 0.1564169476839749
+Calmar Ratio: 0.11804896362753414
+Average Trade: 0.5000702394691232
+
+# RANDOM
+Balance: 1000 -> 1345.760
+Shares:  0 -> 4.162   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 1894.914
+Yearly Sharpe Ratio: 1.789967580311348
+CAGR: 0.3678180986300321
+Max Drawdown: 0.11468109080179097
+Calmar Ratio: 0.3678180986300321
+Average Trade: 2.205518367954522
+
+# BEST AFTER 10
+Balance: 1000 -> 1378.808
+Shares:  0 -> 0.000   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 1378.808
+Yearly Sharpe Ratio: 0.9601645487911488
+CAGR: 0.16808880013354743
+Max Drawdown: 0.2649082411206338
+Calmar Ratio: 0.16808880013354743
+Average Trade: 47.350947638277205
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 17.224   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 2272.482
+Yearly Sharpe Ratio: 1.5758441532267884
+CAGR: 0.5019862472128154
+Max Drawdown: 0.19575393512170958
+Calmar Ratio: 0.5019862472128154
+Average Trade: 62.796583453829435
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 16.059   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 2118.814
+Yearly Sharpe Ratio: 1.4065813192986583
+CAGR: 0.4519720382009904
+Max Drawdown: 0.22527192068861215
+Calmar Ratio: 0.4519720382009904
+Average Trade: 165.99045006615006
+
+# BOLLINGER 1STD
+Balance: 1000 -> 915.873
+Shares:  0 -> 2.127   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 1196.498
+Yearly Sharpe Ratio: 0.623567549786118
+CAGR: 0.0931635842912244
+Max Drawdown: 0.2161395137927282
+Calmar Ratio: 0.0931635842912244
+Average Trade: 0.7095057480954182
+
+# BOLLINGER 2STD
+Balance: 1000 -> 593.328
+Shares:  0 -> 5.003   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 1253.360
+Yearly Sharpe Ratio: 0.8682162391142335
+CAGR: 0.12118445516241128
+Max Drawdown: 0.19026792949381502
+Calmar Ratio: 0.12118445516241128
+Average Trade: 3.510423135453858
+
+# RSI
+Balance: 1000 -> 1528.636
+Shares:  0 -> 3.175   (at 131.938 each)
+TWorth:  1000.0 (57.782) -> 1947.577
+Yearly Sharpe Ratio: 2.121843783614756
+CAGR: 0.3833809191122761
+Max Drawdown: 0.12180522406670549
+Calmar Ratio: 0.3833809191122761
+Average Trade: 191.22043833599028
+
+# PPO-ML
+Balance: 1000 -> 0.078
+Shares:  0 -> 2539.000   (at 131.938 each)
+TWorth:  1000 (57.782) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== NST.AX ===
+# GREEDY
+Balance: 1000 -> 273.751
+Shares:  0 -> 17.836   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 729.812
+Yearly Sharpe Ratio: -0.2071603770612763
+CAGR: -0.05928646748078925
+Max Drawdown: 0.4693183984769105
+Calmar Ratio: -0.05928646748078925
+Average Trade: -0.20901826990476502
+
+# RANDOM
+Balance: 1000 -> 1969.336
+Shares:  0 -> 17.030   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 2404.789
+Yearly Sharpe Ratio: 1.0241371490705766
+CAGR: 0.19318255911069993
+Max Drawdown: 0.2367220864196528
+Calmar Ratio: 0.19318255911069993
+Average Trade: 1.4125124790997166
+
+# BEST AFTER 10
+Balance: 1000 -> 1135.569
+Shares:  0 -> 0.000   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 1135.569
+Yearly Sharpe Ratio: 0.22542511683111233
+CAGR: 0.02567029212713967
+Max Drawdown: 0.4394438018368739
+Calmar Ratio: 0.02567029212713967
+Average Trade: 13.556921348855326
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 61.527   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 1573.248
+Yearly Sharpe Ratio: 0.5157170761763116
+CAGR: 0.10162437361906762
+Max Drawdown: 0.42701398510839106
+Calmar Ratio: 0.10162437361906762
+Average Trade: 8.801842742917858
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 68.405   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 1749.122
+Yearly Sharpe Ratio: 0.5998861678315799
+CAGR: 0.1251462616202892
+Max Drawdown: 0.37295889135640287
+Calmar Ratio: 0.1251462616202892
+Average Trade: 42.451699516492965
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1828.000
+Shares:  0 -> 2.188   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 1883.954
+Yearly Sharpe Ratio: 0.7167610388675445
+CAGR: 0.13481331722566292
+Max Drawdown: 0.32683690862037945
+Calmar Ratio: 0.13481331722566292
+Average Trade: 1.2150790565050484
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1542.912
+Shares:  0 -> 0.042   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 1543.989
+Yearly Sharpe Ratio: 0.5545243971804685
+CAGR: 0.09046425560330595
+Max Drawdown: 0.30172626254939805
+Calmar Ratio: 0.09046425560330595
+Average Trade: 3.126577413103051
+
+# RSI
+Balance: 1000 -> 1421.979
+Shares:  0 -> 3.114   (at 25.570 each)
+TWorth:  1000.0 (12.761) -> 1501.610
+Yearly Sharpe Ratio: 0.6686007196622089
+CAGR: 0.08480172113003315
+Max Drawdown: 0.24329541901836846
+Calmar Ratio: 0.08480172113003315
+Average Trade: 72.03221333859145
+
+# PPO-ML
+Balance: 1000 -> 0.231
+Shares:  0 -> 2773.000   (at 25.570 each)
+TWorth:  1000 (12.761) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== NVDA ===
+# GREEDY
+Balance: 1000 -> 574.575
+Shares:  0 -> 2.227   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 989.828
+Yearly Sharpe Ratio: 0.1238811091519443
+CAGR: -0.002337368703311138
+Max Drawdown: 0.5642261717518184
+Calmar Ratio: -0.002337368703311138
+Average Trade: -0.009239590530011957
+
+# RANDOM
+Balance: 1000 -> 389.452
+Shares:  0 -> 13.903   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 2982.030
+Yearly Sharpe Ratio: 1.0297515116763922
+CAGR: 0.24516580377252795
+Max Drawdown: 0.46908990466963485
+Calmar Ratio: 0.24516580377252795
+Average Trade: 1.9756398249468539
+
+# BEST AFTER 10
+Balance: 1000 -> 1738.462
+Shares:  0 -> 0.000   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 1738.462
+Yearly Sharpe Ratio: 0.795578901953269
+CAGR: 0.11753942485267488
+Max Drawdown: 0.28298960422658465
+Calmar Ratio: 0.11753942485267488
+Average Trade: 52.74727097727212
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 7048.374
+Shares:  0 -> 0.000   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 7048.374
+Yearly Sharpe Ratio: 1.3522367008232818
+CAGR: 0.4805714150746272
+Max Drawdown: 0.4694036712876887
+Calmar Ratio: 0.4805714150746272
+Average Trade: 88.94668107478783
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 30.679   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 5720.834
+Yearly Sharpe Ratio: 1.1790380477654783
+CAGR: 0.41927966840908915
+Max Drawdown: 0.5430568003912813
+Calmar Ratio: 0.41927966840908915
+Average Trade: 188.44372449962583
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1984.770
+Shares:  0 -> 0.000   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 1984.774
+Yearly Sharpe Ratio: 0.6562630109836756
+CAGR: 0.14769664857149323
+Max Drawdown: 0.45064158388951187
+Calmar Ratio: 0.14769664857149323
+Average Trade: 1.3928914121780709
+
+# BOLLINGER 2STD
+Balance: 1000 -> 3122.920
+Shares:  0 -> 0.463   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 3209.200
+Yearly Sharpe Ratio: 1.0494059436658538
+CAGR: 0.2640375127685852
+Max Drawdown: 0.4469065089184361
+Calmar Ratio: 0.2640375127685852
+Average Trade: 14.926037140381853
+
+# RSI
+Balance: 1000 -> 1639.170
+Shares:  0 -> 0.003   (at 186.473 each)
+TWorth:  1000.0 (13.380) -> 1639.728
+Yearly Sharpe Ratio: 0.8365961615894947
+CAGR: 0.10448509866692146
+Max Drawdown: 0.20228736946116252
+Calmar Ratio: 0.10448509866692146
+Average Trade: 39.98297073787573
+
+# PPO-ML
+Balance: 1000 -> 956.380
+Shares:  0 -> 28.000   (at 186.473 each)
+TWorth:  1000 (13.380) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== NWS.AX ===
+# GREEDY
+Balance: 1000 -> 386.369
+Shares:  0 -> 23.126   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1417.510
+Yearly Sharpe Ratio: 0.569723193277104
+CAGR: 0.0739791742920255
+Max Drawdown: 0.16830775580038862
+Calmar Ratio: 0.0739791742920255
+Average Trade: 0.3408628349888815
+
+# RANDOM
+Balance: 1000 -> 983.086
+Shares:  0 -> 4.759   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1195.300
+Yearly Sharpe Ratio: 0.33228777311845
+CAGR: 0.03728839352108726
+Max Drawdown: 0.21798821003675134
+Calmar Ratio: 0.03728839352108726
+Average Trade: 0.19977448963915084
+
+# BEST AFTER 10
+Balance: 1000 -> 1051.706
+Shares:  0 -> 0.000   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1051.706
+Yearly Sharpe Ratio: 0.2552613386139072
+CAGR: 0.01010145398388218
+Max Drawdown: 0.04127179533561691
+Calmar Ratio: 0.01010145398388218
+Average Trade: 12.926448736313944
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1136.818
+Shares:  0 -> 0.000   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1136.818
+Yearly Sharpe Ratio: 0.23317905530802652
+CAGR: 0.02589501544354711
+Max Drawdown: 0.32237099993159396
+Calmar Ratio: 0.02589501544354711
+Average Trade: 1.7102215270330305
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1115.702
+Shares:  0 -> 0.000   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1115.702
+Yearly Sharpe Ratio: 0.20907463934180343
+CAGR: 0.022067499476443597
+Max Drawdown: 0.4380382486231573
+Calmar Ratio: 0.022067499476443597
+Average Trade: 4.450091765745522
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.023
+Shares:  0 -> 35.442   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1580.287
+Yearly Sharpe Ratio: 0.636542324701588
+CAGR: 0.1000045049005609
+Max Drawdown: 0.2548562911016115
+Calmar Ratio: 0.1000045049005609
+Average Trade: 0.8845331216219895
+
+# BOLLINGER 2STD
+Balance: 1000 -> 22.434
+Shares:  0 -> 44.100   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1988.757
+Yearly Sharpe Ratio: 0.9934049558816646
+CAGR: 0.15149187963187027
+Max Drawdown: 0.2698846346930852
+Calmar Ratio: 0.15149187963187027
+Average Trade: 6.6816587943417876
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 44.587 each)
+TWorth:  1000.0 (23.669) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 4.399
+Shares:  0 -> 1438.000   (at 44.587 each)
+TWorth:  1000 (23.669) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== PME.AX ===
+# GREEDY
+Balance: 1000 -> 397.473
+Shares:  0 -> 3.824   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 1366.951
+Yearly Sharpe Ratio: 0.41464021089729536
+CAGR: 0.06512599012391007
+Max Drawdown: 0.31531474583104585
+Calmar Ratio: 0.06512599012391007
+Average Trade: 0.2947899476446633
+
+# RANDOM
+Balance: 1000 -> 2539.266
+Shares:  0 -> 2.205   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 3098.197
+Yearly Sharpe Ratio: 1.2898232771086633
+CAGR: 0.2535210618832364
+Max Drawdown: 0.3122690401748642
+Calmar Ratio: 0.2535210618832364
+Average Trade: 2.087316927270375
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 3979.294
+Shares:  0 -> 0.000   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 3979.294
+Yearly Sharpe Ratio: 1.2219186422269355
+CAGR: 0.31698731564899596
+Max Drawdown: 0.39857244753506965
+Calmar Ratio: 0.31698731564899596
+Average Trade: 46.55147650393777
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 4633.862
+Shares:  0 -> 0.000   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 4633.862
+Yearly Sharpe Ratio: 1.223643259912714
+CAGR: 0.3575853119074148
+Max Drawdown: 0.43341521197846256
+Calmar Ratio: 0.3575853119074148
+Average Trade: 201.88120542473695
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 8.321   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 2109.386
+Yearly Sharpe Ratio: 0.8334340798752367
+CAGR: 0.16273072628208762
+Max Drawdown: 0.3667257445610716
+Calmar Ratio: 0.16273072628208762
+Average Trade: 1.5568487471161128
+
+# BOLLINGER 2STD
+Balance: 1000 -> 282.875
+Shares:  0 -> 8.122   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 2341.819
+Yearly Sharpe Ratio: 1.0288091948125948
+CAGR: 0.18693589468724592
+Max Drawdown: 0.3456831677269667
+Calmar Ratio: 0.18693589468724592
+Average Trade: 7.525998063962327
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 253.495 each)
+TWorth:  1000.0 (31.674) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 907.344
+Shares:  0 -> 46.000   (at 253.495 each)
+TWorth:  1000 (31.674) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== QAN.AX ===
+# GREEDY
+Balance: 1000 -> 64.737
+Shares:  0 -> 52.811   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 572.779
+Yearly Sharpe Ratio: -0.6405161811337239
+CAGR: -0.10408671666863978
+Max Drawdown: 0.5283803369219856
+Calmar Ratio: -0.10408671666863978
+Average Trade: -0.3354847012437452
+
+# RANDOM
+Balance: 1000 -> 1034.257
+Shares:  0 -> 23.627   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 1261.549
+Yearly Sharpe Ratio: 0.40283012267659385
+CAGR: 0.04779434913552438
+Max Drawdown: 0.2194041330056503
+Calmar Ratio: 0.04779434913552438
+Average Trade: 0.2615154772393638
+
+# BEST AFTER 10
+Balance: 1000 -> 1126.036
+Shares:  0 -> 0.000   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 1126.036
+Yearly Sharpe Ratio: 0.25532799973759435
+CAGR: 0.023947877481457436
+Max Drawdown: 0.14235770149497656
+Calmar Ratio: 0.023947877481457436
+Average Trade: 12.603629971584837
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1042.606
+Shares:  0 -> 0.000   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 1042.606
+Yearly Sharpe Ratio: 0.13410900952398586
+CAGR: 0.00835298135403395
+Max Drawdown: 0.3172009632311093
+Calmar Ratio: 0.00835298135403395
+Average Trade: 0.5072158926778614
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1094.792
+Shares:  0 -> 0.000   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 1094.792
+Yearly Sharpe Ratio: 0.18993811843582725
+CAGR: 0.018219599698192868
+Max Drawdown: 0.395568290386523
+Calmar Ratio: 0.018219599698192868
+Average Trade: 3.385438910446599
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 185.038   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 1780.069
+Yearly Sharpe Ratio: 0.803375723323431
+CAGR: 0.12342849876504336
+Max Drawdown: 0.2692665277189124
+Calmar Ratio: 0.12342849876504336
+Average Trade: 1.2196773742026639
+
+# BOLLINGER 2STD
+Balance: 1000 -> 15.492
+Shares:  0 -> 186.158   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 1806.331
+Yearly Sharpe Ratio: 0.9246200702331432
+CAGR: 0.12669985888265534
+Max Drawdown: 0.22175748007417084
+Calmar Ratio: 0.12669985888265534
+Average Trade: 4.734851050433857
+
+# RSI
+Balance: 1000 -> 1157.170
+Shares:  0 -> 1.575   (at 9.620 each)
+TWorth:  1000.0 (4.981) -> 1172.319
+Yearly Sharpe Ratio: 0.8201688346738855
+CAGR: 0.03222290221560642
+Max Drawdown: 0.07266163063004465
+Calmar Ratio: 0.03222290221560642
+Average Trade: 24.632532230706765
+
+# PPO-ML
+Balance: 1000 -> 0.010
+Shares:  0 -> 11271.000   (at 9.620 each)
+TWorth:  1000 (4.981) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== QBE.AX ===
+# GREEDY
+Balance: 1000 -> 326.095
+Shares:  0 -> 35.638   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 1045.494
+Yearly Sharpe Ratio: 0.13820626203887956
+CAGR: 0.009411966922128867
+Max Drawdown: 0.2150497759139681
+Calmar Ratio: 0.009411966922128867
+Average Trade: 0.038092457428814404
+
+# RANDOM
+Balance: 1000 -> 1465.589
+Shares:  0 -> 16.100   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 1790.581
+Yearly Sharpe Ratio: 0.9890108991336861
+CAGR: 0.12354397416644014
+Max Drawdown: 0.11021762476047865
+Calmar Ratio: 0.12354397416644014
+Average Trade: 0.7866350834175597
+
+# BEST AFTER 10
+Balance: 1000 -> 1013.251
+Shares:  0 -> 0.000   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 1013.251
+Yearly Sharpe Ratio: 0.07271962000955377
+CAGR: 0.0026279029021769595
+Max Drawdown: 0.19447916352055988
+Calmar Ratio: 0.0026279029021769595
+Average Trade: 6.62548206372287
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 57.618   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 1163.087
+Yearly Sharpe Ratio: 0.2741021253987511
+CAGR: 0.031961267090411694
+Max Drawdown: 0.27917502667278754
+Calmar Ratio: 0.031961267090411694
+Average Trade: 2.341615129507212
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1501.080
+Shares:  0 -> 0.000   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 1501.080
+Yearly Sharpe Ratio: 0.5228411002664337
+CAGR: 0.08434908594314172
+Max Drawdown: 0.36614167714782625
+Calmar Ratio: 0.08434908594314172
+Average Trade: 25.053998264544635
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1161.215
+Shares:  0 -> 56.943   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 2310.689
+Yearly Sharpe Ratio: 1.3981798619033432
+CAGR: 0.18251948960167663
+Max Drawdown: 0.10058889873773194
+Calmar Ratio: 0.18251948960167663
+Average Trade: 1.8997799342499666
+
+# BOLLINGER 2STD
+Balance: 1000 -> 2014.635
+Shares:  0 -> 13.414   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 2285.408
+Yearly Sharpe Ratio: 1.453022831980147
+CAGR: 0.17932839681811408
+Max Drawdown: 0.16917562558250204
+Calmar Ratio: 0.17932839681811408
+Average Trade: 8.877484621639931
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 20.186 each)
+TWorth:  1000.0 (8.919) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 0.004
+Shares:  0 -> 3710.000   (at 20.186 each)
+TWorth:  1000 (8.919) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== REA.AX ===
+# GREEDY
+Balance: 1000 -> 204.866
+Shares:  0 -> 2.943   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 782.511
+Yearly Sharpe Ratio: -0.2495241269325537
+CAGR: -0.04613135315848993
+Max Drawdown: 0.29836204367535535
+Calmar Ratio: -0.04613135315848993
+Average Trade: -0.16698945834236006
+
+# RANDOM
+Balance: 1000 -> 859.447
+Shares:  0 -> 0.936   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 1043.210
+Yearly Sharpe Ratio: 0.13694995791623166
+CAGR: 0.009338392916125704
+Max Drawdown: 0.2783435824354267
+Calmar Ratio: 0.009338392916125704
+Average Trade: 0.047301063392802906
+
+# BEST AFTER 10
+Balance: 1000 -> 1214.085
+Shares:  0 -> 0.000   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 1214.085
+Yearly Sharpe Ratio: 0.3117424790507399
+CAGR: 0.03943295392108781
+Max Drawdown: 0.34946183926890584
+Calmar Ratio: 0.03943295392108781
+Average Trade: 35.68079825620691
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1031.772
+Shares:  0 -> 0.000   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 1031.772
+Yearly Sharpe Ratio: 0.12256436980733133
+CAGR: 0.006255205294872113
+Max Drawdown: 0.34523044976376194
+Calmar Ratio: 0.006255205294872113
+Average Trade: 0.39714846282493
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 981.965
+Shares:  0 -> 0.000   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 981.965
+Yearly Sharpe Ratio: 0.07382456016870503
+CAGR: -0.0036217798265186785
+Max Drawdown: 0.34187050148987636
+Calmar Ratio: -0.0036217798265186785
+Average Trade: -0.6936444746734546
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 7.507   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 1473.626
+Yearly Sharpe Ratio: 0.5262336265364671
+CAGR: 0.08404672323594231
+Max Drawdown: 0.35428566566064
+Calmar Ratio: 0.08404672323594231
+Average Trade: 0.691110348250969
+
+# BOLLINGER 2STD
+Balance: 1000 -> 9.317
+Shares:  0 -> 11.218   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 2211.333
+Yearly Sharpe Ratio: 1.1446790446067991
+CAGR: 0.1753944589371299
+Max Drawdown: 0.17890499412684557
+Calmar Ratio: 0.1753944589371299
+Average Trade: 8.38403673633867
+
+# RSI
+Balance: 1000 -> 250.000
+Shares:  0 -> 3.485   (at 196.297 each)
+TWorth:  1000.0 (134.693) -> 934.128
+Yearly Sharpe Ratio: -0.9487081503413912
+CAGR: -0.011027325620258877
+Max Drawdown: 0.05748976501069251
+Calmar Ratio: -0.011027325620258877
+Average Trade: -27.05022315298004
+
+# PPO-ML
+Balance: 1000 -> 0.140
+Shares:  0 -> 4603.000   (at 196.297 each)
+TWorth:  1000 (134.693) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== RIO.AX ===
+# GREEDY
+Balance: 1000 -> 301.089
+Shares:  0 -> 3.929   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 813.273
+Yearly Sharpe Ratio: -0.23761316635248247
+CAGR: -0.039602664668568766
+Max Drawdown: 0.3507354118817741
+Calmar Ratio: -0.039602664668568766
+Average Trade: -0.14582473739649895
+
+# RANDOM
+Balance: 1000 -> 1087.360
+Shares:  0 -> 1.849   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 1328.400
+Yearly Sharpe Ratio: 0.519183703188821
+CAGR: 0.05905906746025602
+Max Drawdown: 0.15886665821665713
+Calmar Ratio: 0.05905906746025602
+Average Trade: 0.33053578052017357
+
+# BEST AFTER 10
+Balance: 1000 -> 1095.250
+Shares:  0 -> 0.000   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 1095.250
+Yearly Sharpe Ratio: 0.5853024284944213
+CAGR: 0.01830453020599543
+Max Drawdown: 0.04168244035590456
+Calmar Ratio: 0.01830453020599543
+Average Trade: 47.625201590461415
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 9.585   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 1249.609
+Yearly Sharpe Ratio: 0.36133943594086554
+CAGR: 0.0485020178375668
+Max Drawdown: 0.24329105837891854
+Calmar Ratio: 0.0485020178375668
+Average Trade: 3.575419895557822
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 6.463   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 842.534
+Yearly Sharpe Ratio: -0.08446901091175346
+CAGR: -0.030739880412136822
+Max Drawdown: 0.5026103233792284
+Calmar Ratio: -0.030739880412136822
+Average Trade: -4.392723986902225
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1132.022
+Shares:  0 -> 2.920   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 1512.704
+Yearly Sharpe Ratio: 0.6326510096390455
+CAGR: 0.08682548681926239
+Max Drawdown: 0.22188864988782483
+Calmar Ratio: 0.08682548681926239
+Average Trade: 0.7556180720894051
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1461.534
+Shares:  0 -> 0.049   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 1467.938
+Yearly Sharpe Ratio: 0.5835494812270823
+CAGR: 0.07954714281324105
+Max Drawdown: 0.2749458183016454
+Calmar Ratio: 0.07954714281324105
+Average Trade: 3.1838953839324025
+
+# RSI
+Balance: 1000 -> 541.251
+Shares:  0 -> 5.304   (at 130.365 each)
+TWorth:  1000.0 (68.910) -> 1232.671
+Yearly Sharpe Ratio: 0.7016776883723344
+CAGR: 0.0443109490235809
+Max Drawdown: 0.10372870294690847
+Calmar Ratio: 0.0443109490235809
+Average Trade: 34.704846878579374
+
+# PPO-ML
+Balance: 1000 -> 0.013
+Shares:  0 -> 1388.000   (at 130.365 each)
+TWorth:  1000 (68.910) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== RMD.AX ===
+# GREEDY
+Balance: 1000 -> 584.413
+Shares:  0 -> 12.952   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1071.503
+Yearly Sharpe Ratio: 0.16275583531810284
+CAGR: 0.013119442401832826
+Max Drawdown: 0.3444069597785164
+Calmar Ratio: 0.013119442401832826
+Average Trade: 0.05349462345659892
+
+# RANDOM
+Balance: 1000 -> 1100.805
+Shares:  0 -> 6.378   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1340.661
+Yearly Sharpe Ratio: 0.4678755927470306
+CAGR: 0.059973258519776085
+Max Drawdown: 0.328910399672005
+Calmar Ratio: 0.059973258519776085
+Average Trade: 0.3362679810915659
+
+# BEST AFTER 10
+Balance: 1000 -> 1542.646
+Shares:  0 -> 0.000   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1542.646
+Yearly Sharpe Ratio: 0.7857760505675272
+CAGR: 0.09027009473262226
+Max Drawdown: 0.1783965306446826
+Calmar Ratio: 0.09027009473262226
+Average Trade: 33.91537530976758
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1168.817
+Shares:  0 -> 0.000   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1168.817
+Yearly Sharpe Ratio: 0.2596997519595311
+CAGR: 0.03158839886535936
+Max Drawdown: 0.34295458832368336
+Calmar Ratio: 0.03158839886535936
+Average Trade: 2.344684883409523
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1273.299
+Shares:  0 -> 0.000   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1273.299
+Yearly Sharpe Ratio: 0.34905133844610914
+CAGR: 0.049348231315403
+Max Drawdown: 0.3556685280808283
+Calmar Ratio: 0.049348231315403
+Average Trade: 11.387438047536554
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.133
+Shares:  0 -> 27.570   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1036.966
+Yearly Sharpe Ratio: 0.12493435836848431
+CAGR: 0.006461156445491056
+Max Drawdown: 0.3162934642292236
+Calmar Ratio: 0.006461156445491056
+Average Trade: 0.0477202510686522
+
+# BOLLINGER 2STD
+Balance: 1000 -> 32.878
+Shares:  0 -> 31.501   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1217.563
+Yearly Sharpe Ratio: 0.3125445744861978
+CAGR: 0.03921995516075838
+Max Drawdown: 0.3008458141101472
+Calmar Ratio: 0.03921995516075838
+Average Trade: 1.564980980499767
+
+# RSI
+Balance: 1000 -> 1231.140
+Shares:  0 -> 0.252   (at 37.608 each)
+TWorth:  1000.0 (28.470) -> 1240.629
+Yearly Sharpe Ratio: 0.7253737312719664
+CAGR: 0.04391816882942545
+Max Drawdown: 0.06828747026368856
+Calmar Ratio: 0.04391816882942545
+Average Trade: 26.732316926635477
+
+# PPO-ML
+Balance: 1000 -> 0.093
+Shares:  0 -> 18537.000   (at 37.608 each)
+TWorth:  1000 (28.470) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== SCG.AX ===
+# GREEDY
+Balance: 1000 -> 765.436
+Shares:  0 -> 48.089   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 961.999
+Yearly Sharpe Ratio: -0.018661975012368277
+CAGR: -0.007959941111111424
+Max Drawdown: 0.1885466690909225
+Calmar Ratio: -0.007959941111111424
+Average Trade: -0.031184350751435733
+
+# RANDOM
+Balance: 1000 -> 1444.489
+Shares:  0 -> 77.861   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 1762.746
+Yearly Sharpe Ratio: 1.1075066661510204
+CAGR: 0.119455802195926
+Max Drawdown: 0.14653007755332584
+Calmar Ratio: 0.119455802195926
+Average Trade: 0.7544262616667253
+
+# BEST AFTER 10
+Balance: 1000 -> 1409.962
+Shares:  0 -> 0.000   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 1409.962
+Yearly Sharpe Ratio: 0.8093006598133595
+CAGR: 0.07089542044463526
+Max Drawdown: 0.10774719391809269
+Calmar Ratio: 0.07089542044463526
+Average Trade: 22.775680064755093
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1340.159
+Shares:  0 -> 0.000   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 1340.159
+Yearly Sharpe Ratio: 0.47654153861292253
+CAGR: 0.06010971963712808
+Max Drawdown: 0.22947508838463632
+Calmar Ratio: 0.06010971963712808
+Average Trade: 4.36101869443836
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 217.948   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 890.862
+Yearly Sharpe Ratio: -0.09594046208404665
+CAGR: -0.023432880766796504
+Max Drawdown: 0.3703060917496102
+Calmar Ratio: -0.023432880766796504
+Average Trade: -3.866717580496086
+
+# BOLLINGER 1STD
+Balance: 1000 -> 455.435
+Shares:  0 -> 245.052   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 1457.086
+Yearly Sharpe Ratio: 0.6847239670026704
+CAGR: 0.07743997010999326
+Max Drawdown: 0.14617859111623097
+Calmar Ratio: 0.07743997010999326
+Average Trade: 0.6843379530625106
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1552.859
+Shares:  0 -> 0.001   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 1552.864
+Yearly Sharpe Ratio: 0.8209101647053252
+CAGR: 0.09170602009553219
+Max Drawdown: 0.18103721237844447
+Calmar Ratio: 0.09170602009553219
+Average Trade: 3.4127397815404934
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 4.087 each)
+TWorth:  1000.0 (2.183) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 44.500
+Shares:  0 -> 2044.000   (at 4.087 each)
+TWorth:  1000 (2.183) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== SIG.AX ===
+# GREEDY
+Balance: 1000 -> 27.631
+Shares:  0 -> 299.271   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 899.257
+Yearly Sharpe Ratio: -0.01674664030044037
+CAGR: -0.018974892342244476
+Max Drawdown: 0.34230289397577507
+Calmar Ratio: -0.018974892342244476
+Average Trade: -0.07311562025635047
+
+# RANDOM
+Balance: 1000 -> 2384.039
+Shares:  0 -> 172.432   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 2886.246
+Yearly Sharpe Ratio: 1.111570809897752
+CAGR: 0.23596435409306116
+Max Drawdown: 0.21600551340490062
+Calmar Ratio: 0.23596435409306116
+Average Trade: 1.8770506578849468
+
+# BEST AFTER 10
+Balance: 1000 -> 1015.316
+Shares:  0 -> 0.000   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 1015.316
+Yearly Sharpe Ratio: 0.07820427296309775
+CAGR: 0.0030349745132074446
+Max Drawdown: 0.20689614961047237
+Calmar Ratio: 0.0030349745132074446
+Average Trade: 3.8290250096127068
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 3743.616
+Shares:  0 -> 0.000   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 3743.616
+Yearly Sharpe Ratio: 0.8997038511470071
+CAGR: 0.3010542801751266
+Max Drawdown: 0.27737428145116166
+Calmar Ratio: 0.3010542801751266
+Average Trade: 37.07589154657918
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> -0.000
+Shares:  0 -> 1231.453   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 3586.607
+Yearly Sharpe Ratio: 0.8612185650871911
+CAGR: 0.2927357351360449
+Max Drawdown: 0.24988232914320552
+Calmar Ratio: 0.2927357351360449
+Average Trade: 125.00427529784486
+
+# BOLLINGER 1STD
+Balance: 1000 -> 200.205
+Shares:  0 -> 471.926   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 1574.689
+Yearly Sharpe Ratio: 0.5937161634021658
+CAGR: 0.09648870347138327
+Max Drawdown: 0.30681896171123507
+Calmar Ratio: 0.09648870347138327
+Average Trade: 0.94116703217976
+
+# BOLLINGER 2STD
+Balance: 1000 -> 130.107
+Shares:  0 -> 342.539   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 1127.752
+Yearly Sharpe Ratio: 0.2344488549769729
+CAGR: 0.0259386463839133
+Max Drawdown: 0.30252264406121987
+Calmar Ratio: 0.0259386463839133
+Average Trade: 0.7968619332648399
+
+# RSI
+Balance: 1000 -> 1295.505
+Shares:  0 -> 3.253   (at 2.913 each)
+TWorth:  1000.0 (0.496) -> 1304.978
+Yearly Sharpe Ratio: 0.7735488228873485
+CAGR: 0.05451857512570557
+Max Drawdown: 0.11812553213587498
+Calmar Ratio: 0.05451857512570557
+Average Trade: 27.73453908921812
+
+# PPO-ML
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 2.913 each)
+TWorth:  1000 (0.496) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== STO.AX ===
+# GREEDY
+Balance: 1000 -> 344.373
+Shares:  0 -> 67.167   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 790.364
+Yearly Sharpe Ratio: -0.24297781634919402
+CAGR: -0.045762071372798085
+Max Drawdown: 0.3182241596724533
+Calmar Ratio: -0.045762071372798085
+Average Trade: -0.16577554955307613
+
+# RANDOM
+Balance: 1000 -> 1085.898
+Shares:  0 -> 37.034   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 1331.805
+Yearly Sharpe Ratio: 0.47932951956136693
+CAGR: 0.058841311565750676
+Max Drawdown: 0.20175020204620037
+Calmar Ratio: 0.058841311565750676
+Average Trade: 0.329173325180025
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 120.056   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 797.172
+Yearly Sharpe Ratio: -0.15079985025395332
+CAGR: -0.044008131662971905
+Max Drawdown: 0.4527594700524994
+Calmar Ratio: -0.044008131662971905
+Average Trade: -2.4947833036937612
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 778.335
+Shares:  0 -> 0.000   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 778.335
+Yearly Sharpe Ratio: -0.16423449134643262
+CAGR: -0.048733550632700684
+Max Drawdown: 0.423242394396594
+Calmar Ratio: -0.048733550632700684
+Average Trade: -7.9166117206513364
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1727.296
+Shares:  0 -> 4.180   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 1755.051
+Yearly Sharpe Ratio: 0.7847997008903184
+CAGR: 0.11868012725444399
+Max Drawdown: 0.2358765556644597
+Calmar Ratio: 0.11868012725444399
+Average Trade: 1.1219962452014862
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1120.024
+Shares:  0 -> 24.121   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 1280.185
+Yearly Sharpe Ratio: 0.38143774078122095
+CAGR: 0.05050198988619892
+Max Drawdown: 0.20959629096468302
+Calmar Ratio: 0.05050198988619892
+Average Trade: 1.7970270203167484
+
+# RSI
+Balance: 1000 -> 202.386
+Shares:  0 -> 169.500   (at 6.640 each)
+TWorth:  1000.0 (4.848) -> 1327.867
+Yearly Sharpe Ratio: 0.483166918247882
+CAGR: 0.05833220571906117
+Max Drawdown: 0.18066117379546373
+Calmar Ratio: 0.05833220571906117
+Average Trade: 65.78525396200921
+
+# PPO-ML
+Balance: 1000 -> 0.042
+Shares:  0 -> 1355.000   (at 6.640 each)
+TWorth:  1000 (4.848) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== SUN.AX ===
+# GREEDY
+Balance: 1000 -> 62.193
+Shares:  0 -> 56.079   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 1134.841
+Yearly Sharpe Ratio: 0.3021808511025772
+CAGR: 0.027720256745738858
+Max Drawdown: 0.1992914274568822
+Calmar Ratio: 0.027720256745738858
+Average Trade: 0.11639521623931304
+
+# RANDOM
+Balance: 1000 -> 1377.991
+Shares:  0 -> 15.716   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 1678.607
+Yearly Sharpe Ratio: 0.8731095309868443
+CAGR: 0.10947176030923456
+Max Drawdown: 0.1756858995014435
+Calmar Ratio: 0.10947176030923456
+Average Trade: 0.677727162197633
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 725.207
+Shares:  0 -> 0.000   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 725.207
+Yearly Sharpe Ratio: -0.28377777578599894
+CAGR: -0.06204788724877819
+Max Drawdown: 0.2957582409765098
+Calmar Ratio: -0.06204788724877819
+Average Trade: -3.6157025142786368
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1314.804
+Shares:  0 -> 0.000   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 1314.804
+Yearly Sharpe Ratio: 0.4014968899075263
+CAGR: 0.0560803349252037
+Max Drawdown: 0.3081208963576227
+Calmar Ratio: 0.0560803349252037
+Average Trade: 13.116821274389423
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 115.333   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 2206.034
+Yearly Sharpe Ratio: 1.5227132668066496
+CAGR: 0.17368368296220527
+Max Drawdown: 0.14099925685312328
+Calmar Ratio: 0.17368368296220527
+Average Trade: 1.7487217334783525
+
+# BOLLINGER 2STD
+Balance: 1000 -> 4.138
+Shares:  0 -> 106.065   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 2032.899
+Yearly Sharpe Ratio: 1.4830150280714927
+CAGR: 0.15470231227666553
+Max Drawdown: 0.11291562868197053
+Calmar Ratio: 0.15470231227666553
+Average Trade: 6.257450312391858
+
+# RSI
+Balance: 1000 -> 1229.229
+Shares:  0 -> 0.546   (at 19.128 each)
+TWorth:  1000.0 (8.966) -> 1239.663
+Yearly Sharpe Ratio: 0.5649852581460681
+CAGR: 0.043783751443382535
+Max Drawdown: 0.13761975077061736
+Calmar Ratio: 0.043783751443382535
+Average Trade: 26.64331297231638
+
+# PPO-ML
+Balance: 1000 -> 2.809
+Shares:  0 -> 2679.000   (at 19.128 each)
+TWorth:  1000 (8.966) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== TCL.AX ===
+# GREEDY
+Balance: 1000 -> 598.733
+Shares:  0 -> 9.290   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 736.998
+Yearly Sharpe Ratio: -0.6809507872511339
+CAGR: -0.05910599260475913
+Max Drawdown: 0.2901477041983458
+Calmar Ratio: -0.05910599260475913
+Average Trade: -0.20895337507492054
+
+# RANDOM
+Balance: 1000 -> 844.599
+Shares:  0 -> 12.555   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 1031.449
+Yearly Sharpe Ratio: 0.11569236377427776
+CAGR: 0.006100913351233528
+Max Drawdown: 0.1265074341090205
+Calmar Ratio: 0.006100913351233528
+Average Trade: 0.030702267281857168
+
+# BEST AFTER 10
+Balance: 1000 -> 1051.430
+Shares:  0 -> 0.000   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 1051.430
+Yearly Sharpe Ratio: 0.28890118889686217
+CAGR: 0.010048629483364602
+Max Drawdown: 0.0481893019834863
+Calmar Ratio: 0.010048629483364602
+Average Trade: 8.571658273119397
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 62.172   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 925.281
+Yearly Sharpe Ratio: -0.10878665300222891
+CAGR: -0.015709583351161793
+Max Drawdown: 0.24700380744945602
+Calmar Ratio: -0.015709583351161793
+Average Trade: -0.8775936802333663
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 63.122   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 939.408
+Yearly Sharpe Ratio: -0.07869932799222652
+CAGR: -0.012731626624550962
+Max Drawdown: 0.17429419673909385
+Calmar Ratio: -0.012731626624550962
+Average Trade: -1.778526909913327
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1201.984
+Shares:  0 -> 0.001   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 1201.993
+Yearly Sharpe Ratio: 0.41967771412535587
+CAGR: 0.037360803402900045
+Max Drawdown: 0.14201441892773028
+Calmar Ratio: 0.037360803402900045
+Average Trade: 0.29792513367406537
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1385.616
+Shares:  0 -> 2.891   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 1428.641
+Yearly Sharpe Ratio: 0.743613603879523
+CAGR: 0.07369753529297074
+Max Drawdown: 0.17480363236711155
+Calmar Ratio: 0.07369753529297074
+Average Trade: 2.8957086814305213
+
+# RSI
+Balance: 1000 -> 795.916
+Shares:  0 -> 23.190   (at 14.882 each)
+TWorth:  1000.0 (12.270) -> 1141.048
+Yearly Sharpe Ratio: 0.6624987030194771
+CAGR: 0.026545782645235105
+Max Drawdown: 0.11265558322936225
+Calmar Ratio: 0.026545782645235105
+Average Trade: 70.21971441984954
+
+# PPO-ML
+Balance: 1000 -> 0.005
+Shares:  0 -> 15386.000   (at 14.882 each)
+TWorth:  1000 (12.270) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== TLS.AX ===
+# GREEDY
+Balance: 1000 -> 68.779
+Shares:  0 -> 209.963   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1103.373
+Yearly Sharpe Ratio: 0.3392224750849336
+CAGR: 0.01992516061377425
+Max Drawdown: 0.17851642630137238
+Calmar Ratio: 0.01992516061377425
+Average Trade: 0.08255982719563558
+
+# RANDOM
+Balance: 1000 -> 1156.744
+Shares:  0 -> 51.446   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1410.245
+Yearly Sharpe Ratio: 1.126958004851217
+CAGR: 0.07097992638709738
+Max Drawdown: 0.09284445462056236
+Calmar Ratio: 0.07097992638709738
+Average Trade: 0.4068586785943074
+
+# BEST AFTER 10
+Balance: 1000 -> 1005.705
+Shares:  0 -> 0.000   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1005.705
+Yearly Sharpe Ratio: 0.10035669255921864
+CAGR: 0.0011347555536087572
+Max Drawdown: 0.024847332926220343
+Calmar Ratio: 0.0011347555536087572
+Average Trade: 2.852386702035062
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 294.446   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1450.883
+Yearly Sharpe Ratio: 0.8785106674366088
+CAGR: 0.07718435201009077
+Max Drawdown: 0.16766507111908127
+Calmar Ratio: 0.07718435201009077
+Average Trade: 5.869960678686155
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 353.600   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1742.364
+Yearly Sharpe Ratio: 1.2789199930711366
+CAGR: 0.117225951032909
+Max Drawdown: 0.11948653281991854
+Calmar Ratio: 0.117225951032909
+Average Trade: 43.74645667819189
+
+# BOLLINGER 1STD
+Balance: 1000 -> 1244.690
+Shares:  0 -> 0.030   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1244.838
+Yearly Sharpe Ratio: 0.6481456801157424
+CAGR: 0.04462965520689588
+Max Drawdown: 0.11055900749521433
+Calmar Ratio: 0.04462965520689588
+Average Trade: 0.36817703509275823
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1176.690
+Shares:  0 -> 1.651   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1184.825
+Yearly Sharpe Ratio: 0.537282198462562
+CAGR: 0.034390880848039096
+Max Drawdown: 0.14400990321728352
+Calmar Ratio: 0.034390880848039096
+Average Trade: 1.127019913976534
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 4.927 each)
+TWorth:  1000.0 (2.494) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 0.009
+Shares:  0 -> 2921.000   (at 4.927 each)
+TWorth:  1000 (2.494) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== VAS.AX ===
+# GREEDY
+Balance: 1000 -> 29.364
+Shares:  0 -> 10.275   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1120.122
+Yearly Sharpe Ratio: 0.40811058619601337
+CAGR: 0.024994184454647073
+Max Drawdown: 0.12094224206101109
+Calmar Ratio: 0.024994184454647073
+Average Trade: 0.10478500832555913
+
+# RANDOM
+Balance: 1000 -> 938.372
+Shares:  0 -> 3.039   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1260.979
+Yearly Sharpe Ratio: 0.7568166645981754
+CAGR: 0.04794315575562069
+Max Drawdown: 0.10340360024072602
+Calmar Ratio: 0.04794315575562069
+Average Trade: 0.262435196227816
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1221.951
+Shares:  0 -> 0.000   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1221.951
+Yearly Sharpe Ratio: 0.5442245464026393
+CAGR: 0.040805093886980615
+Max Drawdown: 0.15398320595416645
+Calmar Ratio: 0.040805093886980615
+Average Trade: 2.8455268284703426
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1173.466
+Shares:  0 -> 0.000   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1173.466
+Yearly Sharpe Ratio: 0.4064594382657189
+CAGR: 0.0324310854048695
+Max Drawdown: 0.24927363226340307
+Calmar Ratio: 0.0324310854048695
+Average Trade: 6.671754990043094
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.163
+Shares:  0 -> 12.093   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1283.944
+Yearly Sharpe Ratio: 0.6948982315281889
+CAGR: 0.053433693252776804
+Max Drawdown: 0.11333327932614011
+Calmar Ratio: 0.053433693252776804
+Average Trade: 0.43901480942792026
+
+# BOLLINGER 2STD
+Balance: 1000 -> 87.899
+Shares:  0 -> 12.179   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1380.772
+Yearly Sharpe Ratio: 0.8730734941897841
+CAGR: 0.06853145419446749
+Max Drawdown: 0.11605949524250407
+Calmar Ratio: 0.06853145419446749
+Average Trade: 2.6270194748213
+
+# RSI
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 106.158 each)
+TWorth:  1000.0 (67.364) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# PPO-ML
+Balance: 1000 -> 0.015
+Shares:  0 -> 3601.000   (at 106.158 each)
+TWorth:  1000 (67.364) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== WBC.AX ===
+# GREEDY
+Balance: 1000 -> 272.500
+Shares:  0 -> 15.943   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 880.458
+Yearly Sharpe Ratio: -0.19111063078588614
+CAGR: -0.02336530722736252
+Max Drawdown: 0.3166366107382084
+Calmar Ratio: -0.02336530722736252
+Average Trade: -0.08895861460971713
+
+# RANDOM
+Balance: 1000 -> 1393.245
+Shares:  0 -> 7.903   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 1694.615
+Yearly Sharpe Ratio: 1.1238749205603618
+CAGR: 0.11216248325585454
+Max Drawdown: 0.1819943972915263
+Calmar Ratio: 0.11216248325585454
+Average Trade: 0.6981267025210864
+
+# BEST AFTER 10
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+Average Trade: 0
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 0.000
+Shares:  0 -> 42.904   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 1636.037
+Yearly Sharpe Ratio: 0.8484563427418088
+CAGR: 0.10807968729660633
+Max Drawdown: 0.17717566589613792
+Calmar Ratio: 0.10807968729660633
+Average Trade: 9.482481783300221
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 0.000
+Shares:  0 -> 49.054   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 1870.544
+Yearly Sharpe Ratio: 1.0076539455407862
+CAGR: 0.13807045956272157
+Max Drawdown: 0.305952992596363
+Calmar Ratio: 0.13807045956272157
+Average Trade: 39.699934023385545
+
+# BOLLINGER 1STD
+Balance: 1000 -> 806.016
+Shares:  0 -> 21.420   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 1622.809
+Yearly Sharpe Ratio: 1.0589584843632798
+CAGR: 0.10137062104685435
+Max Drawdown: 0.1269188849954616
+Calmar Ratio: 0.10137062104685435
+Average Trade: 0.8750762588773626
+
+# BOLLINGER 2STD
+Balance: 1000 -> 1290.552
+Shares:  0 -> 1.081   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 1331.780
+Yearly Sharpe Ratio: 0.5944074130872204
+CAGR: 0.05893354876629453
+Max Drawdown: 0.20351830680244948
+Calmar Ratio: 0.05893354876629453
+Average Trade: 1.8797629962334834
+
+# RSI
+Balance: 1000 -> 1327.375
+Shares:  0 -> 1.808   (at 38.132 each)
+TWorth:  1000.0 (14.773) -> 1396.305
+Yearly Sharpe Ratio: 0.680780396671856
+CAGR: 0.06905858870064407
+Max Drawdown: 0.20757563927705142
+Calmar Ratio: 0.06905858870064407
+Average Trade: 39.78735135297718
+
+# PPO-ML
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 38.132 each)
+TWorth:  1000 (14.773) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== WES.AX ===
+# GREEDY
+Balance: 1000 -> 40.174
+Shares:  0 -> 9.949   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 840.155
+Yearly Sharpe Ratio: -0.31406769555535863
+CAGR: -0.033620010936264766
+Max Drawdown: 0.28673447712093475
+Calmar Ratio: -0.033620010936264766
+Average Trade: -0.12499394784092847
+
+# RANDOM
+Balance: 1000 -> 1184.937
+Shares:  0 -> 3.246   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 1445.954
+Yearly Sharpe Ratio: 0.8274159529244227
+CAGR: 0.07644363416892852
+Max Drawdown: 0.21228451984433128
+Calmar Ratio: 0.07644363416892852
+Average Trade: 0.442998804306756
+
+# BEST AFTER 10
+Balance: 1000 -> 1053.800
+Shares:  0 -> 0.000   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 1053.800
+Yearly Sharpe Ratio: 0.2392520552595937
+CAGR: 0.010502075856232196
+Max Drawdown: 0.07162251395898761
+Calmar Ratio: 0.010502075856232196
+Average Trade: 13.449924201954332
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1193.637
+Shares:  0 -> 0.000   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 1193.637
+Yearly Sharpe Ratio: 0.3420102150382682
+CAGR: 0.03591907395933003
+Max Drawdown: 0.22673268962831541
+Calmar Ratio: 0.03591907395933003
+Average Trade: 2.4204674069485663
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1469.669
+Shares:  0 -> 0.000   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 1469.669
+Yearly Sharpe Ratio: 0.6558841702724724
+CAGR: 0.07978691615997136
+Max Drawdown: 0.23162459176257055
+Calmar Ratio: 0.07978691615997136
+Average Trade: 19.56953404258938
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.170
+Shares:  0 -> 17.452   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 1403.516
+Yearly Sharpe Ratio: 0.7321978911040444
+CAGR: 0.07050709064101368
+Max Drawdown: 0.20837669930078515
+Calmar Ratio: 0.07050709064101368
+Average Trade: 0.5596148054970327
+
+# BOLLINGER 2STD
+Balance: 1000 -> 223.463
+Shares:  0 -> 16.672   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 1564.054
+Yearly Sharpe Ratio: 0.9018149140361444
+CAGR: 0.0937863329508486
+Max Drawdown: 0.23856340355147526
+Calmar Ratio: 0.0937863329508486
+Average Trade: 3.3795422650651714
+
+# RSI
+Balance: 1000 -> 1341.674
+Shares:  0 -> 0.081   (at 80.410 each)
+TWorth:  1000.0 (39.025) -> 1348.175
+Yearly Sharpe Ratio: 0.9538051110772345
+CAGR: 0.06137368235130558
+Max Drawdown: 0.08788636028318215
+Calmar Ratio: 0.06137368235130558
+Average Trade: 34.81933536948755
+
+# PPO-ML
+Balance: 1000 -> 894.214
+Shares:  0 -> 101.000   (at 80.410 each)
+TWorth:  1000 (39.025) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== WTC.AX ===
+# GREEDY
+Balance: 1000 -> 222.208
+Shares:  0 -> 8.985   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 787.770
+Yearly Sharpe Ratio: -0.0757847212759226
+CAGR: -0.042949608947522866
+Max Drawdown: 0.42205221039094226
+Calmar Ratio: -0.042949608947522866
+Average Trade: -0.15708961143370737
+
+# RANDOM
+Balance: 1000 -> 1017.678
+Shares:  0 -> 3.329   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 1227.202
+Yearly Sharpe Ratio: 0.30553588483398497
+CAGR: 0.04378593269933284
+Max Drawdown: 0.3860758099000782
+Calmar Ratio: 0.04378593269933284
+Average Trade: 0.23766383769732494
+
+# BEST AFTER 10
+Balance: 1000 -> 1085.289
+Shares:  0 -> 0.000   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 1085.289
+Yearly Sharpe Ratio: 0.21910494718436319
+CAGR: 0.01645135823362298
+Max Drawdown: 0.19609843766371324
+Calmar Ratio: 0.01645135823362298
+Average Trade: 10.66115222145612
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 5116.444
+Shares:  0 -> 0.000   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 5116.444
+Yearly Sharpe Ratio: 1.316947008761002
+CAGR: 0.38466566870334784
+Max Drawdown: 0.28036347228383585
+Calmar Ratio: 0.38466566870334784
+Average Trade: 60.53593554597364
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1139.116
+Shares:  0 -> 0.000   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 1139.116
+Yearly Sharpe Ratio: 0.23925085511136457
+CAGR: 0.02630817166619881
+Max Drawdown: 0.4604573249891644
+Calmar Ratio: 0.02630817166619881
+Average Trade: 4.968428082083116
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 12.339   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 776.737
+Yearly Sharpe Ratio: -0.02322465341574957
+CAGR: -0.04127353351858398
+Max Drawdown: 0.4960569300641166
+Calmar Ratio: -0.04127353351858398
+Average Trade: -0.2551044910951753
+
+# BOLLINGER 2STD
+Balance: 1000 -> 0.081
+Shares:  0 -> 13.277   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 835.846
+Yearly Sharpe Ratio: 0.047730393286113414
+CAGR: -0.02715289823137279
+Max Drawdown: 0.5235085216868474
+Calmar Ratio: -0.02715289823137279
+Average Trade: -0.7542097587039247
+
+# RSI
+Balance: 1000 -> 531.110
+Shares:  0 -> 14.566   (at 62.948 each)
+TWorth:  1000.0 (30.341) -> 1447.991
+Yearly Sharpe Ratio: 0.6467160491718416
+CAGR: 0.08225415246988943
+Max Drawdown: 0.30371703617189966
+Calmar Ratio: 0.08225415246988943
+Average Trade: 44.23545639426315
+
+# PPO-ML
+Balance: 1000 -> 7.258
+Shares:  0 -> 877.000   (at 62.948 each)
+TWorth:  1000 (30.341) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== XRO.AX ===
+# GREEDY
+Balance: 1000 -> 13.621
+Shares:  0 -> 5.904   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 717.944
+Yearly Sharpe Ratio: -0.26652139237347167
+CAGR: -0.060110621307681855
+Max Drawdown: 0.35360673671967385
+Calmar Ratio: -0.060110621307681855
+Average Trade: -0.21224551231552274
+
+# RANDOM
+Balance: 1000 -> 791.502
+Shares:  0 -> 1.300   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 946.582
+Yearly Sharpe Ratio: 0.030352385634344847
+CAGR: -0.009909748067868707
+Max Drawdown: 0.3858286870125705
+Calmar Ratio: -0.009909748067868707
+Average Trade: -0.04829215465351653
+
+# BEST AFTER 10
+Balance: 1000 -> 0.000
+Shares:  0 -> 9.907   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 1181.859
+Yearly Sharpe Ratio: 0.2587648108565397
+CAGR: 0.033872965484936124
+Max Drawdown: 0.48018856526854536
+Calmar Ratio: 0.033872965484936124
+Average Trade: 20.206515350885134
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 1891.452
+Shares:  0 -> 0.000   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 1891.452
+Yearly Sharpe Ratio: 0.7495682326584701
+CAGR: 0.1354915040954927
+Max Drawdown: 0.3285800715959365
+Calmar Ratio: 0.1354915040954927
+Average Trade: 12.73503204291346
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 1643.108
+Shares:  0 -> 0.000   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 1643.108
+Yearly Sharpe Ratio: 0.5821958243646291
+CAGR: 0.10407029115090016
+Max Drawdown: 0.38697452009456496
+Calmar Ratio: 0.10407029115090016
+Average Trade: 35.72822152780735
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 4.298   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 512.704
+Yearly Sharpe Ratio: -0.4107415003976212
+CAGR: -0.1210352961881015
+Max Drawdown: 0.48605061706064207
+Calmar Ratio: -0.1210352961881015
+Average Trade: -0.6748418413835945
+
+# BOLLINGER 2STD
+Balance: 1000 -> 0.000
+Shares:  0 -> 3.979   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 474.645
+Yearly Sharpe Ratio: -0.4638472797320897
+CAGR: -0.1344481772855407
+Max Drawdown: 0.6002158392635989
+Calmar Ratio: -0.1344481772855407
+Average Trade: -2.995949642878612
+
+# RSI
+Balance: 1000 -> 277.317
+Shares:  0 -> 5.762   (at 119.293 each)
+TWorth:  1000.0 (120.078) -> 964.666
+Yearly Sharpe Ratio: 0.04064771575864185
+CAGR: -0.004177435932011031
+Max Drawdown: 0.2943774770576253
+Calmar Ratio: -0.004177435932011031
+Average Trade: -1.731538859379005
+
+# PPO-ML
+Balance: 1000 -> 0.174
+Shares:  0 -> 3517.000   (at 119.293 each)
+TWorth:  1000 (120.078) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+
+
+=== XYZ.AX ===
+# GREEDY
+Balance: 1000 -> 20.042
+Shares:  0 -> 7.641   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 713.646
+Yearly Sharpe Ratio: -0.8036396999886863
+CAGR: -0.30573323618856496
+Max Drawdown: 0.39112401352647447
+Calmar Ratio: -0.30573323618856496
+Average Trade: -1.2483362857545066
+
+# RANDOM
+Balance: 1000 -> 179.989
+Shares:  0 -> 7.290   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 841.765
+Yearly Sharpe Ratio: -0.5669388543381858
+CAGR: -0.16558829396096497
+Max Drawdown: 0.2584384239686109
+Calmar Ratio: -0.16558829396096497
+Average Trade: -0.8454586094556389
+
+# BEST AFTER 10
+Balance: 1000 -> 0.000
+Shares:  0 -> 7.524   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 682.968
+Yearly Sharpe Ratio: -0.37824178640051953
+CAGR: -0.34049243191643674
+Max Drawdown: 0.5098923793394654
+Calmar Ratio: -0.34049243191643674
+Average Trade: -300.084632968502
+
+# SIMPLE MA (5, 21)
+Balance: 1000 -> 780.613
+Shares:  0 -> 0.000   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 780.613
+Yearly Sharpe Ratio: -0.3824427745675247
+CAGR: -0.25095464890605645
+Max Drawdown: 0.42624327796634304
+Calmar Ratio: -0.25095464890605645
+Average Trade: -13.711716055213373
+
+# EXPO MA (10, 20, 50)
+Balance: 1000 -> 949.849
+Shares:  0 -> 0.000   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 949.849
+Yearly Sharpe Ratio: 0.008131259250378612
+CAGR: -0.05826134804402572
+Max Drawdown: 0.23287751412808044
+Calmar Ratio: -0.05826134804402572
+Average Trade: -12.53771994041324
+
+# BOLLINGER 1STD
+Balance: 1000 -> 0.119
+Shares:  0 -> 8.537   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 775.066
+Yearly Sharpe Ratio: -0.44269418341257694
+CAGR: -0.2356174631992639
+Max Drawdown: 0.41939422892993083
+Calmar Ratio: -0.2356174631992639
+Average Trade: -1.887221638643721
+
+# BOLLINGER 2STD
+Balance: 1000 -> 214.817
+Shares:  0 -> 7.652   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 909.411
+Yearly Sharpe Ratio: 0.06052055882793498
+CAGR: -0.08504456233366697
+Max Drawdown: 0.4069247046420195
+Calmar Ratio: -0.08504456233366697
+Average Trade: -3.6676593451885084
+
+# RSI
+Balance: 1000 -> 736.827
+Shares:  0 -> 5.810   (at 90.775 each)
+TWorth:  1000.0 (134.485) -> 1264.205
+Yearly Sharpe Ratio: 0.8860323028566528
+CAGR: 0.33046958667234616
+Max Drawdown: 0.2776172281868089
+Calmar Ratio: 0.33046958667234616
+Average Trade: 46.215218765631334
+
+# PPO-ML
+Balance: 1000 -> 1000.000
+Shares:  0 -> 0.000   (at 90.775 each)
+TWorth:  1000 (134.485) -> 1000.000
+Yearly Sharpe Ratio: 0
+CAGR: 0.0
+Max Drawdown: 0
+Calmar Ratio: 0.0
+

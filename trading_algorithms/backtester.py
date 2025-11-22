@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import mpl_axes_aligner as mpl
 from typing import cast
-from algorithm_class import TradingAlgorithm
-from algorithm_factory import algorithm_create, AlgorithmTypes
+from algorithms.algorithm_class import TradingAlgorithm
+from algorithms.algorithm_factory import algorithm_create, AlgorithmTypes
 from data_parser import parse_csv
 from metrics import sharpe, max_drawdown, calmar, cagr, average_trade
 from algorithms.true_optimal import get_optimal_worth_history
@@ -145,8 +145,9 @@ for stock in testing_stocks:
             f"Yearly Sharpe Ratio: {sharpe(ppo_data)}\n"
             f"CAGR: {cagr(ppo_data)}\n"
             f"Max Drawdown: {max_drawdown(ppo_data)}\n"
-            f"Calmar Ratio: {calmar(ppo_data)}\n")
+            f"Calmar Ratio: {calmar(ppo_data)}\n"
             # f"Average Trade: {average_trade(ppo_data, ppo_bal_history)}\n")
+            f"Average Trade: 0\n")  # Currently not working
 
 
     # Finishing plotting

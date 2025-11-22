@@ -1,7 +1,7 @@
 from typing import override
 from random import random
 
-from algorithm_class import TradingAlgorithm
+from algorithms.algorithm_class import TradingAlgorithm
 
 
 class RandomChoiceAlgorithm(TradingAlgorithm):
