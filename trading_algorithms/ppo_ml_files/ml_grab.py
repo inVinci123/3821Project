@@ -8,13 +8,13 @@ def ppo_ml_algorithm(ticker: str, starting_balance: float,
                      time_period: str = "5y", interval: str = "1d", model: str = "final_model", plot_graphs: bool = False):
     # Load local model
     # print("Loading model")
-    model = PPO.load("models/" + model + ".zip")
+    ml_model = PPO.load("ppo_ml_files/models/" + model + ".zip")
 
     # The second returnee of PSP normalises the stock values by a significant margin.
     # e.g. 200 -> 1.2, because PPOs are generally sensitive
     # This also puts flags on certain indicators
     # print("Loading and processing stock data")
-    _, le_data, _ = StockDataProcessor("dummy_stock", "dummy_cache").process_stocks_pipeline([ticker], time_period, interval)
+    _, le_data, _ = StockDataProcessor("ppo_ml_files/dummy_stock", "ppo_ml_files/dummy_cache").process_stocks_pipeline([ticker], time_period, interval)
 
     yticker = yfinance.Ticker(ticker)
     hist_data = yticker.history(period="5y")
@@ -38,12 +38,12 @@ def ppo_ml_algorithm(ticker: str, starting_balance: float,
                                           transaction_cost=0., enable_logging=False)
     obs, _ = env.reset()
 
-    action, _ = model.predict(obs, deterministic=True)
+    action, _ = ml_model.predict(obs, deterministic=True)
     info = {}
     i = 0
     while not info:
         obs, _, _, _, info = env.step(action)
-        action, _ = model.predict(obs, deterministic=True)
+        action, _ = ml_model.predict(obs, deterministic=True)
 
         current_balance = balance_history[-1]
         current_shares = shares_history[-1]

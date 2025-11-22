@@ -27,7 +27,7 @@ def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool
                 f"Total worth: {algorithm.get_current_worth(datum):.03f}")
 
 
-test_ml = False
+test_ml = True
 plot_out = True
 
 
@@ -35,7 +35,9 @@ bullish_stocks = ["AAPL","ALL.AX","AMZN","ANZ.AX","BTC-USD","BXB.AX","CBA.AX","C
 
 sideways_stocks = ["AMC.AX", "ASX.AX", "BHP.AX", "CSL.AX", "WDS.AX", "WOW.AX"]
 
-testing_stocks = sideways_stocks
+sample_stocks = ["AAPL", "ANZ.AX", "BHP.AX"]
+
+testing_stocks = sample_stocks
 
 for stock in testing_stocks:
     data = parse_csv(stock.lower() + ".csv")
@@ -146,8 +148,9 @@ for stock in testing_stocks:
             f"CAGR: {cagr(ppo_data)}\n"
             f"Max Drawdown: {max_drawdown(ppo_data)}\n"
             f"Calmar Ratio: {calmar(ppo_data)}\n"
-            # f"Average Trade: {average_trade(ppo_data, ppo_bal_history)}\n")
-            f"Average Trade: 0\n")  # Currently not working
+            # f"Average Trade: {average_trade(ppo_data, ppo_bal_history)}\n"
+            f"Average Trade: 0\n"  # Currently not working
+        )
 
 
     # Finishing plotting
