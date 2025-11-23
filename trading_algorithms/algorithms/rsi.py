@@ -35,18 +35,20 @@ class RSIAlgorithm(TradingAlgorithm):
             self.shares_history.append(current_shares)
             return
 
-        window = self.seen_data_points[-(self.window_size + 1):]  # last window_size+1 prices
+        real_window_size = min(self.window_size, len(self.seen_data_points) - 1)    
+        window = self.seen_data_points[-(real_window_size + 1):]  # last real_window_size+1 prices
         gains = 0.0
         losses = 0.0
         for i in range(1, len(window)):
-            change = window[i] - window[i - 1]
+            # calulate average PERCENTAGE changes
+            change = (window[i] - window[i - 1]) / window[i - 1]
             if change > 0:
                 gains += change
             else:
                 losses += -change
 
-        avg_gain = gains / self.window_size
-        avg_loss = losses / self.window_size
+        avg_gain = gains / real_window_size
+        avg_loss = losses / real_window_size
 
         # Avoid division by zero: if avg_loss == 0 then RSI is 100, if avg_gain == 0 RSI is 0
         # If both average loss and gain is zero, assume RSI of 50 (no momentum)
