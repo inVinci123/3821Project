@@ -27,7 +27,7 @@ def backtest(algorithm: TradingAlgorithm, data: list[float], print_results: bool
                 f"Total worth: {algorithm.get_current_worth(datum):.03f}")
 
 
-test_ml = True
+test_ml = False
 plot_out = True
 
 
@@ -37,7 +37,7 @@ sideways_stocks = ["AMC.AX", "ASX.AX", "BHP.AX", "CSL.AX", "WDS.AX", "WOW.AX"]
 
 sample_stocks = ["AAPL", "ANZ.AX", "BHP.AX"]
 
-testing_stocks = sample_stocks
+testing_stocks = bullish_stocks
 
 for stock in testing_stocks:
     data = parse_csv(stock.lower() + ".csv")
@@ -54,7 +54,7 @@ for stock in testing_stocks:
     plt.title(stock)
     plt.xlabel("Days since start")
     stock_axes.set_ylabel("Stock Value")
-    stock_axes.plot(data, 'k-+')
+    stock_axes.plot(data, 'k-+', label="Stock Price")
     stock_axes.set_xlim(0, len(data) - 1)
 
     # rsi_axes.set_xlabel("Days since start")
@@ -65,6 +65,7 @@ for stock in testing_stocks:
     print(f"\n=== {stock} ===")
 
     greedy_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares)
+    greedy_alt_long = algorithm_create(AlgorithmTypes.MAXIMALLY_GREEDY, start_balance, start_shares, [0.5, True])
     random_long = algorithm_create(AlgorithmTypes.RANDOM_CHOICE, start_balance, start_shares, [0.3, (0.4, 0.4)])
     best_after_long = algorithm_create(AlgorithmTypes.BEST_AFTER_N, start_balance, start_shares)
     simple_ma_long = algorithm_create(AlgorithmTypes.SIMPLE_MA, start_balance, start_shares, [1.0, (5, 21)])
@@ -93,6 +94,7 @@ for stock in testing_stocks:
 
     algs = [
         (greedy_long, "GREEDY"),
+        (greedy_alt_long, "GREEDY (ALT)"),
         (random_long, "RANDOM"),
         (best_after_long, "BEST AFTER 10"),
         (simple_ma_long, "SIMPLE MA (5, 21)"),
@@ -154,12 +156,12 @@ for stock in testing_stocks:
 
 
     # Finishing plotting
-    algo_axes.legend(loc="lower left")
-    stock_axes.legend(loc="best")
+    algo_axes.legend(loc="upper left")
+    stock_axes.legend(loc="lower left")
 
     if plot_out:
         plt.tight_layout()
         first_worth = start_balance + data[0] * start_shares
-        mpl.align.yaxes(stock_axes, data[0], algo_axes, first_worth, 0.5)
+        mpl.align.yaxes(stock_axes, data[0], algo_axes, first_worth, 0.2)
         plt.show()
 
